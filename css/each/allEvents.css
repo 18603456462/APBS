@@ -1,0 +1,7 @@
+@media only screen and (min-width: 768px){
+	.navbar{
+		background-color: rgba(23, 23, 32, 0.15);
+		border: 1px solid rgba(146, 146, 146, 1);
+
+	}
+}
