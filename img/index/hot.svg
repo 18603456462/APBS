@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="30px" viewBox="0 0 23 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Path 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M9.36370955,30 C-0.542823742,27.1022179 -2.58873823,21.7359547 3.2259661,13.9012105 C5.81027913,11.5400547 6.83323637,9.07157365 6.29483782,6.49576733 C9.09451028,7.35436944 10.2789871,8.85692313 9.84826824,11.0034284 C12.0018624,5.85181575 12.7556204,2.31008206 12.1095421,0.378227325 C11.1404248,-2.51955479 26.8078225,11.8083679 22.1237551,23.7214721 C19.5394421,27.6925068 16.8474494,29.7853495 14.0477769,30 C15.2322537,28.8194221 15.6091327,27.6388442 15.1784139,26.4582663 C14.5323356,24.6873995 9.36370955,21.9506053 11.5,18.7308474 C13.6362905,15.5110895 5.16420087,21.1456658 7.26395521,25.1703632 C8.66379144,27.8534947 9.36370955,29.4633737 9.36370955,30 Z" id="path-1"></path>
+        <linearGradient x1="30.4860058%" y1="42.7201048%" x2="80.8019202%" y2="50%" id="linearGradient-3">
+            <stop stop-color="#BA8608" offset="0%"></stop>
+            <stop stop-color="#A3A3A3" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-963.000000, -160.000000)">
+            <g id="Path-3" transform="translate(963.000000, 160.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#F4BE3C" xlink:href="#path-1"></use>
+                <path d="M11,-2 C15.6666667,6.66666667 15,14 9,20 C-2.84217094e-13,29 12,32 18,32 C22,32 26.3333333,24.6666667 31,10 C23.6666667,4 20,0.666666667 20,0 C20,-0.666666667 17,-1.33333333 11,-2 Z" fill="url(#linearGradient-3)" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>
