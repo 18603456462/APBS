@@ -1,7 +1,158 @@
+html{
+	width: auto;
+}
+body{
+	overflow-x: hidden;
+	background: #282739;
+	width: auto;
+}
+p{
+	margin: 0 0 0 0 ;
+}
 @media only screen and (min-width: 768px){
 	.navbar{
 		background-color: rgba(23, 23, 32, 0.15);
-		border: 1px solid rgba(146, 146, 146, 1);
+		border: 1px solid rgba(146, 146, 146, 0.15);
 
+	}
+	.allEvents{
+		width: 84%;
+	}
+	.allEvents>ul{
+		width: 1000%;
+		padding-left: 0px;
+		margin-bottom: 0px;
+		overflow: hidden;
+		height: 100%;
+	}
+	.allEvents>ul>li{
+		width: 345px;
+		float: left;
+		height: 100%;
+		position: relative;
+		box-sizing: border-box;
+		padding-left: 51px;
+	}
+	.allEvents>ul>li:first-child{
+		background: url(../../img/index/草原赛事.png) no-repeat;
+		background-size: cover;
+	}
+	.allEvents>ul>li>div.coming-soon{
+		position: absolute;
+		left: 32px;
+		top: 0px;
+		width: 175px;
+		height: 137px;
+		background: url('../../img/index/Group 7.svg') no-repeat;
+		background-size: cover;
+		padding: 18px 16px 21px 29px;
+	}
+	.allEvents>ul>li>div.coming-soon>p:first-child{
+		font-size: 14px;
+		opacity: 0.6;
+		font-weight: 300;
+	}
+	.allEvents>ul>li>div.coming-soon>p:nth-child(2){
+		font-size: 21px;
+		font-family: DIN-Condensed-Bold;
+	}
+	.allEvents>ul>li>div.coming-soon>hr{
+		margin-top: 13px;
+		margin-bottom: 8px;
+		border-top: 1px dashed white;
+		opacity: 0.35;
+	}
+	.allEvents>ul>li>div.coming-soon>p:last-child{
+		color: #282739;
+		font-weight: 300;
+		font-size: 12px;
+		padding-right: 5px;
+	}
+	.allEvents>ul>li>div.event-content{
+		color: white;
+		position: absolute;
+		bottom: 66px;
+	}
+	.allEvents>ul>li>div.event-content>p.year{
+		font-family: DIN-Condensed-Bold;
+		font-size: 24px;
+		font-weight: 300;
+		opacity: 0.6;
+	}
+	.allEvents>ul>li>div.event-content>h4{
+		font-size: 21px;
+		margin-top: 5px;
+		margin-bottom: 15px;
+	}
+	.allEvents>ul>li>div.event-content>p.area{
+		font-size: 14px;
+		opacity: 0.6;
+		font-weight: 300;
+		margin-bottom: 90px;
+	}
+	.allEvents>ul>li>div.event-content>p.area>i{
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background: white;
+		margin-right: 5px;
+		margin-left: 5px;
+		position: relative;
+		top: -2px;
+		
+	}
+	.allEvents>ul>li>div.event-content>div.time>span.data{
+		font-family: Georgia;
+		font-size: 16px;
+		
+	}
+	.allEvents>ul>li>div.event-content>div.time>span.week{
+		display: inline-block;
+		font-size: 5px;
+		font-weight: 300;
+		opacity: 0.6;
+		transform: rotate(90deg);
+		transform-origin: left;
+		position: relative;
+		top: -8px;
+		left: 4px;
+		font-family: Gilroy-Light;
+	}
+	.allEvents>ul>li>div.event-content>div.time>span.year{
+		display: inline-block;
+		font-family: Georgia;
+		font-size: 16px;
+		opacity: 0.6;
+		border-bottom: 1px solid white;
+		margin-left: 10px;
+		margin-right: 17px;
+	}
+	.allEvents>ul>li:nth-child(2){
+		background: url(../../img/index/沙漠赛事.png) no-repeat;
+	}
+	.allEvents>ul>li:nth-child(3){
+		background: url(../../img/index/戈壁赛事.png) no-repeat;
+	}
+	.allEvents>ul>li:nth-child(4){
+		background: url(../../img/index/草原2赛事.png) no-repeat;
+	}
+	.allEvents>ul>li>div.coming-soon.forward{
+		background: none;
+		/*opacity: 0.6;*/
+		color: white;
+		top: 32px;
+	}
+	.allEvents>ul>li>div.forward>p:last-child{
+		color: white;
+		font-size: 21px;
+	}
+	.zhezhao{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(#2B2A3E,#171628);
+		opacity: 0.6;
 	}
 }
