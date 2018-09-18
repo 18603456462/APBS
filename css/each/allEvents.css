@@ -1,5 +1,5 @@
 html{
-	width: auto;
+	/*width: auto;*/
 }
 body{
 	overflow-x: hidden;
@@ -9,6 +9,76 @@ body{
 p{
 	margin: 0 0 0 0 ;
 }
+
+.allEvents>ul>li>div.coming-soon{
+	position: absolute;
+	background: url('../../img/index/Group 7.svg') no-repeat;
+	background-size: cover;
+}
+.allEvents>ul>li{
+	position: relative;
+	box-sizing: border-box;
+}
+.allEvents>ul>li>div.coming-soon>hr{
+	opacity: 0.35;
+}
+.allEvents>ul>li>div.coming-soon>p:first-child{
+    opacity: 0.6;
+    font-weight: 300;
+}
+.allEvents>ul>li>div.coming-soon>p:nth-child(2){
+	font-family: DIN-Condensed-Bold;
+}
+.allEvents>ul>li>div.event-content>p.year{
+	font-family: DIN-Condensed-Bold;
+	font-weight: 300;
+	opacity: 0.6;
+}
+.allEvents>ul>li>div.event-content{
+	color: white;
+	position: absolute;
+}
+.allEvents>ul>li>div.event-content>p.area{
+	opacity: 0.6;
+	font-weight: 300;
+}
+.allEvents>ul>li>div.event-content>p.area>i{
+    border-radius: 50%;
+    background: white;
+    position: relative;
+}
+.allEvents>ul>li>div.event-content>div.time>span.data{
+	font-family: Georgia;
+	
+}
+.allEvents>ul>li>div.event-content>div.time>span.week{
+	display: inline-block;
+	font-weight: 300;
+	opacity: 0.6;
+	transform: rotate(90deg);
+	transform-origin: left;
+	position: relative;
+	font-family: Gilroy-Light;
+}
+.allEvents>ul>li>div.event-content>div.time>span.year{
+	display: inline-block;
+	font-family: Georgia;
+	opacity: 0.6;
+}
+.zhezhao{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(#2B2A3E,#171628);
+	opacity: 0.6;
+}
+.allEvents>ul>li>div.coming-soon.forward{
+	background: none;
+	color: white;
+}
+/*PC端*/
 @media only screen and (min-width: 768px){
 	.navbar{
 		background-color: rgba(23, 23, 32, 0.15);
@@ -26,11 +96,8 @@ p{
 		height: 100%;
 	}
 	.allEvents>ul>li{
-		width: 345px;
 		float: left;
 		height: 100%;
-		position: relative;
-		box-sizing: border-box;
 		padding-left: 51px;
 	}
 	.allEvents>ul>li:first-child{
@@ -38,29 +105,22 @@ p{
 		background-size: cover;
 	}
 	.allEvents>ul>li>div.coming-soon{
-		position: absolute;
 		left: 32px;
 		top: 0px;
 		width: 175px;
 		height: 137px;
-		background: url('../../img/index/Group 7.svg') no-repeat;
-		background-size: cover;
 		padding: 18px 16px 21px 29px;
 	}
 	.allEvents>ul>li>div.coming-soon>p:first-child{
 		font-size: 14px;
-		opacity: 0.6;
-		font-weight: 300;
 	}
 	.allEvents>ul>li>div.coming-soon>p:nth-child(2){
 		font-size: 21px;
-		font-family: DIN-Condensed-Bold;
 	}
 	.allEvents>ul>li>div.coming-soon>hr{
 		margin-top: 13px;
 		margin-bottom: 8px;
 		border-top: 1px dashed white;
-		opacity: 0.35;
 	}
 	.allEvents>ul>li>div.coming-soon>p:last-child{
 		color: #282739;
@@ -69,15 +129,11 @@ p{
 		padding-right: 5px;
 	}
 	.allEvents>ul>li>div.event-content{
-		color: white;
-		position: absolute;
+		
 		bottom: 66px;
 	}
 	.allEvents>ul>li>div.event-content>p.year{
-		font-family: DIN-Condensed-Bold;
 		font-size: 24px;
-		font-weight: 300;
-		opacity: 0.6;
 	}
 	.allEvents>ul>li>div.event-content>h4{
 		font-size: 21px;
@@ -86,43 +142,25 @@ p{
 	}
 	.allEvents>ul>li>div.event-content>p.area{
 		font-size: 14px;
-		opacity: 0.6;
-		font-weight: 300;
 		margin-bottom: 90px;
 	}
 	.allEvents>ul>li>div.event-content>p.area>i{
 		width: 4px;
 		height: 4px;
-		border-radius: 50%;
-		background: white;
 		margin-right: 5px;
 		margin-left: 5px;
-		position: relative;
 		top: -2px;
-		
 	}
 	.allEvents>ul>li>div.event-content>div.time>span.data{
-		font-family: Georgia;
 		font-size: 16px;
-		
 	}
 	.allEvents>ul>li>div.event-content>div.time>span.week{
-		display: inline-block;
 		font-size: 5px;
-		font-weight: 300;
-		opacity: 0.6;
-		transform: rotate(90deg);
-		transform-origin: left;
-		position: relative;
 		top: -8px;
 		left: 4px;
-		font-family: Gilroy-Light;
 	}
 	.allEvents>ul>li>div.event-content>div.time>span.year{
-		display: inline-block;
-		font-family: Georgia;
 		font-size: 16px;
-		opacity: 0.6;
 		border-bottom: 1px solid white;
 		margin-left: 10px;
 		margin-right: 17px;
@@ -137,22 +175,92 @@ p{
 		background: url(../../img/index/草原2赛事.png) no-repeat;
 	}
 	.allEvents>ul>li>div.coming-soon.forward{
-		background: none;
-		/*opacity: 0.6;*/
-		color: white;
 		top: 32px;
 	}
 	.allEvents>ul>li>div.forward>p:last-child{
 		color: white;
 		font-size: 21px;
 	}
-	.zhezhao{
-		position: absolute;
-		top: 0px;
-		left: 0px;
+}
+
+/*移动端*/
+@media only screen and (max-width: 768px) {
+	.allEvents{
 		width: 100%;
-		height: 100%;
-		background: linear-gradient(#2B2A3E,#171628);
-		opacity: 0.6;
+		margin-top: 2rem;
 	}
+	.allEvents>ul{
+		width: 100%;
+		padding-left: 0rem;
+	}
+	.allEvents>ul>li{
+		width: 100%;
+		float: none;
+		height: 6rem;
+		padding:0.6rem 0rem 0.52rem 1.2rem;
+	}
+	.allEvents>ul>li:first-child{
+		background: url(../../img/index/banner01.png) no-repeat;
+		background-size: cover;
+	}
+	.allEvents>ul>li>div.coming-soon{
+		top: 0rem;
+		right: 1.36rem;
+		width: 5rem;
+		height: 3.92rem;
+		padding: 0.52rem 0.48rem 0.6rem 0.52rem;
+	}
+	.allEvents>ul>li>div.coming-soon>hr{
+		margin-top: 0.4rem;
+	    margin-bottom: 0.24rem;
+	    border-top: 0.04rem dashed white;
+	}
+	.allEvents>ul>li>div.coming-soon>p:first-child{
+		font-size: 0.44rem;
+	}
+	.allEvents>ul>li>div.coming-soon>p:nth-child(2){
+		font-size: 0.6rem;
+	}
+	.allEvents>ul>li>div.coming-soon>p:last-child{
+		font-size: 0.44rem;
+		padding-right: 0.4rem;
+	}
+	.allEvents>ul>li>div.event-content>p.year{
+		font-size: 0.6rem;
+	}
+	.allEvents>ul>li>div.event-content>h4{
+		font-size: 0.6rem;
+	    margin-top: 0.2rem;
+	    margin-bottom: 0.28rem;
+	}
+	.allEvents>ul>li>div.event-content>p.area{
+		font-size: 0.4rem;
+		margin-bottom: 1.6rem;
+	}
+	.allEvents>ul>li>div.event-content>p.area>i{
+		width: 0.08rem;
+	    height: 0.08rem;
+	    margin-right: 0.2rem;
+	    margin-left: 0.2rem;
+	    top: -0.08rem;
+	}
+	.allEvents>ul>li>div.event-content>div.time>span.data{
+		font-size: 0.48rem;
+	}
+	.allEvents>ul>li>div.event-content>div.time>span.week{
+		font-size: 0.4rem;
+		top: -0.36rem;
+		left: 0.16rem;
+	}
+	.allEvents>ul>li>div.event-content>div.time>span.year{
+		font-size: 0.4rem;
+		border-bottom: 0.04rem solid white;
+		margin-right: 0.4rem;
+	}
+	.allEvents>ul>li:nth-child(2),.allEvents>ul>li:nth-child(3),.allEvents>ul>li:nth-child(4){
+		background: url(../../img/index/banner02.png) no-repeat;
+		background-size: cover;
+		filter: grayscale(100%);
+	}
+	
 }
