@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="180px" height="71px" viewBox="0 0 180 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 20</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="-23.1612262%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#6CFFB2" offset="0%"></stop>
+            <stop stop-color="#2B2A3E" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="-12.8253718%" x2="50%" y2="77.136907%" id="linearGradient-2">
+            <stop stop-color="#6CFFB2" offset="0%"></stop>
+            <stop stop-color="#00CF64" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-3" x="0" y="0" width="18.4071347" height="34.2520263" rx="9.20356737"></rect>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#83E7C1" offset="0%"></stop>
+            <stop stop-color="#4CCB8D" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-6" x="0" y="0" width="11.2043429" height="21.4075165" rx="5.60217144"></rect>
+        <rect id="path-8" x="0" y="0" width="8.9010989" height="16.734375" rx="4.45054945"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-3" transform="translate(-1039.000000, -728.000000)">
+            <g id="Group-20" transform="translate(1039.000000, 728.000000)">
+                <path d="M0,71.0651726 C5.93406593,57.7209848 9.89010989,50.0604565 11.8681319,48.0835878 C14.8351648,45.1182847 39.0659341,35.2339409 67.2527473,41.6587644 C80.4433402,44.6653913 80.1098901,50.8770585 96.9230769,50.8770585 C113.736264,50.8770585 114.827311,44.2151633 129.56044,38.6934612 C157.252747,28.3149003 172.087912,62.1692632 180,68.5940866" id="Path-4" fill="url(#linearGradient-1)"></path>
+                <path d="M12.8571429,49.7275078 C16.0524091,45.1541266 18.3347422,42.0603686 19.704142,40.4462341 C21.7582418,38.0250322 36.5934066,29.0631643 49.4505495,35.5804078 C62.3076923,42.0976514 80.7185123,38.809088 99.8901099,30.3348815 C119.061708,21.8606751 131.994928,42.4639023 137.472527,47.7098396" id="Path-4-Copy" fill="url(#linearGradient-2)" opacity="0.400000006"></path>
+                <g id="Group-19" transform="translate(44.505495, 0.770240)">
+                    <rect id="Rectangle-10" fill="#4CCB8D" opacity="0.699999988" x="8.00310206" y="11.9483813" width="2.40093062" height="39.0313788" rx="1.20046531"></rect>
+                    <g id="Rectangle-11-Copy-4">
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <use id="Mask" fill="#1D6D46" xlink:href="#path-3"></use>
+                        <rect fill="url(#linearGradient-5)" mask="url(#mask-4)" x="-3.17647059" y="-2.11764706" width="18.4071347" height="34.2520263" rx="9.20356737"></rect>
+                    </g>
+                </g>
+                <g id="Group-19-Copy" opacity="0.5" transform="translate(76.517903, 11.125504)">
+                    <rect id="Rectangle-10" fill="#4CCB8D" opacity="0.699999988" x="4.87145343" y="7.4677383" width="1.46143603" height="24.3946118" rx="0.730718014"></rect>
+                    <g id="Rectangle-11-Copy-5">
+                        <mask id="mask-7" fill="white">
+                            <use xlink:href="#path-6"></use>
+                        </mask>
+                        <use id="Mask" fill="#1D6D46" xlink:href="#path-6"></use>
+                        <rect fill="url(#linearGradient-5)" mask="url(#mask-7)" x="-1.05882353" y="0" width="11.2043429" height="21.4075165" rx="5.60217144"></rect>
+                    </g>
+                </g>
+                <g id="Group-19-Copy-2" transform="translate(109.780220, 44.859375)">
+                    <rect id="Rectangle-10" fill="#4CCB8D" opacity="0.699999988" x="3.95604396" y="5.90625" width="1" height="19.6875" rx="0.5"></rect>
+                    <g id="Rectangle-11-Copy-6">
+                        <mask id="mask-9" fill="white">
+                            <use xlink:href="#path-8"></use>
+                        </mask>
+                        <use id="Mask" fill="#1D6D46" xlink:href="#path-8"></use>
+                        <rect fill="url(#linearGradient-5)" mask="url(#mask-9)" x="-2.11764706" y="0" width="8.9010989" height="16.734375" rx="4.45054945"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

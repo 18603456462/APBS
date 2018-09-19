@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="33px" viewBox="0 0 30 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFEB7C" offset="0%"></stop>
+            <stop stop-color="#EF7628" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-4" transform="translate(-43.000000, -33.000000)" stroke="#F4BE3C" stroke-width="2">
+            <g id="Group-5">
+                <g id="Group-4" transform="translate(44.000000, 34.000000)">
+                    <g id="Group-2" transform="translate(5.527395, 22.735632)">
+                        <path d="M2.80041506,0 L15.231577,0 C16.3361465,-2.02906125e-16 17.231577,0.8954305 17.231577,2 L17.231577,7.70935636 L0.800415057,7.70935636 L0.800415057,2 C0.800415057,0.8954305 1.69584556,1.09108455e-15 2.80041506,8.8817842e-16 Z" id="Rectangle-3"></path>
+                        <path d="M6.56944434,3.85517235 L11.4625477,3.85517235" id="Line-7" opacity="0.600000024" stroke-linecap="square"></path>
+                    </g>
+                    <g id="Group-3" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon id="Triangle-Copy" opacity="0.600000024" points="14.135632 16.903448 0.271839076 4.34942522 27.9994248 4.34942522"></polygon>
+                        <polygon id="Triangle" fill="url(#linearGradient-1)" points="14.135632 16.903448 2.71839076 0 25.5528732 0"></polygon>
+                    </g>
+                    <path d="M14.135632,17.1999997 L14.135632,21.9448272" id="Line-8" opacity="0.600000024" stroke-linecap="square"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

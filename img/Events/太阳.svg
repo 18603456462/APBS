@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>太阳</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F5C442" offset="0%"></stop>
+            <stop stop-color="#EE9E26" offset="100%"></stop>
+        </linearGradient>
+        <ellipse id="path-2" cx="13.9701493" cy="14.7567568" rx="7.17386043" ry="7.18918919"></ellipse>
+        <filter x="-62.7%" y="-41.7%" width="225.5%" height="225.2%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.653061224   0 0 0 0 0.429766397   0 0 0 0 0.016504329  0 0 0 0.768087636 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-3" transform="translate(-1065.000000, -208.000000)">
+            <g id="01" transform="translate(555.000000, 141.000000)">
+                <g id="Group-16" transform="translate(513.000000, 69.000000)">
+                    <g id="Group-7">
+                        <g id="太阳">
+                            <path d="M13.9701493,28 C21.6856496,28 27.9402985,21.7319865 27.9402985,14 C27.9402985,6.2680135 21.6856496,0 13.9701493,0 C6.25464887,0 0,6.2680135 0,14 C0,21.7319865 6.25464887,28 13.9701493,28 Z" id="Oval-7" stroke="#F1AE32" stroke-width="4.99846144" opacity="0.5" stroke-dasharray="1.496881570389022,11.22661203412867"></path>
+                            <g id="Oval-8">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

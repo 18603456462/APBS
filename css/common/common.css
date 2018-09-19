@@ -27,6 +27,9 @@ li{
 i{
 	display: inline-block;
 }
+.opacity6{
+	opacity: 0.6;
+}
 
 /*导航*/
 .index-content{

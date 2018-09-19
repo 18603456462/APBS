@@ -37,10 +37,6 @@ body{
 .content-right>div>.open>ul>li:first-child{
 	margin-left: 0px;
 }
-
-
-
-
 .content-right>div>ul>li{
 	text-align: right;
 	margin-left: 15px;
@@ -90,21 +86,22 @@ body{
 		margin-bottom: 10px;
 	}
 	
-	.content-right>div>ul.page{
+	ul.page{
 		display: flex;
 		padding-left: 0rem;
 	}
-	.content-right>div>ul.page>li{
+	ul.page>li{
 		margin-left: 15px;
-		
+		text-align: center;
+		font-family: DIN-Condensed-Bold;
 	}
-	.content-right>div>ul.page>li:first-child{
+	ul.page>li:first-child{
 		margin-left: 0px;
 	}
-	.content-right>div>ul.page>li.active{
+	ul.page>li.active{
 		text-align: left;
 	}
-	.content-right>div>ul.page>li.active>i{
+	ul.page>li.active>i{
 		width: 100px;
 		height: 1px;
 		opacity: 0.6;
@@ -114,7 +111,7 @@ body{
 	.content-right>div>.open>p{
 		font-size: 16px;
 	}
-	.content-right>div>ul.page>li>i{
+	ul.page>li>i{
 		width: 3px;
 		height: 3px;
 		background-color: rgba(255, 255, 255, 1);

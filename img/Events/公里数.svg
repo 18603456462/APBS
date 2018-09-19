@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="69px" height="55px" viewBox="0 0 69 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 17</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="24.0734367%" y1="25.1622245%" x2="94.7165807%" y2="87.0695885%" id="linearGradient-1">
+            <stop stop-color="#FF76B6" offset="0%"></stop>
+            <stop stop-color="#E61E7B" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="38.7139678%" y1="-10.0638216%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#F9D65F" offset="0%"></stop>
+            <stop stop-color="#FFE69B" offset="15.4065038%"></stop>
+            <stop stop-color="#FFB82B" offset="75.2573847%"></stop>
+            <stop stop-color="#F1AD31" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-3" transform="translate(-1068.000000, -343.000000)">
+            <g id="01" transform="translate(555.000000, 141.000000)">
+                <g id="Group-15" transform="translate(513.000000, 202.000000)">
+                    <g id="Group-17" transform="translate(1.000000, 0.000000)">
+                        <path d="M6.39072115,36.9744312 C16.3501806,33.2502932 4.57991034,23.0089139 23.5934239,23.0089139 C42.6069374,23.0089139 38.9853157,-1.19798264 56.1880184,9.04339667 C73.3907211,19.284776 67.0528833,60.2502932 47.1339644,43.4916725 C27.2150455,26.7330518 23.5934239,53.7330518 10.9177482,53.7330518 C-1.7579275,53.7330518 -3.56873831,40.6985691 6.39072115,36.9744312 Z" id="Path-2" stroke="url(#linearGradient-1)" stroke-width="1.82189189"></path>
+                        <path d="M50.7027027,9.57635468 C53.1171171,7.00371549 54.3243243,5.03933504 54.3243243,3.68321334 C54.3243243,1.64903078 52.7028691,0 50.7027027,0 C48.7025363,0 47.0810811,1.64903078 47.0810811,3.68321334 C47.0810811,5.03933504 48.2882883,7.00371549 50.7027027,9.57635468 Z" id="Oval-9-Copy" fill="url(#linearGradient-2)"></path>
+                        <path d="M18.1081081,52.4039409 C20.5225225,49.8313017 21.7297297,47.8669212 21.7297297,46.5107995 C21.7297297,44.476617 20.1082745,42.8275862 18.1081081,42.8275862 C16.1079417,42.8275862 14.4864865,44.476617 14.4864865,46.5107995 C14.4864865,47.8669212 15.6936937,49.8313017 18.1081081,52.4039409 Z" id="Oval-9-Copy-2" fill="url(#linearGradient-2)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

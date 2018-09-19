@@ -1,6 +1,4 @@
-html{
-	/*width: auto;*/
-}
+
 body{
 	overflow-x: hidden;
 	background: #282739;
@@ -9,7 +7,11 @@ body{
 p{
 	margin: 0 0 0 0 ;
 }
+ul{
+	padding-left: 0px;
+}
 
+/*全部赛事*/
 .allEvents>ul>li>div.coming-soon{
 	position: absolute;
 	background: url('../../img/index/Group 7.svg') no-repeat;
@@ -78,6 +80,52 @@ p{
 	background: none;
 	color: white;
 }
+
+/*赛事详情*/
+.details{
+	width: 67%;
+	height: 100%;
+	overflow-y:scroll ;
+	color: white;
+	font-weight: 300;
+	box-sizing: border-box;
+	position: absolute;
+	
+}
+.details>.title{
+	display: flex;
+	justify-content: space-between;
+	width: 45%;
+	margin:0 auto;
+	margin-bottom: 43px;
+}
+.details>.title>li{
+	opacity: 0.6;
+	font-size: 16px;
+}
+.details>.title>li.active{
+	opacity: 1;
+	font-size: 18px;
+}
+.details>div>div.introduce,.details>div>div.event-origin,.details>div>div.event-features{
+	display: flex;
+	justify-content: space-between;
+	
+}
+.details>div>div.introduce>div>ul{
+	display: flex;
+	padding-left: 0px;
+}
+.details>div>div.event-origin>div>ul.caro{
+	position: relative;
+}
+.details>div>div.event-origin>div>ul.caro>li{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+}
+
+
 /*PC端*/
 @media only screen and (min-width: 768px){
 	.navbar{
@@ -96,6 +144,7 @@ p{
 		height: 100%;
 	}
 	.allEvents>ul>li{
+		width: 345px;
 		float: left;
 		height: 100%;
 		padding-left: 51px;
@@ -179,12 +228,96 @@ p{
 	}
 	.allEvents>ul>li>div.forward>p:last-child{
 		color: white;
-		font-size: 21px;
+		font-size: 21px;	
+	}
+	
+	
+	/*赛事详情*/
+	.details{
+		padding-top: 73px;
+		padding-left: 91px;
+		padding-right: 247px;
+		right: 0rem;
+		top: 0rem;
+	}
+	.details h4{
+		font-size: 16px;
+		position: relative;
+		margin-bottom: 35px;
+	}
+	.details h4.about{
+		width: 137px;
+		line-height: 10px;
+		border-bottom: 3px solid #F4BE3C;
+	}
+	.details>div>p{
+		margin-bottom: 40px;
+	}
+	.details>div>div.introduce{
+		margin-bottom:30px ;
+	}
+	.details>div>div.introduce>div>p.mile{
+		font-size: 18px;
+	}
+	.details>div>div.introduce>div>p.mile>span.num{
+		font-family: DIN-Condensed-Bold;
+		font-size: 30px;
+		margin-right: 12px;
+	}
+	.details>div>div.introduce>div>p.mile>span.mile-txt{
+		opacity: 0.6;
+	}
+	.details>div>div.introduce>div>img{
+		margin-top: 40px;
+	}
+	.details>div>div.event-origin>div>ul.caro{
+		position: relative;
+		width: 400px;
+		height: 268px;
+		margin-bottom: 20px;
+	}
+	.details>div>div.event-origin,.details>div>div.event-features,.details>div>div.introduce{
+		padding-right: 27px;
+	}
+	.details>div>div.event-origin>div>img{
+		margin-top: 50px;
+		margin-bottom: 58px;
+	}
+	.details>div>div.event-features>div>img{
+		margin-top: 0px;
+		margin-bottom: 28px;
+	}
+	.details>div>div.event-features{
+		margin-bottom: 30px;
+	}
+	.details>div>div.event-features>div>ul>li{
+		margin-top: 10px;
+	}
+	.details>div>div.event-features>div>ul>li>i{
+		width: 8px;
+		height: 8px;
+		border: 2px solid rgba(255, 255, 255, 1);
+		margin-right: 8px;
+		margin-left: 40px;
+	}
+	.details>div>div.event-origin>div>p{
+		margin-left: 20px;
+	}
+	.details>div>div.event-origin>div>p.name{
+			font-size: 16px;
+	}
+	.details>div>img{
+		margin-bottom: 20px;
+		/*width: 100%;*/
+	}
+	.details>div>p{
+		font-size: 14px;
 	}
 }
 
 /*移动端*/
 @media only screen and (max-width: 768px) {
+	/*赛事详情*/
 	.allEvents{
 		width: 100%;
 		margin-top: 2rem;
@@ -263,4 +396,5 @@ p{
 		filter: grayscale(100%);
 	}
 	
+	/*赛事详情*/
 }
