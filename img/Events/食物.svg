@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="18px" viewBox="0 0 19 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 25</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-4" transform="translate(-848.000000, -1787.000000)" stroke="#282739">
+            <g id="Group-33-Copy-4" transform="translate(848.000000, 1787.000000)">
+                <g id="Group-34">
+                    <g id="Group-25" transform="translate(2.000000, 1.000000)">
+                        <rect id="Rectangle-10-Copy-2" opacity="0.5" x="1" y="7.38461538" width="14" height="2.46153846"></rect>
+                        <rect id="Rectangle-10-Copy" opacity="0.5" stroke-linecap="round" stroke-linejoin="round" x="0" y="9.84615385" width="16" height="2.46153846"></rect>
+                        <path d="M0.5,6.88461538 L15.5,6.88461538 L15.5,4 C15.5,2.06700338 13.9329966,0.5 12,0.5 L4,0.5 C2.06700338,0.5 0.5,2.06700338 0.5,4 L0.5,6.88461538 Z" id="Rectangle-8"></path>
+                        <path d="M0.538928886,15.5 L15.4610711,15.5 C15.2211028,13.9744516 13.9006532,12.8076923 12.3076923,12.8076923 L3.69230769,12.8076923 C2.09934681,12.8076923 0.778897154,13.9744516 0.538928886,15.5 Z" id="Rectangle-8-Copy" transform="translate(8.000000, 14.153846) scale(1, -1) translate(-8.000000, -14.153846) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

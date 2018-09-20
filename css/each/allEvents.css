@@ -125,13 +125,151 @@ ul{
 	bottom: 0px;
 }
 
-
+/*赛制/赛道介绍*/
+.details .team-group>ul>li.now-group{
+	width: 100%;
+	background: linear-gradient(#F7D24C,#EE9E26);
+	color: #282739;
+}
+.details .team-group>ul>li.now-group>p:first-child{
+	font-weight: bold;
+}
+.details .team-group>ul>li{
+	width: 100%;
+	background-color: rgba(78, 77, 104, 1);
+	box-sizing: border-box;
+}
+.details .team-grade ul{
+	display: flex;
+	justify-content: space-around;
+}
+.details .team-grade ul li{
+	font-size: 16px;
+	text-align: center;
+}
+.details .team-grade ul li img{
+		margin-bottom: 10px;
+}
+.details .team-grade div{
+	width:100%;
+	/*height: 170px;*/
+	border-radius: 5px;
+	border: 1px dashed rgba(151, 151, 151, 1);
+	padding: 30px 25px 21px 25px;
+	margin-top: 18px;
+	position: relative;
+	margin-bottom: 50px
+}
+.details .team-grade div:before{
+	content: "";
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: #2B2A3E;
+	border-top: 1px dashed  rgba(151, 151, 151, 1);
+	border-left: 1px dashed rgba(151, 151, 151, 1);
+	position: absolute;
+	top: -7px;
+	left: 75px;
+	transform: rotate(45deg);
+}
+.details .way-introduce>ul.way{
+	display: flex;
+	justify-content: space-around;
+}
+.details .way-introduce>ul.way li img{
+	height: 50px;
+	margin-bottom: 15px;
+}
+.details .way-introduce>ul.way li p.mile{
+	font-size: 16px;
+}
+.details .way-introduce>ul.way li p.mile span{
+	font-family:  DIN-Condensed-Bold;
+	font-size: 26px;
+	margin-right: 5px;
+}
+.details .way-introduce>ul.way li p{
+	font-size: 12px;
+}
+.details .way-introduce{
+	width: 100%;
+}
+.details .way-introduce>ul.way-img{
+	position: relative;
+	text-align: center;
+	width: 100%;
+	height: 492px;
+	
+}
+.details .way-introduce>ul.way-img li{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	margin-top: 70px;
+}
+.details .way-txt{
+	
+}
 /*PC端*/
 @media only screen and (min-width: 768px){
 	.navbar{
 		background-color: rgba(23, 23, 32, 0.15);
 		border: 1px solid rgba(146, 146, 146, 0.15);
-
+	}
+	.navbar.small-navbar{
+		width: 120px;
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	.navbar.small-navbar .container-fluid{
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	.navbar.small-navbar .navbar-header{
+		width: 100%;
+	}
+	.navbar.small-navbar > .container-fluid .navbar-brand{
+		margin-left: 0px;
+		position: relative;
+	}
+	.navbar.small-navbar > .container-fluid .navbar-brand>img{
+		margin-right: 0px;
+		margin-top: 0px;
+		position: absolute;
+		left: 30%;
+	}
+	.navbar.small-navbar .navbar-brand>hr{
+		width: 100%;
+		left: 0px;
+	}
+	.navbar.small-navbar .nav-list{
+		padding-right: 0px;
+	}
+	.navbar.small-navbar .nav-list li.page a{
+		font-size: 12px;
+		opacity: 0.6;
+	}
+	.navbar.small-navbar .navbar-collapse{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.navbar.small-navbar .nav-list li i{
+		width: 125px;
+		top: 35px;
+	}
+	.navbar.small-navbar .nav-list li{
+		text-align: center;
+	}
+	.navbar.small-navbar .nav-list li.page span{
+		font-size: 15px;
+		opacity: 1;
+	}
+	.navbar.small-navbar .nav-bottom{
+		left: 0px;
+		border-top: none;
 	}
 	.allEvents{
 		width: 84%;
@@ -308,9 +446,41 @@ ul{
 	}
 	.details>div>img{
 		margin-bottom: 20px;
-		/*width: 100%;*/
 	}
 	.details>div>p{
+		font-size: 14px;
+	}
+	
+	/*赛事/赛制介绍*/
+	.details .team-group>ul>li.now-group{
+		height: 160px;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		padding: 25px 50px 46px 30px;
+		font-size: 14px;
+	}
+	.details .team-group{
+		padding-bottom: 45px;
+		margin-bottom: 45px;
+		border-bottom: 1px dashed rgba(151,151,151,0.4);
+	}
+	.details .team-group>ul>li.now-group>p:first-child{
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+	.details .team-group>ul>li{
+		height: 55px;
+		padding: 17px 40px 16px 30px;
+		font-size: 16px ;
+	}
+	.details .team-group>ul>li:last-child{
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+	}
+	.details .team-group>ul{
+		margin-bottom: 20px;
+	}
+	.details>div{
 		font-size: 14px;
 	}
 }

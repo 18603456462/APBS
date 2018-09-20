@@ -30,6 +30,9 @@ i{
 .opacity6{
 	opacity: 0.6;
 }
+.disNone{
+	display: none;
+}
 
 /*导航*/
 .index-content{
