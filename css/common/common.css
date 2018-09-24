@@ -33,6 +33,24 @@ i{
 .disNone{
 	display: none;
 }
+.liLeft{
+	clear: both;
+}
+.liLeft>li{
+	float: left;
+}
+.font-num{
+	font-family: DIN-Condensed-Bold;
+}
+.font16{
+	font-size: 16px;
+}
+.fontWeight300{
+	font-weight: 300;
+}
+.fontBold{
+	font-weight: bold;
+}
 
 /*导航*/
 .index-content{

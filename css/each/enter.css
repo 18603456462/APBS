@@ -1,0 +1,203 @@
+.enter-information{
+	height: 55%;
+	overflow-y: scroll;
+	padding-bottom: 47px;
+}
+
+
+@media only screen and (min-width: 768px) {
+	.coming-soon{
+		width: 266px;
+		height: 195px;
+		background-size: 274px 194px;
+		left: auto;
+		right: 39px;
+	}
+	.coming-soon p:nth-child(2){
+		margin-top: 10px;
+	}
+	.coming-soon>hr{
+		margin-top: 22px;
+	}
+	#Events{
+		width: 100%;
+		height: 125px;
+		background: url(../../img/index/banner01.png) no-repeat 0px -400px;
+		position: relative;
+	}
+	.event-content{
+		bottom: auto;
+		top: 18px;
+		left: 126px;
+	}
+	.enter-information{
+		width: 100%;
+		background: white;
+		padding: 57px 0px 0px 125px;
+	}
+	.enter-information h5{
+		font-size: 14px;
+		font-weight: bold;
+	}
+	.enter-information .ticket-type ul li{
+		width: 384px;
+		height: 112px;
+		border-radius: 4px;
+		box-sizing: border-box;
+		background-color: rgba(255, 255, 255, 1);
+		box-shadow: 0px 9px 31px 0px rgba(40, 39, 57, 0.07);
+		padding: 19px 24px 20px 28px;
+		position: relative;
+		margin-left: 30px;
+		margin-top: 28px;
+		margin-bottom: 45px;
+	}
+	.enter-information .ticket-type ul li:first-child{
+		margin-left: 0px;
+	}
+	.enter-information .ticket-type ul li>div>span{
+		font-weight: 500;
+		font-size: 14px;
+	}
+	.enter-information .ticket-type ul li>div>p.pull-right{
+		color: #FF053C;
+		font-weight: 300;
+		font-size: 12px;
+	}
+	.enter-information .ticket-type ul li>div>p.pull-right>span{
+		font-weight: bold;
+		font-size: 16px;
+	}
+	.enter-information .ticket-type ul li>div:nth-child(2){
+		margin-top: 19px;
+		font-weight: 300;
+	}
+	.enter-information .ticket-type ul li>div:nth-child(2) .money{
+		font-size: 12px;
+	}
+	.enter-information .ticket-type ul li>div:nth-child(2) .money p:first-child{
+		position: relative;
+		top: 11px;
+		margin-right: 13px;
+	}
+	.enter-information .ticket-type ul li>div:nth-child(2) .money p:first-child:before{
+		content: "";
+		display: inline-block;
+		width: 100%;
+		height: 1px;
+		background: #FF053C;
+		position: absolute;
+		top: 50%;
+		left: 0px;
+		transform: rotate(5deg);
+	}
+	.enter-information .ticket-type ul li>div:nth-child(2) .money p:last-child{
+		position: relative;
+		top: 5px;
+	}
+	.enter-information .ticket-type ul li .border{
+		width: 7px;
+		height: 100%;
+		border-radius: 4px;
+		background: linear-gradient(#FFCD17,#FF9900);
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	.enter-information .ticket-type ul li.none-ticket>div>p.pull-right{
+		color: #42464D;
+	}
+	.enter-information .ticket-type ul li.none-ticket>div>p.pull-right>span{
+		font-weight: 300;
+		font-size: 12px;
+	}
+	.enter-information .ticket-type ul li.none-ticket .border{
+		background: #E4E4E4;
+	}
+	.now-price{
+		font-size: 20px;
+	}
+	
+	.personnal{
+		width:903px;
+	}
+	.personnal .form-group{
+		display:inline-block;
+		width: 210px;
+		margin-right: 91px;
+		margin-top: 20px;
+	}
+	.personnal .form-group.form-width{
+		width: 314px;
+	}
+	.personnal .form-group label{
+		font-weight: normal;
+		display: block;
+	}
+	.personnal .form-group input{
+		margin-top: 8px;
+		font-size: 12px;
+		padding-left: 12px;
+		box-sizing: border-box;
+		display: inline-block;
+	}
+	.personnal .form-group label span{
+		color: #E51152;
+		margin-right: 5px;
+	}
+	.personnal .form-group input.input-width-long{
+		width: 60%;
+	}
+	.personnal .form-group input.input-width-short{
+		width: 25%;
+	}
+	.personnal>div{
+		padding-bottom: 30px;
+		margin-bottom: 25px;
+		border-bottom: 1px dashed rgba(151,151,151,0.2);
+	}
+	.personnal>button{
+		display: block;
+		width: 99px;
+		height: 33px;
+		border-radius: 2px;
+		border: 1px solid rgba(151, 151, 151, 0.4);
+		background: transparent;
+		font-weight: bold;
+		margin-bottom: 25px;
+	}
+	
+	.attention{
+		margin-top: 45px;
+		margin-bottom: 47px;
+	}
+	.pay{
+		width: 100%;
+		height: 60px;
+		background-color: rgba(255, 255, 255, 1);
+		box-shadow: 0px -6px 13px 0px rgba(0, 0, 0, 0.4);
+		box-sizing: border-box;
+		padding: 0px 87px 0px 119px;
+		line-height: 60px;
+	}
+	.pay button{
+		width: 125px;
+		height: 33px;
+		border-radius: 2px;
+		background-color: rgba(43, 42, 62, 1);
+		box-sizing: border-box;
+		text-align: center;
+		line-height: 33px;
+		border: none;
+		color: white;
+	}
+	.pay div span.font-num{
+		color: #FF8500;
+		font-size: 20px;
+		margin-right: 20px;
+	}
+	.pay div span.type{
+		font-size: 14px;
+		font-weight: normal;
+	}
+}

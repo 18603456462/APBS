@@ -1,0 +1,130 @@
+.news{
+	display: inline-block;
+	width: 84%;
+	color: white;
+	padding-top: 40px;
+}
+.news h1{
+	font-size: 18px;
+	margin-left: 86px;
+	margin-bottom: 40px;
+}
+.news>div{
+	width: 100%;
+	height: 120px;
+	padding: 21px 119px 19px 86px;
+}
+.news>div>div>img{
+	widows: 120px;
+	height: 80px;
+	margin-right: 30px;
+}
+.news>div>div:first-child{
+	margin-right: 53px;
+	position: relative;
+	margin-top: 10px;
+}
+.news>div>div>p.font-num{
+	font-size: 19px;
+	margin-bottom: 2px;
+	margin-left: 5px;
+}
+.news>div>div:first-child:before{
+	content: "";
+	display: inline-block;
+	width: 26px;
+	border-top: 1px solid rgba(255,255,255,0.2);
+	position: absolute;
+	top: 26px;
+	left: 0px;
+	transform: rotate(-19deg);
+}
+.news>div>div>div>p.title{
+	font-size: 15px;
+	margin-bottom: 14px;
+}
+.news>div>div>div>p.opacity6{
+	width: 502px;
+}
+.news div.check>a{
+	line-height: 60px;
+}
+.news .backColor{
+	background: #34334A ;
+}
+ul{
+	padding-left: 0px;
+}
+
+/*关于我们*/
+.contact{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 522px;
+	height: 768px;
+	background-color: rgba(43, 42, 62, 1);
+	color: white;
+	z-index: 2;
+}
+.contact div.contact-information{
+	padding: 50px 70px 65px 81px;
+}
+.contact h1{
+	font-size: 18px;
+	margin-bottom: 40px;
+}
+.contact div.contact-information>ul{
+	padding-bottom: 15px;
+	border-bottom: 1px dashed rgba(151,151,151,0.2);
+	margin-bottom: 15px;
+}
+.contact div.contact-information>ul>li{
+	float: left;
+	
+}
+.contact div.contact-information>ul>li>span{
+	margin-left:15px ;
+	}
+.contact div.contact-information>ul>li:first-child{
+	width: 187px;
+}
+.contact div.contact-information>ul>li>ul,.committee>ul>li>ul{
+	margin-top: 11px;
+}
+.contact div.contact-information>ul>li>ul>li,.committee>ul>li>ul>li{
+	margin-top: 4px;
+}
+.committee>ul{
+	display: flex;
+	justify-content: space-between;
+}
+
+.partner{
+	height: 248px;
+	box-sizing: border-box;
+	padding: 32px 98px 27px 83px;
+	background: linear-gradient(#35344B 100%,#35344B 0%);
+}
+.partner .caro-icon{
+	width: 50px;
+	margin: 0 auto;
+}
+.partner ul{
+	display: flex;
+	justify-content: space-around;
+}
+.partner .caro-icon i{
+	width: 10px;
+	height: 2px;
+	border-radius: 2px;
+	background-color: rgba(216, 216, 216, 0.4);
+	margin-right: 5px;
+}
+.partner .caro-icon i.active{
+	width: 30px;
+	border-radius: 2px;
+	background-color: rgba(255, 255, 255, 1);
+	
+
+}
