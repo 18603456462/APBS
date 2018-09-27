@@ -62,7 +62,7 @@ ul{
 	right: 0px;
 	top: 0px;
 	width: 522px;
-	height: 768px;
+	height: 100%;
 	background-color: rgba(43, 42, 62, 1);
 	color: white;
 	z-index: 2;
@@ -94,7 +94,12 @@ ul{
 }
 .contact div.contact-information>ul>li>ul>li,.committee>ul>li>ul>li{
 	margin-top: 4px;
+	
 }
+.contact div.contact-information>ul>li>ul>li>img,.committee>ul>li>ul>li>img{
+	margin-right: 13px;
+}
+
 .committee>ul{
 	display: flex;
 	justify-content: space-between;
@@ -105,6 +110,9 @@ ul{
 	box-sizing: border-box;
 	padding: 32px 98px 27px 83px;
 	background: linear-gradient(#35344B 100%,#35344B 0%);
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
 }
 .partner .caro-icon{
 	width: 50px;
@@ -125,6 +133,11 @@ ul{
 	width: 30px;
 	border-radius: 2px;
 	background-color: rgba(255, 255, 255, 1);
-	
-
 }
+.partner ul li img:last-child{
+	margin-top: 30px;
+}	
+.partner ul li:last-child img:last-child{
+	margin-top: 15px;
+}
+

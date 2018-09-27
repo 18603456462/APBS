@@ -17,16 +17,18 @@
 
 		<script src="../../js/include.js" type="text/javascript" charset="utf-8"></script>
 		<style type="text/css">
-			.details{
-				padding-left: 0px;
-				padding-right: 0px;
-				box-sizing: border-box;
+			@media only screen and (min-width: 768px) {
+				.details{
+					padding-left: 0px;
+					padding-right: 0px;
+					box-sizing: border-box;
+				}
+				.details>.title-box,.details>div>h4,.details>div>div.team-group,.details>div>div.team-grade,.details>div>div.way-introduce{
+					margin-left: 91px;
+					margin-right: 247px;
+				}
 			}
-			.details>ul,.details>div>h4,.details>div>div.team-group,.details>div>div.team-grade,.details>div>div.way-introduce{
-				margin-left: 91px;
-				margin-right: 247px;
-				
-			}
+			
 		</style>
 	</head>
 
@@ -91,13 +93,20 @@
 							</div>
 						</div>
 					</li>
+					<li class="mobile-events">
+						<h1><span class="font-num opacity6">2018</span>第三届草原挑战赛</h1>
+						<button>前去报名</button>
+					</li>
 				</ul>
 				<div class="details">
-					<ul class="title">
-						<li><a href="Regulations.html">赛事介绍</a></li>
-						<li  class="active"><a href="introduce.html">赛制/赛道介绍</a></li>
-						<li><a href="brochure.html">赛事简章</a></li>
-					</ul>
+					<div class="title-box">
+						<ul class="title">
+							<li><a href="Regulations.html">赛事介绍</a></li>
+							<li  class="active"><a href="introduce.html">赛制/赛道介绍</a></li>
+							<li><a href="brochure.html">赛事简章</a></li>
+						</ul>
+					</div>
+					
 					<div>
 						<h4 class="about">赛制介绍</h4>
 						<div class="team-group">
@@ -179,19 +188,19 @@
 </div>
 							<div class="way-icon">
 								<ul class="clearfix">
-									<li>
+									<li class="margin-top-0">
 										<img src="../../img/Events/打卡（检查点）.svg"/>
 										<span>打卡 (检查)</span>
 									</li>
-									<li>
+									<li class="margin-top-0">
 										<img src="../../img/Events/水.svg"/>
 										<span>水</span>
 									</li>
-									<li>
+									<li class="margin-top-0">
 										<img src="../../img/Events/医疗站.svg"/>
 										<span>医疗站</span>
 									</li>
-									<li>
+									<li class="margin-left-0">
 										<img src="../../img/Events/wc.svg"/>
 										<span>厕所</span>
 									</li>
@@ -203,7 +212,7 @@
 										<img src="../../img/Events/香蕉.svg"/>
 										<span>香蕉</span>
 									</li>
-									<li>
+									<li class="margin-left-0">
 										<img src="../../img/Events/功能饮料.svg"/>
 										<span>功能饮料</span>
 									</li>

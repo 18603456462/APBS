@@ -7,9 +7,7 @@ body{
 p{
 	margin: 0 0 0 0 ;
 }
-ul{
-	padding-left: 0px;
-}
+
 
 /*全部赛事*/
 .coming-soon{
@@ -83,8 +81,6 @@ ul{
 
 /*赛事详情*/
 .details{
-	width: 70%;
-	height: 100%;
 	overflow-y:auto ;
 	overflow-x: hidden;
 	color: white;
@@ -93,22 +89,17 @@ ul{
 	position: absolute;
 	
 }
-.details>.title{
+.details .title{
 	display: flex;
 	justify-content: space-between;
-	width: 45%;
-	margin:0 auto;
-	margin-bottom: 43px;
 }
-.details>.title>li{
+.details .title>li{
 	opacity: 0.6;
-	font-size: 16px;
 }
-.details>.title>li.active{
+.details .title>li.active{
 	opacity: 1;
-	font-size: 18px;
 }
-.details>div>div.introduce,.details>div>div.event-origin,.details>div>div.event-features{
+.details>div>div.introduce,.details>div>div.event-origin{
 	display: flex;
 	justify-content: space-between;
 	
@@ -323,6 +314,7 @@ ul{
 	margin-top: 5px;
 }
 
+
 /*PC端*/
 @media only screen and (min-width: 768px){
 	.navbar{
@@ -481,6 +473,8 @@ ul{
 	
 	/*赛事详情*/
 	.details{
+		width: 70%;
+		height: 100%;
 		padding-top: 73px;
 		padding-left: 91px;
 		padding-right: 247px;
@@ -495,7 +489,6 @@ ul{
 	.details h4.about{
 		width: 137px;
 		line-height: 10px;
-		border-bottom: 3px solid #F4BE3C;
 	}
 	.details>div>p{
 		margin-bottom: 40px;
@@ -592,6 +585,30 @@ ul{
 	.details>div{
 		font-size: 14px;
 	}
+	#Events{
+		display: block;
+	}
+	.mobile-events{
+		display: none;
+	}
+	.details .title>li{
+		font-size: 16px;
+	}
+	.details .title>li.active{
+		font-size: 18px;
+	}
+	.details .title{
+		width: 45%;
+		margin:0 auto;
+		margin-bottom: 43px;
+	}
+	.details>div>div.event-features{
+		display: flex;
+		justify-content: space-between;
+	}
+	.MECA p:last-child{
+		float: right;
+	}
 }
 
 /*移动端*/
@@ -676,4 +693,258 @@ ul{
 	}
 	
 	/*赛事详情*/
+	#Events{
+		display: none;
+	}
+	.allEvents>ul>li.mobile-events{
+		display: block;
+		width: 100%;
+		height: 2rem;
+		background: url(../../img/index/banner01.png) no-repeat;
+		background-size: 100% 100px;
+		filter: grayscale(0%);
+		text-align: center;	
+	}
+	.allEvents>ul>li.mobile-events>.zhezhao{
+		z-index: -2;
+	}
+	.allEvents>ul>li.mobile-events>h1{
+		color: white;
+		display: inline-block;
+		font-size: 0.56rem;
+		position: relative;
+	}
+	.allEvents>ul>li.mobile-events>h1>span{
+		margin-right: 0.12rem;
+	}
+	.allEvents>ul>li.mobile-events>h1:after{
+		content: "";
+		display: inline-block;
+		opacity: 0.5;
+		border-left: 0.2rem solid transparent;
+	    border-right: 0.2rem solid transparent;
+	    border-top: 0.25rem solid white;
+	    position: absolute;
+	    right: -1.2rem;
+	    top: 30%;
+	}
+	.allEvents>ul>li.mobile-events>button{
+		border: 1px solid white;
+		background: transparent;
+		opacity: 0.5;
+		width: 2.48rem;
+		height: 0.92rem;
+		color: white;
+		border-radius: 0.08rem;
+		margin-left: 1.8rem;
+		padding-right: 0.52rem 0.8rem 0.56rem 4.2rem;
+	}
+	.details .title>li{
+		font-size: 0.48rem;
+	}
+	.details .title>li.active{
+		font-size: 0.56rem;
+	}
+	.details{
+		width: 100%;
+		height: 91%;
+		padding: 0rem 0.8rem 0rem 0.8rem;
+		font-size: 0.4rem;
+	}
+	.details>div>img{
+		width: 100%;
+		margin-bottom: 0.4rem;
+	}
+	.details>div>div>img,.caro img{
+		width: 8.2rem;
+		height: 5.48rem;
+	}
+	.event-origin>div>img{
+		width: 3.6rem;
+		height: 1.28rem;
+	}
+	.details .title{
+		width: 60%;
+		margin:0 auto;
+		margin-bottom:1.32rem;
+	}
+	.details h4 {
+	    font-size: 0.52rem;
+	    position: relative;
+	    margin-bottom: 0.88rem;
+	}
+	.details h4.about{
+		width: 4.2rem;
+		line-height: 0.30rem;
+		border-bottom: 0.08rem solid #F4BE3C;
+	}
+	.sun{
+		width: 0.52rem;
+		height: 0.52rem;
+	}
+	.details>div>div.introduce>div>p.mile>span.num {
+	    font-size: 0.56rem;
+	    margin-right: 0.2rem;
+    }
+    .details>div>div.introduce>div>img {
+	    margin-top: 0.6rem;
+	    width: 1.2rem;
+	    height: 0.84rem;
+	}
+	.details>div>p {
+	    margin-bottom: 1.2rem;
+	}
+	.details>div>div.introduce {
+	    margin-bottom: 0.6rem;
+	}
+	.details>div>div.event-origin>div>ul.caro {
+	    position: relative;
+	    width: 8.2rem;
+	    height: 5.48rem;
+	    margin-bottom: 0.6rem;
+	}
+	.details>div>div.event-origin>div>img {
+	    margin-top: 1rem;
+	    margin-bottom: 0.92rem;
+	}
+	.page{
+		position: static;
+		bottom: 0rem;
+		left: 0rem;
+		display: flex;
+	}
+	ul.page>li>i{
+	   width: 0.28rem;
+	    height: 0.08rem;
+	    opacity: 0.4;
+	    background-color: rgba(255, 255, 255, 1);
+	    margin-right: 0.2rem;
+	}
+	ul.page>li>span{
+		display: none;
+	}
+	ul.page>li.active>i{
+		width: 0.84rem;
+		opacity: 1;
+	}
+	.details>div>div.event-features>img{
+		width: 100%;
+		height: 8.92rem;
+	}
+	.details>div>div.event-features>div>ul>li>i {
+	    width: 8px;
+	    height: 8px;
+	    border: 2px solid rgba(255, 255, 255, 1);
+	    margin-right: 8px;
+	    margin-left: 40px;
+	}
+	.event-features>div{
+		display: flex;
+		justify-content: space-around;
+	}
+	.event-features>div>img{
+		width: 50%
+	}
+	.details>div>div.event-features>div>ul{
+		margin-top: 0.8rem;
+	}
+	.details>div>div.event-features>div>ul>li{
+		margin-top: 0.16rem;
+	}
+	.details .team-group>ul>li.now-group {
+	    height: 5.28rem;
+	    border-top-left-radius: 0.08rem;
+	    border-top-right-radius: 0.08rem;
+	    padding: 0.52rem 0.88rem 1.2rem 0.6rem;
+	    font-size: 0.48rem;
+	}
+	.details .team-group>ul>li.now-group>p:first-child {
+	    font-size: 0.52rem;
+	    margin-bottom: 0.2rem;
+	}
+	.details .team-group>ul>li {
+	    height: 1.72rem;
+	    padding: 0.48rem 0.8rem 0.48rem 0.6rem;
+	    font-size: 0.52rem;
+	}
+	.details .team-group>ul {
+	    margin-bottom: 0.8rem;
+	}
+	.details .team-group {
+	    padding-bottom: 1.12rem;
+	    margin-bottom: 1.12rem;
+	    border-bottom: 0.04rem dashed rgba(151,151,151,0.4);
+	}
+	.details .team-grade ul li img {
+	    margin-bottom: 0.2rem;
+	    width: 2rem;
+	    height: 1.6rem;
+	}
+	.details .team-grade ul li {
+	    font-size: 0.52rem;
+	}
+	.details .team-grade div {
+	    width: 100%;
+	    border-radius: 0.12rem;
+	    border: 0.04rem dashed rgba(151, 151, 151, 1);
+	    padding: 0.84rem 0.48rem 0.44rem 0.84rem;
+	    margin-top: 0.4rem;
+	    margin-bottom: 1.2rem;
+	}
+	.details .team-grade div:before {
+	    width: 0.2rem;
+	    height: 0.2rem;
+	    border-top: 0.04rem dashed rgba(151, 151, 151, 1);
+	    border-left: 0.04rem dashed rgba(151, 151, 151, 1);
+	    top: -0.16rem;
+	    left: 1.4rem;
+	}
+	.details .way-introduce>ul.way li img {
+		width: 2.92rem;
+	    height: 1.04rem;
+	    margin-bottom: 0.6rem;
+	}
+	.details .way-introduce>ul.way li p.mile span {
+	    font-family: DIN-Condensed-Bold;
+	    font-size: 0.56rem;
+	    margin-right: 0.2rem;
+	}
+	.details .way-introduce>ul.way li p.mile {
+	    font-size: 0.48rem;
+	}
+	.details .way-introduce>ul.way li p {
+	    font-size: 0.44rem;
+	}
+	.details .way-introduce>ul.way-img{
+		left: -3rem;
+	}
+	.details .way-txt {
+	    margin-bottom: 1rem;
+	    border-radius: 0.08rem;
+	    font-size: 0.52rem;
+	}
+	.details .way-txt .way-txt-intro {
+	    padding: 1rem 0.8rem 1rem 0.8rem;
+	    border-bottom: 0.04rem solid #2D2C40;
+	}
+	.details .way-txt .way-icon {
+	    padding: 0.68rem 1.28rem 1.36rem 0.8rem;
+	}
+	.details .way-txt .way-icon>ul:first-child li{
+		width: 33.3%;
+		margin-left: 0px;
+		margin-top: 1rem;
+	}
+	.details .way-txt .way-icon>ul.start-end{
+		width: 1000%;
+	}
+	.details .way-txt .way-icon>ul li img{
+	    margin-right: 0.2rem;
+	}
+	.MECA p:last-child{
+		float: left;
+	}
+	.details .event-date .event-date-day1 p.week {
+	    margin-left: -1.04rem;
+	}
 }
