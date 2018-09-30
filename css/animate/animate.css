@@ -1,0 +1,56 @@
+@keyframes navPage{
+	0%{
+		opacity: 0;
+		left: -10px;
+	}
+	100%{
+		opacity: 1;
+		left: 0px;
+	}
+}
+@keyframes navLine{
+	0%{
+		width: 0px;
+	}
+	100%{
+		width: 147px;
+	}
+}
+@keyframes title{
+	0%{
+		opacity: 0;
+		top: 20px;
+	}
+	100%{
+		opacity: 1;
+		top: 0px;
+	}
+}
+@keyframes more{
+	0%{
+		opacity: 0;
+		bottom: 30px;
+	}
+	100%{
+		opacity: 1;
+		bottom: 50px;
+	}
+}
+@keyframes leftLine{
+	0%{
+		height: 0px;
+	}
+	100%{
+		height: 193px;
+	}
+}
+@keyframes page{
+	0%{
+		width: 3px;
+		height: 1px;
+	}
+	100%{
+		width: 100px;
+		height: 1px;
+	}
+}

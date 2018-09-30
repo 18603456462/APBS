@@ -11,25 +11,28 @@
 }
 .news>div{
 	width: 100%;
-	height: 120px;
 	padding: 21px 119px 19px 86px;
+	
 }
-.news>div>div>img{
+.news-txt{
+	width: 500px;
+}
+.news>div>div>div>img{
 	widows: 120px;
 	height: 80px;
 	margin-right: 30px;
 }
-.news>div>div:first-child{
+.news>div>div>div:first-child{
 	margin-right: 53px;
 	position: relative;
 	margin-top: 10px;
 }
-.news>div>div>p.font-num{
+.news>div>div>div>p.font-num{
 	font-size: 19px;
 	margin-bottom: 2px;
 	margin-left: 5px;
 }
-.news>div>div:first-child:before{
+.news>div>div>div:first-child:before{
 	content: "";
 	display: inline-block;
 	width: 26px;
@@ -39,12 +42,12 @@
 	left: 0px;
 	transform: rotate(-19deg);
 }
-.news>div>div>div>p.title{
+p.title{
 	font-size: 15px;
 	margin-bottom: 14px;
 }
-.news>div>div>div>p.opacity6{
-	width: 502px;
+.news>div>div>div>div>p.opacity6{
+	width: 80%;
 }
 .news div.check>a{
 	line-height: 60px;
@@ -110,9 +113,6 @@ ul{
 	box-sizing: border-box;
 	padding: 32px 98px 27px 83px;
 	background: linear-gradient(#35344B 100%,#35344B 0%);
-	position: absolute;
-	bottom: 0px;
-	right: 0px;
 }
 .partner .caro-icon{
 	width: 50px;
@@ -140,4 +140,106 @@ ul{
 .partner ul li:last-child img:last-child{
 	margin-top: 15px;
 }
+@media only screen and (min-width:768px ) {
+	.news .news-txt p:last-child{
+		display: none;
+	}
+	.partner{
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+	}
+}
 
+@media only screen and (max-width:768px ) {
+	body{
+		background: #2B2A3E;
+	}
+	.news .news-time{
+		display: none;
+	}
+	.news .news-txt p:nth-child(2){
+		display: none;
+	}
+	.news .news-txt{
+		width: 8rem;
+		text-align: left;
+		font-size: 0.6rem;
+	}
+	.news{
+		width: 100%;
+		text-align: center;
+		margin-top: 2rem;
+		padding-top: 0.84rem;
+	}
+	.news h1{
+		margin-left: 0rem;
+		margin-bottom: 1rem;
+	}
+	.news>div {
+	    height: 4.4rem;
+	    padding: 0.6rem 0.8rem 0.6rem 0.8rem;
+	}
+	.news>div>div>div>img{
+		width: 4.8rem;
+		height: 3.2rem;
+		margin-right: 0.6rem;
+	}
+	.news div.check{
+		display: none;
+	}
+	
+	/*关于我们*/
+	.shade{
+		display: none;
+	}
+	.banner>ul>li>img{
+		display: none;
+		
+	}
+	.contact{
+		width: 100%;
+		height: 16.28rem;
+		position: fixed;
+		right: 0rem;
+		bottom: 0px;
+		top: auto;
+		overflow: hidden;
+	}
+	.contact div.contact-information {
+	    padding: 0.84rem 0px 0rem 0rem;
+	    border-bottom: 0.04rem solid rgba(155,155,155,0.4);
+	    margin-left: 1.2rem;
+	}
+	.contact div.contact-information>ul {
+	    padding-bottom: 0.92rem;
+	    border-bottom: none;
+	}
+	.partner{
+		background: transparent;
+		padding: 0.84rem 2.08rem 0rem 1.2rem;
+	}
+	.contact-information{
+		width: 1000%;
+	}
+	.contact-information ul{
+		float: left;
+	}
+	.contact div.contact-information>ul>li{
+	    width: 187px;
+	}
+	.committee>ul>li{
+		width: 140px;
+	}
+	.partner>ul{
+		margin-left: 1.36rem;
+	}
+	.contact h1 {
+	    font-size: 0.48rem;
+	    margin-bottom: 1rem;
+	}
+	.banner li{
+		background: url(../../img/icon/about-bj.png) no-repeat 0px 0px;
+		background-size: 100% 57%;
+	}
+}

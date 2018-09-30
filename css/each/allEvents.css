@@ -10,12 +10,15 @@ p{
 
 
 /*全部赛事*/
+.allEvents>ul>li{
+	position: relative;
+}
 .coming-soon{
 	position: absolute;
 	background: url('../../img/index/Group 7.svg') no-repeat;
 	background-size: cover;
 }
-.allEvents>ul>li{
+#Events{
 	position: relative;
 	box-sizing: border-box;
 }
@@ -80,13 +83,14 @@ p{
 }
 
 /*赛事详情*/
+
+
 .details{
 	overflow-y:auto ;
 	overflow-x: hidden;
 	color: white;
 	font-weight: 300;
 	box-sizing: border-box;
-	position: absolute;
 	
 }
 .details .title{
@@ -168,6 +172,7 @@ p{
 .details .way-introduce>ul.way{
 	display: flex;
 	justify-content: space-around;
+	width: 80%;
 }
 .details .way-introduce>ul.way li img{
 	height: 50px;
@@ -190,7 +195,7 @@ p{
 .details .way-introduce>ul.way-img{
 	position: relative;
 	text-align: center;
-	width: 100%;
+	width: 80%;
 	height: 492px;
 	
 }
@@ -204,7 +209,6 @@ p{
 }
 .details .way-txt{
 	background: linear-gradient(#F7D24C,#EE9E26);
-	margin-left: 4px;
 	margin-bottom: 40px;
 	border-radius: 4px;
 	color: #282739;
@@ -313,7 +317,18 @@ p{
 .details .event-date .event-date-day1>ul>li>ul>li{
 	margin-top: 5px;
 }
-
+#Events{
+	position: relative;
+}
+.img-zhezhao{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: linear-gradient(to bottom,transparent 0%,#171628 100%);
+	opacity: 0.6;
+}
 
 /*PC端*/
 @media only screen and (min-width: 768px){
@@ -374,7 +389,8 @@ p{
 		border-top: none;
 	}
 	.allEvents{
-		width: 84%;
+		width: 93%;
+		position: relative;
 	}
 	.allEvents>ul{
 		width: 1000%;
@@ -383,13 +399,19 @@ p{
 		overflow: hidden;
 		height: 100%;
 	}
+	#Events{
+		width: 345px;
+		float: left;
+		height: 100%;
+		padding-left: 51px;
+	}
 	.allEvents>ul>li{
 		width: 345px;
 		float: left;
 		height: 100%;
 		padding-left: 51px;
 	}
-	.allEvents>ul>li:first-child{
+	#Events{
 		background: url(../../img/index/草原赛事.png) no-repeat;
 		background-size: cover;
 	}
@@ -472,14 +494,16 @@ p{
 	
 	
 	/*赛事详情*/
+	.allEvents>div:first-child{
+		width: 345px;
+		height: 100%;
+	}
 	.details{
-		width: 70%;
+		width: 75%;
 		height: 100%;
 		padding-top: 73px;
 		padding-left: 91px;
-		padding-right: 247px;
-		right: 0rem;
-		top: 0rem;
+		padding-right: 121px;
 	}
 	.details h4{
 		font-size: 16px;
@@ -512,8 +536,8 @@ p{
 	}
 	.details>div>div.event-origin>div>ul.caro{
 		position: relative;
-		width: 400px;
-		height: 268px;
+		width: 100%;
+		height: 300px;
 		margin-bottom: 20px;
 	}
 	.details>div>div.event-origin,.details>div>div.event-features,.details>div>div.introduce{
@@ -544,7 +568,7 @@ p{
 		margin-left: 20px;
 	}
 	.details>div>div.event-origin>div>p.name{
-			font-size: 16px;
+		font-size: 16px;
 	}
 	.details>div>img{
 		margin-bottom: 20px;
@@ -552,7 +576,20 @@ p{
 	.details>div>p{
 		font-size: 14px;
 	}
-	
+	.details>div>img{
+		width: 100%;
+	}
+	.details>div>div.introduce>img,.details>div>div.event-features>img{
+		width: 65%;
+		height: 100%;
+	}
+	.details>div>div.event-origin>div>ul.caro>li>img,.details>div>div.event-origin>div>ul.caro>li{
+		width: 100%;
+		height: 100%;
+	}
+	.details>div>div.event-origin>div:first-child{
+		width: 65%;
+	}
 	/*赛事/赛制介绍*/
 	.details .team-group>ul>li.now-group{
 		height: 160px;
@@ -628,7 +665,7 @@ p{
 		height: 6rem;
 		padding:0.6rem 0rem 0.52rem 1.2rem;
 	}
-	.allEvents>ul>li:first-child{
+	#Events{
 		background: url(../../img/index/banner01.png) no-repeat;
 		background-size: cover;
 	}
@@ -693,31 +730,33 @@ p{
 	}
 	
 	/*赛事详情*/
-	#Events{
+	.starting{
 		display: none;
 	}
-	.allEvents>ul>li.mobile-events{
+	.mobile-events{
 		display: block;
 		width: 100%;
 		height: 2rem;
+		/*line-height: 2rem;*/
 		background: url(../../img/index/banner01.png) no-repeat;
 		background-size: 100% 100px;
 		filter: grayscale(0%);
 		text-align: center;	
 	}
-	.allEvents>ul>li.mobile-events>.zhezhao{
+	.mobile-events>.zhezhao{
 		z-index: -2;
 	}
-	.allEvents>ul>li.mobile-events>h1{
+	.mobile-events>h1{
 		color: white;
 		display: inline-block;
 		font-size: 0.56rem;
 		position: relative;
+		line-height: 2rem;
 	}
-	.allEvents>ul>li.mobile-events>h1>span{
+	.mobile-events>h1>span{
 		margin-right: 0.12rem;
 	}
-	.allEvents>ul>li.mobile-events>h1:after{
+	.mobile-events>h1:after{
 		content: "";
 		display: inline-block;
 		opacity: 0.5;
@@ -726,9 +765,9 @@ p{
 	    border-top: 0.25rem solid white;
 	    position: absolute;
 	    right: -1.2rem;
-	    top: 30%;
+	    top: 45%;
 	}
-	.allEvents>ul>li.mobile-events>button{
+	.mobile-events>button{
 		border: 1px solid white;
 		background: transparent;
 		opacity: 0.5;
@@ -738,6 +777,8 @@ p{
 		border-radius: 0.08rem;
 		margin-left: 1.8rem;
 		padding-right: 0.52rem 0.8rem 0.56rem 4.2rem;
+		position: relative;
+		top: 0px;
 	}
 	.details .title>li{
 		font-size: 0.48rem;

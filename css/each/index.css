@@ -63,9 +63,19 @@ body{
 	}
 	.content-right>div>div.left-line{
 		width: 3px;
-		height: 193px;
+		height: 0px;
 		margin-top: 78px;
-		margin-bottom: 166px;
+		/*margin-bottom: 166px;*/
+		position: relative;
+	    -webkit-animation-name: leftLine;
+	    animation-name: leftLine;
+	    -webkit-animation-duration: 0.8s;  
+	    animation-duration: 0.8s;  
+	    -webkit-animation-fill-mode: forwards ;  
+	    animation-fill-mode: forwards ;
+	    animation-direction: cubic-bezier(0.19, 1, 0.22, 1);
+	    -webkit-animation-delay:2s;
+	    animation-delay:2s; 
 	}
 	.content-right{
 		width: 84%;
@@ -76,9 +86,21 @@ body{
 		padding-right: 136px;
 		position: relative;
 	}
+	
 	.content-right>div{
-		
 		position: relative;
+	}
+	.content-right .animate-title{
+		position: relative;
+		opacity:0;
+	    -webkit-animation-name: title;
+	    animation-name: title;
+	    -webkit-animation-duration: 1s;  
+	    animation-duration: 1s;  
+	    -webkit-animation-fill-mode: forwards ;  
+	    animation-fill-mode: forwards ;
+	    -webkit-animation-delay:0.5s;
+	    animation-delay:0.5s; 
 	}
 	.content-right>div>div>h1:first-child{
 		font-weight: 300;
@@ -89,6 +111,9 @@ body{
 	ul.page{
 		display: flex;
 		padding-left: 0rem;
+		position: absolute;
+		bottom: 50px;
+		left: 0px;
 	}
 	ul.page>li{
 		margin-left: 15px;
@@ -106,6 +131,12 @@ body{
 		height: 1px;
 		opacity: 0.6;
 		background-color: rgba(255, 255, 255, 1);
+		/*-webkit-animation-name: page;
+	    animation-name: page;
+	    -webkit-animation-duration: 1s;  
+	    animation-duration: 1s;  
+	    -webkit-animation-fill-mode: forwards ;  
+	    animation-fill-mode: forwards;*/
 
 	}
 	.content-right>div>.open>p{
@@ -118,14 +149,24 @@ body{
 	}
 	.content-right>div>.open{
 		width: 330px;
+		position: relative;
 		text-align: right;
 		margin-right: 0px;
+		opacity:0;
+	    -webkit-animation-name: title;
+	    animation-name: title;
+	    -webkit-animation-duration: 0.8s;  
+	    animation-duration: 0.8s;  
+	    -webkit-animation-fill-mode: forwards ;  
+	    animation-fill-mode: forwards ;
+	    -webkit-animation-delay:1s;
+	    animation-delay:1s; 
 	}
 	.content-right>div>.open>ul{
 		width: 300px;
 		height: 57px;
 		margin-top: 53px;
-		padding-left: 0px;
+		margin-left: 30px;
 		background: url('../../img/index/Group 15.png') no-repeat;
 		background-size: cover;
 	}
@@ -138,6 +179,15 @@ body{
 		bottom: 50px;
 		right:-20px;
 		padding-left: 0px;
+		opacity:0;
+	    -webkit-animation-name: more;
+	    animation-name: more;
+	    -webkit-animation-duration: 0.8s;  
+	    animation-duration: 0.8s;  
+	    -webkit-animation-fill-mode: forwards ;  
+	    animation-fill-mode: forwards ;
+	    -webkit-animation-delay:1.5s;
+	    animation-delay:1.5s; 
 	}
 	.content-right>div>.open>ul>li{
 		font-size: 16px;

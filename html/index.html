@@ -5,11 +5,14 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>亚太地区商学院统计赛</title>
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap/css/bootstrap.css"/>
+	
 		<link rel="stylesheet" type="text/css" href="../css/common/common.css"/>
 		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../css/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+			<link rel="stylesheet" type="text/css" href="../css/animate/animate.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/each/index.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/fonts.css"/>
+		
 		<script src="../js/include.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
@@ -43,7 +46,6 @@
 							<div class="pull-right">
 								<span>亚太地区商学院</span><br />
 								<span>挑战赛</span>
-								
 							</div>
 							<hr />
 						</a>
@@ -77,7 +79,7 @@
 			<!--右侧内容-->
 			<div class="content-right">
 				<div>
-					<div>
+					<div class="animate-title">
 						<h1>亚太地区商学院</h1>
 						<h1>挑战赛</h1>
 					</div>
@@ -85,8 +87,6 @@
 					<ul class="page">
 						<li class="active"><span class="font-num">01</span><br/><i></i></li>
 						<li><span class="font-num">02</span><br/><i></i></li>
-						<li><span class="font-num">03</span><br/><i></i></li>
-						<li><span class="font-num">04</span><br/><i></i></li>
 					</ul>
 					
 				</div>
@@ -128,7 +128,7 @@
 							</li>
 						</ul>
 						<p class="view">
-							<a href="allEvents/index.html">查看详情</a>
+							<a href="allEvents/index.html" class="fontWeight300">查看详情</a>
 							<a href="#" class="all-com">全部赛事</a>
 						</p>
 					</div>
@@ -144,4 +144,17 @@
 	</body>
 </html>
 <script type="text/javascript">
+	$(function(){
+		//轮播图
+		var n=0;
+		function caro(){
+			var ob=$(".banner ul li");
+			var page=$(".page li");
+			ob.eq(n).fadeIn().siblings().fadeOut('slow');
+//			page.eq(n).addClass("active").siblings().removeClass("active")
+			n++;
+			if(n>1){n=0}
+		}
+		var time=setInterval(caro,2500)
+	})
 </script>

@@ -1,9 +1,13 @@
+html{
+	display: initial;
+}
+body{
+	display: initial;
+}
 .enter-information{
-	height: 55%;
 	overflow-y: scroll;
 	padding-bottom: 47px;
 }
-
 /*@media only screen and (min-width: 768px) {*/
 	.coming-soon{
 		width: 266px;
@@ -36,6 +40,7 @@
 	.enter-information h5{
 		font-size: 14px;
 		font-weight: bold;
+		margin-top: 0px;
 	}
 	.enter-information .ticket-type ul li{
 		width: 384px;
@@ -46,12 +51,9 @@
 		box-shadow: 0px 9px 31px 0px rgba(40, 39, 57, 0.07);
 		padding: 19px 24px 20px 28px;
 		position: relative;
-		margin-left: 30px;
+		margin-right: 30px;
 		margin-top: 28px;
 		margin-bottom: 45px;
-	}
-	.enter-information .ticket-type ul li:first-child{
-		margin-left: 0px;
 	}
 	.enter-information .ticket-type ul li>div>span{
 		font-weight: 500;
@@ -73,9 +75,6 @@
 	.enter-information .ticket-type ul li>div:nth-child(2) .money{
 		font-size: 12px;
 	}
-	
-	
-	
 	.enter-information .ticket-type ul li .border{
 		width: 7px;
 		height: 100%;
@@ -160,10 +159,14 @@
 		width: 100%;
 		height: 60px;
 		background-color: rgba(255, 255, 255, 1);
-		box-shadow: 0px -6px 13px 0px rgba(0, 0, 0, 0.4);
+		box-shadow: 0px -6px 13px 0px rgba(0, 0, 0, 0.04);
 		box-sizing: border-box;
 		padding: 0px 87px 0px 119px;
 		line-height: 60px;
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		z-index: 1;
 	}
 	.pay button{
 		width: 125px;
@@ -189,8 +192,26 @@
 		font-size: 14px;
 		font-weight: normal;
 	}
+	
+	/*注意事项*/
+	.sure{
+		cursor: pointer;
+	}
+	.sure>i{
+		width: 10px;
+	    height: 10px;
+	    border-radius: 2px;
+	    border: solid 1px #d5dce2;
+	    margin-right: 10px;
+	}
 /*}*/
-@media only screen and (min-width:768px ) {
+@media screen and (min-width:768px ) {
+	.allEvents{
+		height: 100%;
+	}
+	.personnal {
+	    width: 88%;
+	}
 	.enter-information .ticket-type ul li>div:nth-child(2) .money p{
 		float: left;
 	}
@@ -221,9 +242,21 @@
 	.personnal .form-group.form-width{
 		width: 314px;
 	}
+	.allEvents{
+		position: relative;
+	}
+	.enter-information{
+		height: 75%;
+	}
+	.pay{
+		bottom: 0px;
+	}
+	.pay button{
+		margin-top: 15px;
+	}
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
 	body{
 		background: white;
 	}
@@ -233,6 +266,7 @@
 	.mobile-events{
 		background: white;
 		padding: 0.6rem 0rem 0rem 0.8rem;
+		height: auto;
 	}
 	.mobile-events>div>p{
 		margin-top: 0.4rem;
@@ -286,7 +320,7 @@
 		width: 100%;
 	}
 	.enter-information{
-		height: 22.2rem;
+		height: 19rem;
 	}
 	.pay{
 		position: absolute;
