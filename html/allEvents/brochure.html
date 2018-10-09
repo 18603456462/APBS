@@ -13,7 +13,9 @@
 		<script src="../../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../css/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="../../css/each/index.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/animate/animate.css"/>
 		<link rel="stylesheet" type="text/css" href="../../css/each/allEvents.css" />
+		<script src="../../js/language-2.js" type="text/javascript" charset="utf-8"></script>
 
 		<script src="../../js/include.js" type="text/javascript" charset="utf-8"></script>
 		<style type="text/css">
@@ -38,10 +40,10 @@
 			<nav class="navbar small-navbar">
 				<div class="container-fluid">
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<div type="button" id="nav-button">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
-			  			</button>
+			  			</div>
 						<a class="navbar-brand" href="#">
 							<img src="../../img/Events/Group 4.svg" class="pull-left" />
 							<hr />
@@ -64,12 +66,33 @@
 							</li>
 						</ul>
 					</div>
+					
 					<div class="nav-bottom">
 				
 					</div>
 				</div>
 			</nav>
-
+			<div class="mobile-bar">
+				<ul class="nav-list">
+					<li>
+						<a href="../index.html">首页</a>
+					</li>
+					<li>
+						<a href="../allEvents/index.html">全部赛事</a>
+					</li>
+					<li>
+						<a href="../news/index.html">赛事新闻</a>
+					</li>
+					<li>
+						<a href="../about.html">关于我们</a>
+					</li>
+				</ul>
+			</div>
+			<div id="change">
+				<span class="now opacity6">中</span>
+				<i class="opacity6"></i>
+				<span class="opacity6">EN</span>
+			</div>
 			<!--全部赛事-->
 			<div class="allEvents Regulations">
 				<div>
@@ -432,8 +455,14 @@
 	</body>
 	<script type="text/javascript">
 		$("#Events").on("click", function() {
-			window.location.href = 'Regulations.html'
+			window.location.href = 'index.html'
 		})
 	</script>
 
 </html>
+<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$("#change").click(function() {
+		translate();
+	})
+</script>

@@ -14,8 +14,9 @@
 		<script src="../../css/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="../../css/each/index.css" />
 		<link rel="stylesheet" type="text/css" href="../../css/each/allEvents.css" />
-
+		<link rel="stylesheet" type="text/css" href="../../css/animate/animate.css"/>
 		<script src="../../js/include.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/language-2.js" type="text/javascript" charset="utf-8"></script>
 		<style type="text/css">
 			@media only screen and (min-width: 768px) {
 				.details{
@@ -23,7 +24,7 @@
 					padding-right: 0px;
 					box-sizing: border-box;
 				}
-				.details>.title-box,.details>div>h4,.details>div>div.team-group,.details>div>div.team-grade,.details>div>div.way-introduce{
+				.details>.title-box,.details>div>.about,.details>div>div.team-group,.details>div>div.team-grade,.details>div>div.way-introduce{
 					margin-left: 91px;
 					margin-right: 121px;
 				}
@@ -42,10 +43,10 @@
 			<nav class="navbar small-navbar">
 				<div class="container-fluid">
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<div type="button" id="nav-button">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
-			  			</button>
+			  			</div>
 						<a class="navbar-brand" href="#">
 							<img src="../../img/Events/Group 4.svg" class="pull-left" />
 							<hr />
@@ -68,12 +69,33 @@
 							</li>
 						</ul>
 					</div>
+					
 					<div class="nav-bottom">
 				
 					</div>
 				</div>
 			</nav>
-
+			<div class="mobile-bar">
+				<ul class="nav-list">
+					<li>
+						<a href="../index.html">首页</a>
+					</li>
+					<li>
+						<a href="../allEvents/index.html">全部赛事</a>
+					</li>
+					<li>
+						<a href="../news/index.html">赛事新闻</a>
+					</li>
+					<li>
+						<a href="../about.html">关于我们</a>
+					</li>
+				</ul>
+			</div>
+			<div id="change">
+				<span class="now opacity6">中</span>
+				<i class="opacity6"></i>
+				<span class="opacity6">EN</span>
+			</div>
 			<!--全部赛事-->
 			<div class="allEvents Regulations clearfix">
 				<div>
@@ -101,7 +123,7 @@
 					</div>
 					<div class="mobile-events">
 						<h1><span class="font-num opacity6">2018</span>第三届草原挑战赛</h1>
-						<button>前去报名</button>
+						<button><a href="../enter/index.html">前去报名</a></button>
 						<div class="zhezhao"></div>
 					</div>
 				</div>
@@ -115,21 +137,30 @@
 					</div>
 					
 					<div>
-						<h4 class="about">赛制介绍</h4>
+						<div class="about"><span>赛制介绍</span></div>
 						<div class="team-group">
 							<ul>
 								<li class="now-group">
-									<p>团队竞技组 (A组)</p>
+									<p class="clearfix">
+										<span class="pull-left">团队竞技组 (A组)</span>
+										<span class="pull-right">+</span>
+									</p>
 									<p>A组队员必须为所在商学院学生（含在读、往届、预录取）。每个院校需满足6-10（含）人，方可组成竞技组（不足6人的，自动视为B组），队员需完成两天赛程。组委会建议参加竞技组的队员有长期运动基础。
 </p>
 								</li>
 								<li>
-									<span class="opacity6 pull-left">体验组 (B组)</span>
-									<span class="pull-right">+</span>
+									<p class="clearfix">
+										<span class="opacity6 pull-left">体验组 (B组)</span>
+										<span class="pull-right">-</span>
+									</p>
+									<p>A组队员必须为所在商学院学生（含在读、往届、预录取）。每个院校需满足6-10（含）人，方可组成竞技组（不足6人的，自动视为B组），队员需完成两天赛程。组委会建议参加竞技组的队员有长期运动基础。</p>
 								</li>
 								<li>
-									<span class="opacity6 pull-left">亲子组 (C组)</span>
-									<span class="pull-right">+</span>
+									<p class="clearfix">
+										<span class="opacity6 pull-left">亲子组 (C组)</span>
+										<span class="pull-right">-</span>
+									</p>
+									<p>A组队员必须为所在商学院学生（含在读、往届、预录取）。每个院校需满足6-10（含）人，方可组成竞技组（不足6人的，自动视为B组），队员需完成两天赛程。组委会建议参加竞技组的队员有长期运动基础。</p>
 								</li>
 							</ul>
 							<p class="opacity6">比赛将历经2天，参赛队员以徒步、越野跑的形式，在规定的时间内完成赛程。本赛事以院校为单位组队参赛。每个院校代表队可包含团队竞技组（简称竞技组或A组）、体验组（简称B组）、亲子组（简称C组）、领队、随队记者、院校领导或中心老师。由各院校MBA中心核准后在规定时间内（6月25号下午5点前）由领队将参赛名单报至赛事组委会队员中心。</p>
@@ -157,9 +188,10 @@
 								<p class="opacity6">1. 每个竞赛日各院校竞技组有效参赛成绩的第六名为该团队当日成绩；两个竞赛日成绩之和为团队总成绩。<br />
 2. 竞技组中非有效参赛队员不再具备团队成绩排名资格，此前成绩作废，竞技组此前团队当日成绩全部重新排序并取新第六名成绩计算。<br />
 3. 如团队有效队员不足六人则该团队成绩无效，但该团队有效成员仍可参加后续的赛程，其成绩不再计入团队排名。</p>
+								<div></div>
 							</div>
 						</div>
-						<h4>赛道介绍</h4>
+						<div class="about">赛道介绍</div>
 						<div class="way-introduce">
 							<ul class="way">
 								<li>
@@ -169,7 +201,7 @@
 								</li>
 								<li>
 									<img src="../../img/Events/未选中-15公里小图.svg"/>
-									<p class="opacity6 mile"><span>35</span>公里</p>
+									<p class="opacity6 mile"><span>15</span>公里</p>
 									<p class="opacity6">“冰川地貌”15公里越野</p>
 								</li>
 								<li>
@@ -181,12 +213,32 @@
 							<ul class="way-img">
 								<li>
 									<img src="../../img/Events/35公里-赛道图.svg"/>
+									<ul class="roadmap">
+										<li class="active">赛道图</li>
+										<li>海拔图</li>
+									</ul>
+									<div class="north">
+										<p>N</p>
+										<i class="sanjiao"></i>
+									</div>
 								</li>
 								<li class="disNone">
 									<img src="../../img/Events/15公里-赛道图.svg"/>
+									<ul class="roadmap">
+										<li class="active">赛道图</li>
+										<li>海拔图</li>
+									</ul>
+									<div class="north">
+										<p>N</p>
+										<i class="sanjiao"></i>
+									</div>
 								</li>
 								<li class="disNone">
 									<img src="../../img/Events/亲子跑-赛道图.svg"/>
+									<div class="north">
+										<p>N</p>
+										<i class="sanjiao"></i>
+									</div>
 								</li>
 							</ul>
 						</div>
@@ -291,8 +343,72 @@
 	</body>
 	<script type="text/javascript">
 		$("#Events").on("click", function() {
-			window.location.href = 'Regulations.html'
+			window.location.href = 'index.html'
+		})
+		$(function(){
+			function groupChange(){
+				var ob=$(".team-group ul li");
+				ob.click(function(){
+					$(this).addClass("now-group").siblings().removeClass('now-group');
+					$(this).children("p:last-child").show().end().find("span:first").removeClass("opacity6").siblings("span").text("-");
+					$(this).siblings().children("p:last-child").hide().end().find("span:first").addClass("opacity6").siblings("span").text("+");
+				})
+			}
+			groupChange();
+			var groupImg=["../../img/Events/Group 9.png","../../img/Events/Group 9.png"]
+			$(".team-grade ul li").on("click",function(){
+				var ob=$(this);
+			})
+			var img={
+				wayImg:{
+					checked:["../../img/Events/选中-35公里小图.svg","../../img/Events/选中-15公里小图.svg","../../img/Events/选中-亲子跑小图.svg"],
+					noCheck:["../../img/Events/未选中-35公里小图.svg","../../img/Events/未选中-15公里小图.svg","../../img/Events/未选中-亲子跑小图.svg"]
+				},
+				gradeImg:{
+					checked:["../../img/Events/Group 9.png","../../img/Events/女队员-选中.png","../../img/Events/个人成绩-选中.png","../../img/Events/关门时间-选中.png"],
+					noCheck:["../../img/Events/团队成绩-默认.png","../../img/Events/Page 1.png","../../img/Events/Group 10.png","../../img/Events/Group 11.png"]
+				},
+				distance:{
+					longer:["../../img/Events/35公里-赛道图.svg","../../img/Events/35公里-海拔图.svg"],
+					shorter:["../../img/Events/15公里-赛道图.svg","../../img/Events/15公里-海拔图.svg"]
+				}
+			}
+			function roadmapChange(id,n,img){
+				id.eq(n).children("li").click(function(){
+					var index=$(this).index();
+					$(this).addClass("active").siblings().removeClass("active")
+					var ob=$(this).parent("ul.roadmap").siblings("img");
+					ob.attr("src",img[index]);
+					
+				})
+			}
+			roadmapChange($(".roadmap"),0,img.distance.longer)
+			roadmapChange($(".roadmap"),1,img.distance.shorter)
+			
+			function iconCheck(ob,checked,nocheck,flag){
+				ob.click(function(){
+					var n=$(this).index();
+					for(var i=0;i<ob.length;i++){
+						ob.eq(i).children("img").attr("src",nocheck[i]);
+					}
+					$(this).children("img").attr("src",checked[n]);
+					if(flag){
+						$(".way-img>li").eq(n).show().siblings().hide();
+					}else{
+						var left=98+210*n;
+						$(".team-grade>div>div").css("left",left+"px")
+					}
+				})
+			}
+			iconCheck($(".team-grade ul li"),img.gradeImg.checked,img.gradeImg.noCheck,false);
+			iconCheck($(".way li"),img.wayImg.checked,img.wayImg.noCheck,true);
 		})
 	</script>
 
 </html>
+<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$("#change").click(function() {
+		translate();
+	})
+</script>

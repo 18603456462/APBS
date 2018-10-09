@@ -14,8 +14,9 @@
 		<script src="../../css/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="../../css/each/index.css" />
 		<link rel="stylesheet" type="text/css" href="../../css/each/allEvents.css" />
-
+		<link rel="stylesheet" type="text/css" href="../../css/animate/animate.css"/>
 		<script src="../../js/include.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/language-2.js" type="text/javascript" charset="utf-8"></script>
 		<style type="text/css">
 			@media only screen and (min-width:768px ) {
 				.allEvents{
@@ -32,10 +33,10 @@
 			<nav class="navbar small-navbar">
 				<div class="container-fluid">
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<div type="button" id="nav-button">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
-			  			</button>
+			  			</div>
 						<a class="navbar-brand" href="#">
 							<img src="../../img/Events/Group 4.svg" class="pull-left" />
 							<hr />
@@ -58,12 +59,33 @@
 							</li>
 						</ul>
 					</div>
+					
 					<div class="nav-bottom">
 				
 					</div>
 				</div>
 			</nav>
-
+			<div class="mobile-bar">
+				<ul class="nav-list">
+					<li>
+						<a href="../index.html">首页</a>
+					</li>
+					<li>
+						<a href="../allEvents/index.html">全部赛事</a>
+					</li>
+					<li>
+						<a href="../news/index.html">赛事新闻</a>
+					</li>
+					<li>
+						<a href="../about.html">关于我们</a>
+					</li>
+				</ul>
+			</div>
+			<div id="change">
+				<span class="now opacity6">中</span>
+				<i class="opacity6"></i>
+				<span class="opacity6">EN</span>
+			</div>
 			<!--全部赛事-->
 			<div class="allEvents Regulations">
 				<div>
@@ -83,15 +105,15 @@
 								<span class="data">08/03</span>
 								<span class="week">Wed</span>
 								<span class="year">2018</span>
-								<span class="data">08/06</span>
+								<span class="data">08/06</span>	
 								<span class="week">Fri</span>
 							</div>
 						</div>
-						
+						<div class="arrows"></div>
 					</div>
 					<div class="mobile-events">
 						<h1><span class="font-num opacity6">2018</span>第三届草原挑战赛</h1>
-						<button>前去报名</button>
+						<button><a href="../enter/index.html">前去报名</a></button>
 						<div class="zhezhao"></div>
 					</div>
 				</div>
@@ -102,7 +124,7 @@
 						<li><a href="brochure.html">赛事简章</a></li>
 					</ul>
 					<div>
-						<h4 class="about">关于草原挑战赛</h4>
+						<div class="about"><span>关于草原挑战赛</span></div>
 						<div class="introduce">
 							<img src="../../img/Events/01.png" />
 							<div>
@@ -122,7 +144,7 @@
 							</div>
 						</div>
 						<p class="opacity6">亚太地区商学院草原挑战赛面向全球华语商学院招募参赛队员，要求在两天内轻装完成50公里（35公里+15公里）草原越野任务，以期在三天的相处中，建立互助互信的同伴关系，体验和践行“理想、实践、责任”的赛事理念，从而以积极进取的商学院精神实现自我价值和承载社会责任。</p>
-						<h4>赛事起源</h4>
+						<div class="about">赛事起源</div>
 						<div class="event-origin">
 							<div>
 								<ul class="caro">
@@ -134,9 +156,8 @@
 									</li>
 								</ul>
 								<ul class="page">
-									<li class="active"><span>01</span><br/><i></i></li>
-									<li><span>02</span><br/><i></i></li>
-									<li><span>03</span><br/><i></i></li>
+									<li class=""><span>01</span><br/><i><i></i></i></li>
+									<li><span>02</span><br/><i><i></i></i></li>
 								</ul>
 							</div>
 							
@@ -147,7 +168,7 @@
 							</div>
 						</div>
 						<p class="opacity6">泱泱华夏三万里河山，煌煌先哲五千年文明。赛事活动经过两年多的甄选，落地于“俯黄河、倚长城、托幽燕、拄太行”的古代草原丝绸之路的桥头堡——内蒙古乌兰察布市辉腾锡勒草原。“天苍苍，野茫茫，风吹草低见牛羊”恰是其时草本风光的真实写照，“敕勒川，阴山下，天似穹庐，笼盖四野”描写的就是赛事所在地——辉腾锡勒草原。此次赛事，邀请全球华语地区一流商学院精英学子参与，着力打造“竞技搭台、商务唱戏”的广泛合作平台，携手各界力量为此平台汇入涓涓细流，弘扬“心无界、域无疆”的突破精神，力争在效率上打造无时空限制的商业合作联盟，矢志于与中国的精英中产群体同呼吸、共命运、把脉未来。</p>
-						<h4>赛事特色</h4>
+						<div class="about">赛事特色</div>
 						<div class="event-features">
 							<img src="../../img/Events/03.png" />
 							<div>
@@ -202,8 +223,26 @@
 	</body>
 	<script type="text/javascript">
 		$("#Events").on("click", function() {
-			window.location.href = 'Regulations.html'
+			window.location.href = 'index.html'
+		})
+		$(function(){
+			//轮播图
+			var n=0;
+			function caro(){
+				var ob=$(".caro li");
+				var page=$(".page li");
+				ob.eq(n).fadeIn('slow').siblings().fadeOut('slow');
+				page.eq(n).addClass("active").siblings().removeClass("active")
+				n++;
+				if(n>1){n=0}
+			}
+			var time=setInterval(caro,2500)
 		})
 	</script>
-
+	<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	$("#change").click(function() {
+		translate();
+	})
+</script>
 </html>

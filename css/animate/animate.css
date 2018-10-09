@@ -50,7 +50,35 @@
 		height: 1px;
 	}
 	100%{
-		width: 100px;
+		width: 80px;
 		height: 1px;
+	}
+}
+@keyframes left{
+	0%{
+		opacity: 0;
+		left: 40px;
+	}
+	100%{
+		opacity: 1;
+		left: 0px;
+	}
+}
+@keyframes left{
+	0%{
+		opacity: 0;
+		left: 40px;
+	}
+	100%{
+		opacity: 1;
+		left: 0px;
+	}
+}
+@keyframes comming{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
 	}
 }

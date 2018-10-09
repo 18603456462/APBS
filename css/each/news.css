@@ -75,7 +75,7 @@ ul{
 }
 .contact h1{
 	font-size: 18px;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 }
 .contact div.contact-information>ul{
 	padding-bottom: 15px;
@@ -84,6 +84,7 @@ ul{
 }
 .contact div.contact-information>ul>li{
 	float: left;
+	margin-top: 10px;
 	
 }
 .contact div.contact-information>ul>li>span{
@@ -109,7 +110,6 @@ ul{
 }
 
 .partner{
-	height: 248px;
 	box-sizing: border-box;
 	padding: 32px 98px 27px 83px;
 	background: linear-gradient(#35344B 100%,#35344B 0%);
@@ -148,6 +148,11 @@ ul{
 		position: absolute;
 		bottom: 0px;
 		right: 0px;
+		height: 34%;
+	}
+	.contact div.contact-information{
+		overflow-y:scroll ;
+		height: 66%;
 	}
 }
 

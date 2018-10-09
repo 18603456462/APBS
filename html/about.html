@@ -10,6 +10,8 @@
 		<script src="../css/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="../css/each/index.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/each/news.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/animate/animate.css"/>
+		<script src="../js/language.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/include.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
@@ -31,10 +33,10 @@
 			<nav class="navbar">
 				<div class="container-fluid">
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<div type="button" id="nav-button">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
-			  			</button>
+			  			</div>
 						<a class="navbar-brand" href="#">
 							<img src="../img/index/logo.png" class="pull-left"/>
 							<div class="pull-right">
@@ -70,9 +72,30 @@
 					</div>
 				</div>
 			</nav>
+			<div class="mobile-bar">
+				<ul class="nav-list">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="allEvents/index.html">全部赛事</a>
+					</li>
+					<li>
+						<a href="news/index.html">赛事新闻</a>
+					</li>
+					<li>
+						<a href="about.html">关于我们</a>
+					</li>
+				</ul>
+			</div>
+			<div id="change" style="z-index: 3;">
+				<span class="now opacity6">中</span>
+				<i class="opacity6"></i>
+				<span class="opacity6">EN</span>
+			</div>
 			<!--联系我们-->
 			<div class="contact">
-				<div class="contact-information clearfix">
+				<div class="contact-information clearfix scrollNone">
 					<h1>联系我们</h1>
 					<ul class="clearfix">
 						<li>
@@ -160,5 +183,9 @@
 		</div>
 	</body>
 </html>
+<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
+	$("#change").click(function() {
+		translate();
+	})
 </script>

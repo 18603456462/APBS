@@ -131,13 +131,28 @@ body{
 		height: 1px;
 		opacity: 0.6;
 		background-color: rgba(255, 255, 255, 1);
-		/*-webkit-animation-name: page;
+		-webkit-animation-name: page;
 	    animation-name: page;
-	    -webkit-animation-duration: 1s;  
+	    -webkit-animation-duration: 1s; 
 	    animation-duration: 1s;  
 	    -webkit-animation-fill-mode: forwards ;  
-	    animation-fill-mode: forwards;*/
-
+	    animation-fill-mode: forwards;
+		top: 0px;
+	}
+	ul.page>li.active>i>i{
+		height: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		background: #F4BE3C;
+		-webkit-animation-name: page;
+	    animation-name: page;
+	    -webkit-animation-duration: 1.5s; 
+	    animation-duration: 1.5s;  
+	    -webkit-animation-fill-mode: forwards ;  
+	    animation-fill-mode: forwards;
+	    -webkit-animation-delay:1s;
+	    animation-delay:1s; 
 	}
 	.content-right>div>.open>p{
 		font-size: 16px;
@@ -146,11 +161,12 @@ body{
 		width: 3px;
 		height: 3px;
 		background-color: rgba(255, 255, 255, 1);
+		position: relative;
+		top: 8px;
 	}
 	.content-right>div>.open{
 		width: 330px;
 		position: relative;
-		text-align: right;
 		margin-right: 0px;
 		opacity:0;
 	    -webkit-animation-name: title;
@@ -169,6 +185,19 @@ body{
 		margin-left: 30px;
 		background: url('../../img/index/Group 15.png') no-repeat;
 		background-size: cover;
+	}
+	.content-right>div>.open>h1>span{
+		margin-right: 6px;
+		margin-left: 13px;
+		font-size: 28px;
+		position: relative;
+		top: 3px;
+	}
+	.content-right>div>.open>h1>img{
+		width: 23px;
+		height: 30px;
+		position: relative;
+		top: -2px;
 	}
 	.content-right>div>ul.more{
 		display: flex;
@@ -232,7 +261,10 @@ body{
 	.page{
 		position: absolute;
 		bottom: 6rem;
-		left: 0rem;
+		left: 2rem;
+	}
+	.page>li.active>i{
+		animation: ;
 	}
 	.content-right>div>div.left-line{
 		width: 0.04rem;
@@ -306,6 +338,38 @@ body{
 	.navbar > .container-fluid .navbar-brand>img{
 		width: 1rem;
 		height: 0.64rem;
+	}
+	ul.page>li>i{
+		position: relative;
+		top: 10px;
+	}
+	ul.page>li.active>i{
+		width: 100px;
+		height: 1px;
+		opacity: 0.6;
+		background-color: rgba(255, 255, 255, 1);
+		-webkit-animation-name: page;
+	    animation-name: page;
+	    -webkit-animation-duration: 1s; 
+	    animation-duration: 1s;  
+	    -webkit-animation-fill-mode: forwards ;  
+	    animation-fill-mode: forwards;
+		top: 0px;
+	}
+	ul.page>li.active>i>i{
+		height: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		background: #F4BE3C;
+		-webkit-animation-name: page;
+	    animation-name: page;
+	    -webkit-animation-duration: 1.5s; 
+	    animation-duration: 1.5s;  
+	    -webkit-animation-fill-mode: forwards ;  
+	    animation-fill-mode: forwards;
+	    -webkit-animation-delay:1s;
+	    animation-delay:1s; 
 	}
 }
 .shade{

@@ -14,6 +14,8 @@
 		<link rel="stylesheet" type="text/css" href="../../css/each/index.css"/>
 		<link rel="stylesheet" type="text/css" href="../../css/each/allEvents.css"/>
 		<link rel="stylesheet" type="text/css" href="../../css/each/news.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/animate/animate.css"/>
+		<script src="../../js/language-2.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/include.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
@@ -22,10 +24,10 @@
 			<nav class="navbar">
 				<div class="container-fluid">
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<div type="button" id="nav-button">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
-			  			</button>
+			  			</div>
 						<a class="navbar-brand" href="#">
 							<img src="../../img/index/logo.png" class="pull-left"/>
 							<div class="pull-right">
@@ -54,6 +56,7 @@
 							</li>
 						</ul>
 					</div>
+					
 					<div class="nav-bottom">
 						<p>国际商学院 <span>王红妍</span></p>
 						<p>+86 1350-1365-706</p>
@@ -61,7 +64,27 @@
 					</div>
 				</div>
 			</nav>
-		
+			<div class="mobile-bar">
+				<ul class="nav-list">
+					<li>
+						<a href="../index.html">首页</a>
+					</li>
+					<li>
+						<a href="../allEvents/index.html">全部赛事</a>
+					</li>
+					<li>
+						<a href="../news/index.html">赛事新闻</a>
+					</li>
+					<li>
+						<a href="../about.html">关于我们</a>
+					</li>
+				</ul>
+			</div>
+			<div id="change">
+				<span class="now opacity6">中</span>
+				<i class="opacity6"></i>
+				<span class="opacity6">EN</span>
+			</div>
 			<!--赛事新闻-->
 			<div class="news">
 				<h1>赛事新闻</h1>
@@ -154,3 +177,9 @@
 		})
 	</script>
 </html>
+<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$("#change").click(function() {
+		translate();
+	})
+</script>
