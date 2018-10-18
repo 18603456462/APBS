@@ -257,6 +257,19 @@ p{
 	width: 60px;
 }
 
+.details>div>.imgwrap{
+	width: 100%;
+	height:460px ;
+	background:#3F3E57 ;
+	position: relative;
+}
+.details>div>.imgwrap>img{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
 /*赛事简章*/
 .details .event-date{
 	margin-bottom: 30px;
@@ -496,7 +509,7 @@ p{
 		animation: left 0.8s 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 	}
 	#Events{
-		background: url(../../img/index/草原赛事.png) no-repeat;
+		background: url(../../img/index/banner01.jpg) no-repeat center;
 		background-size: cover;
 	}
 	.coming-soon{
@@ -567,13 +580,13 @@ p{
 		margin-right: 17px;
 	}
 	.allEvents>ul>li:nth-child(2){
-		background: url(../../img/index/沙漠赛事.png) no-repeat;
+		background: url(../../img/index/desert.png) no-repeat;
 	}
 	.allEvents>ul>li:nth-child(3){
-		background: url(../../img/index/戈壁赛事.png) no-repeat;
+		background: url(../../img/index/gobi.png) no-repeat;
 	}
 	.allEvents>ul>li:nth-child(4){
-		background: url(../../img/index/草原2赛事.png) no-repeat;
+		background: url(../../img/index/praire2.png) no-repeat;
 	}
 	.allEvents>ul>li>div.coming-soon.forward{
 		top: 32px;
@@ -699,9 +712,7 @@ p{
 	.details>div>p{
 		font-size: 14px;
 	}
-	.details>div>img{
-		width: 100%;
-	}
+	
 	.details>div>div.introduce>img,.details>div>div.event-features>img{
 		width: 65%;
 		height: 100%;
@@ -779,6 +790,13 @@ p{
 
 /*移动端*/
 @media only screen and (max-width: 768px) {
+	.details>div>.imgwrap{
+		height: 8.92rem;
+	}
+	.details>div>.imgwrap>img{
+		width: 100%;
+		height: 100%;
+	}
 	/*赛事详情*/
 	.allEvents{
 		width: 100%;
@@ -795,7 +813,7 @@ p{
 		padding:0.6rem 0rem 0.52rem 1.2rem;
 	}
 	#Events{
-		background: url(../../img/index/banner01.png) no-repeat;
+		background: url(../../img/index/banner01.jpg) no-repeat;
 		background-size: cover;
 	}
 	.allEvents>ul>li>div.coming-soon{
@@ -853,7 +871,7 @@ p{
 		margin-right: 0.4rem;
 	}
 	.allEvents>ul>li:nth-child(2),.allEvents>ul>li:nth-child(3),.allEvents>ul>li:nth-child(4){
-		background: url(../../img/index/banner02.png) no-repeat;
+		background: url(../../img/index/banner02.jpg) no-repeat;
 		background-size: cover;
 		filter: grayscale(100%);
 	}
@@ -872,7 +890,7 @@ p{
 		width: 100%;
 		height: 2rem;
 		/*line-height: 2rem;*/
-		background: url(../../img/index/banner01.png) no-repeat;
+		background: url(../../img/index/banner01.jpg) no-repeat;
 		background-size: 100% 100px;
 		filter: grayscale(0%);
 		text-align: center;	
@@ -901,21 +919,23 @@ p{
 	    right: -1.2rem;
 	    top: 45%;
 	}
-	.mobile-events>button{
+	.mobile-events>a{
+		display: inline-block;
 		border: 1px solid white;
 		background: transparent;
 		opacity: 0.5;
-		width: 2.48rem;
-		height: 0.92rem;
+		/*width: 2.48rem;
+		height: 0.92rem;*/
 		color: white;
 		border-radius: 0.08rem;
 		margin-left: 1.8rem;
-		padding-right: 0.52rem 0.8rem 0.56rem 4.2rem;
+		padding: 0.1rem 0.2rem;
 		position: relative;
 		top: 0px;
 	}
 	.details .title>li{
 		font-size: 0.48rem;
+		margin-top: 1rem;
 	}
 	.details .title>li.active{
 		font-size: 0.56rem;
@@ -1134,5 +1154,22 @@ p{
 	}
 	.details .way-introduce>ul.way-img>li{
 		padding-top: 0px;
+	}
+	.details div.about{
+		font-size: 0.52rem;
+		position: relative;
+		margin-bottom: 0.88rem;
+		/*width: auto;*/
+		
+	}
+	.details div.about span{
+		display: inline-block;
+		padding-right: 30px;
+		height: 0.64rem;
+		border-bottom: 0.12rem solid #F4BE3C;
+	}
+	.details .way-txt .way-icon>ul.start-end>li{
+		float: initial;
+		margin-left: 0rem;
 	}
 }

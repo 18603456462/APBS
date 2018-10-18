@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 14 14">
+    <defs>
+        <rect id="a" width="2.333" height="4.667" x="3.5" y="9.333" rx="1.167"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="rotate(-45 7.328 3.036)">
+        <circle cx="4.667" cy="4.667" r="4.667" stroke="#444B5A" stroke-width="2"/>
+        <g opacity=".6">
+            <use fill="#434B5B" xlink:href="#a"/>
+            <rect width="1.333" height="3.667" x="4" y="9.833" stroke="#434A5A" rx=".667"/>
+        </g>
+    </g>
+</svg>

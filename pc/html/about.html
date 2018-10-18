@@ -11,8 +11,58 @@
 		<link rel="stylesheet" type="text/css" href="../css/each/index.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/each/news.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/animate/animate.css"/>
-		<script src="../js/language.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../css/common/idangerous.swiper.css"/>
+		<!--<script src="../js/language.js" type="text/javascript" charset="utf-8"></script>-->
 		<script src="../js/include.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.swiper-slide {
+		      -webkit-box-pack: center;
+		      -ms-flex-pack: center;
+		      -webkit-justify-content: center;
+		      justify-content: center;
+		      -webkit-box-align: center;
+		      -ms-flex-align: center;
+		      -webkit-align-items: center;
+		      align-items: center;
+		    }
+		    @media only screen and (min-width: 768px) {
+		    	.swiper-container{
+			    	position: fixed !important;
+			    }
+			    .contact div.contact-information>ul{
+			    	width: auto !important;
+			    	height: auto !important;
+			    }
+			     .contact div.contact-information>div{
+			     	width: auto !important;
+			    	height: auto !important;
+			     }
+			     .swiper-wrapper{
+			     	width:100% !important;
+			    	height: auto !important;
+			    }
+		    }
+		     
+		    @media only screen and (max-width:768px ) {
+		    	.swiper-container{
+			    	position: fixed !important;
+			    }
+		    	.swiper-wrapper{
+			    	width: 1000% !important;
+			    	height: 8rem !important;
+			    }
+			   
+			    .contact div.contact-information>ul{
+			    	width: 14.96rem !important;
+			    	height: 5rem !important;
+			    }
+			     .contact div.contact-information>div{
+			     	width: 14.96rem !important;
+			    	height: 5rem !important;
+			     }
+		    }
+		    
+		</style>
 	</head>
 	<body>
 		<div class="backImg">
@@ -50,7 +100,7 @@
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav-list">
 							<li>
-								<a href="index.html">首页</a><br />
+								<a href="../index.html">首页</a><br />
 							</li>
 							<li>
 								<a href="allEvents/index.html">全部赛事</a>
@@ -75,7 +125,7 @@
 			<div class="mobile-bar">
 				<ul class="nav-list">
 					<li>
-						<a href="index.html">首页</a>
+						<a href="../index.html">首页</a>
 					</li>
 					<li>
 						<a href="allEvents/index.html">全部赛事</a>
@@ -94,17 +144,17 @@
 				<span class="opacity6">EN</span>
 			</div>
 			<!--联系我们-->
-			<div class="contact">
-				<div class="contact-information clearfix scrollNone">
+			<div class="contact swiper-container">
+				<div class="contact-information clearfix scrollNone swiper-wrapper">
 					<h1>联系我们</h1>
-					<ul class="clearfix">
+					<ul class="clearfix swiper-slide">
 						<li>
 							国际商学院
 							<span class="fontWeight300 opacity6">王红妍</span>
 							<ul class="fontWeight300 font-num opacity6">
 								<li>+86 1350-1365-706</li>
 								<li>hongyan.wang@ruc.edu.cn</li>
-								<li><img src="../img/icon/微信.svg"/>13501365706</li>
+								<li><img src="../img/icon/wechat.svg"/>13501365706</li>
 							</ul>
 						</li>
 						<li>
@@ -112,17 +162,17 @@
 							<span class="fontWeight300 opacity6">尹曦皞</span>
 							<ul class="fontWeight300 font-num opacity6">
 								<li>+86 1860-0455-551</li>
-								<li><img src="../img/icon/微信.svg"/>18600455551 </li>
+								<li><img src="../img/icon/wechat.svg"/>18600455551 </li>
 							</ul>
 						</li>
 					</ul>
-					<ul class="clearfix">
+					<ul class="clearfix swiper-slide">
 						<li>
 							企业组报名
 							<span class="fontWeight300 opacity6">陈凤娇</span>
 							<ul class="fontWeight300 font-num opacity6">
 								<li>+86 1870-1316-623</li>
-								<li><img src="../img/icon/微信.svg"/>18701316623</li>
+								<li><img src="../img/icon/wechat.svg"/>18701316623</li>
 							</ul>
 						</li>
 						<li>
@@ -130,29 +180,29 @@
 							<span class="fontWeight300 opacity6">冉安琪</span>
 							<ul class="fontWeight300 font-num opacity6">
 								<li>+86 1391-1140-157</li>
-								<li><img src="../img/icon/微信.svg"/>13911400157</li>
+								<li><img src="../img/icon/wechat.svg"/>13911400157</li>
 							</ul>
 						</li>
 					</ul>
-					<div class="committee">
+					<div class="committee swiper-slide">
 						<p>赛事组委会人员</p>
 						<ul class="fontWeight300 opacity6">
 							<li>王文超
 								<ul>
 									<li>+86 1369-1206-888</li>
-									<li><img src="../img/icon/微信.svg"/>wwch21sj</li>
+									<li><img src="../img/icon/wechat.svg"/>wwch21sj</li>
 								</ul>
 							</li>
 							<li>毛成林
 								<ul>
 									<li>+86 1861-8315-881</li>
-									<li><img src="../img/icon/微信.svg"/>18618315881</li>
+									<li><img src="../img/icon/wechat.svg"/>18618315881</li>
 								</ul>
 							</li>
 							<li>贺志明
 								<ul>
 									<li>+86 1391-1156-867</li>
-									<li><img src="../img/icon/微信.svg"/>13911156867</li>
+									<li><img src="../img/icon/wechat.svg"/>13911156867</li>
 								</ul>
 							</li>
 						</ul>
@@ -184,8 +234,15 @@
 	</body>
 </html>
 <script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
+<!--<script type="text/javascript">
 	$("#change").click(function() {
 		translate();
 	})
-</script>
+</script>-->
+	<script src="../js/idangerous.swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		 var swiper = new Swiper('.swiper-container', {
+		      slidesPerView: 1,
+		      spaceBetween: 30,
+		    });
+	</script>

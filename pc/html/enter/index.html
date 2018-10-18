@@ -16,8 +16,30 @@
 		<link rel="stylesheet" type="text/css" href="../../css/each/enter.css"/>
 		<link rel="stylesheet" type="text/css" href="../../css/animate/animate.css"/>
 		<script src="../../js/include.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../../js/language-2.js" type="text/javascript" charset="utf-8"></script>
-		
+		<link rel="stylesheet" type="text/css" href="../../css/common/idangerous.swiper.css"/>
+		<!--<script src="../../js/language-2.js" type="text/javascript" charset="utf-8"></script>-->
+		<style type="text/css">
+			.swiper-slide {
+		      display: -webkit-box;
+		      display: -ms-flexbox;
+		      display: -webkit-flex;
+		      display: flex;
+		      -webkit-box-pack: center;
+		      -ms-flex-pack: center;
+		      -webkit-justify-content: center;
+		      justify-content: center;
+		      -webkit-box-align: center;
+		      -ms-flex-align: center;
+		      -webkit-align-items: center;
+		      align-items: center;
+		    }
+		    @media only screen and (min-width: 768px) {
+		    	.enter-information .ticket-type ul li{
+		    		width: 384px !important;
+		    		height: 112px !important;
+		    	}
+		    }
+		</style>
 	</head>
 	<body>
 		<div class="index-content">
@@ -41,7 +63,7 @@
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav-list">
 							<li>
-								<a href="../index.html">首页</a><br />
+								<a href="../../index.html">首页</a><br />
 							</li>
 							<li class="page">
 								<a href="../allEvents/index.html">全部赛事</a><br />
@@ -67,7 +89,7 @@
 			<div class="mobile-bar">
 				<ul class="nav-list">
 					<li>
-						<a href="../index.html">首页</a>
+						<a href="../../index.html">首页</a>
 					</li>
 					<li>
 						<a href="../allEvents/index.html">全部赛事</a>
@@ -118,10 +140,10 @@
 					
 				</div>
 				<div class="enter-information">
-					<div class="ticket-type">
+					<div class="ticket-type swiper-container">
 						<h5>票类型</h5>
-						<ul class="list-inline">
-							<li class="early-bird">
+						<ul class="list-inline swiper-wrapper">
+							<li class="early-bird swiper-slide">
 								<div class="clearfix">
 									<span class="pull-left">早鸟票</span>
 									<p class="pull-right">数量：<span class="font-num">20</span></p>
@@ -138,7 +160,7 @@
 								</div>
 								<div class="border"></div>
 							</li>
-							<li class="none-ticket">
+							<li class="none-ticket swiper-slide">
 								<div class="clearfix opacity6">
 									<span class="pull-left">普通票</span>
 									<p class="pull-right">数量：<span>不限量</span></p>
@@ -209,7 +231,7 @@
 						<span class="fontWeight300 opacity6 cost">费用：</span>
 						<span class="font-num">￥3999</span>	
 					</div>
-					<button class="pull-right"><img src="../../img/icon/支付icon.svg"/>前去支付</button>
+					<button class="pull-right"><img src="../../img/icon/payicon.svg"/>前去支付</button>
 				</div>
 				
 			</div>
@@ -221,9 +243,16 @@
 		})
 	</script>
 	<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript">
+	<script src="../../js/idangerous.swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script type="text/javascript">
 		$("#change").click(function() {
 			translate();
 		})
+	</script>-->
+	<script type="text/javascript">
+		 var swiper = new Swiper('.swiper-container', {
+		      slidesPerView: 1,
+		      spaceBetween: 30,
+		    });
 	</script>
 </html>

@@ -165,6 +165,7 @@ body{
 		top: 8px;
 	}
 	.content-right>div>.open{
+		text-align: right;
 		width: 330px;
 		position: relative;
 		margin-right: 0px;
