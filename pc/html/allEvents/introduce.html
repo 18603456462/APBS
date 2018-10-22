@@ -33,7 +33,27 @@
 					display: flex;
 				}
 			}
-			
+			.pinch-zoom-container{
+	        	height: 300px !important;
+	        }
+			 div.pinch-zoom,
+        div.pinch-zoom img{
+            width: 100%;
+            height: 100% !important;
+            -webkit-user-drag: none;
+        }
+        @media only screen and (max-width: 769px) {
+        	.pinch-zoom-container{
+	        	height: 300px !important;
+	        }
+	        div.pinch-zoom img{
+	            width: 125%;
+	            height: 100% !important;
+	            position: relative;
+	            left: -2rem;
+	        }
+        }
+        
 		</style>
 	</head>
 
@@ -212,7 +232,10 @@
 							</ul>
 							<ul class="way-img">
 								<li>
-									<img src="../../img/Events/35track.svg"/>
+									<div class="pinch-zoom">
+										<img src="../../img/Events/35track.svg"/>
+									</div>
+									
 									<ul class="roadmap">
 										<li class="active">赛道图</li>
 										<li>海拔图</li>
@@ -223,7 +246,9 @@
 									</div>
 								</li>
 								<li class="disNone">
-									<img src="../../img/Events/15track.svg"/>
+									<div class="pinch-zoom">
+										<img src="../../img/Events/15track.svg"/>
+									</div>
 									<ul class="roadmap">
 										<li class="active">赛道图</li>
 										<li>海拔图</li>
@@ -234,7 +259,9 @@
 									</div>
 								</li>
 								<li class="disNone">
-									<img src="../../img/Events/childTrack.svg"/>
+									<div class="pinch-zoom">
+										<img src="../../img/Events/childTrack.svg"/>
+									</div>
 									<div class="north">
 										<p>N</p>
 										<i class="sanjiao"></i>
@@ -377,7 +404,7 @@
 				id.eq(n).children("li").click(function(){
 					var index=$(this).index();
 					$(this).addClass("active").siblings().removeClass("active")
-					var ob=$(this).parent("ul.roadmap").siblings("img");
+					var ob=$(this).parent("ul.roadmap").siblings("div").find("img");
 					ob.attr("src",img[index]);
 					
 				})
@@ -403,12 +430,15 @@
 			iconCheck($(".team-grade ul li"),img.gradeImg.checked,img.gradeImg.noCheck,false);
 			iconCheck($(".way li"),img.wayImg.checked,img.wayImg.noCheck,true);
 		})
+		
 	</script>
 
 </html>
 <script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
-<!--<script type="text/javascript">
-	$("#change").click(function() {
-		translate();
-	})
-</script>-->
+<script src="../../js/pinchzoom.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="../../js/e-smart-zoom-jquery.min.js" type="text/javascript" charset="utf-8"></script>-->
+<script type="text/javascript">
+	 $('div.pinch-zoom').each(function () {
+            new RTP.PinchZoom($(this), {});
+        });
+</script>

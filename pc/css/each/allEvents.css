@@ -88,6 +88,8 @@ p{
 .details{
 	overflow-y:auto ;
 	overflow-x: hidden;
+	-webkit-overflow-scrolling:touch;
+	overflow-scrolling: touch;
 	color: white;
 	font-weight: 300;
 	box-sizing: border-box;
@@ -144,7 +146,7 @@ p{
 	text-align: center;
 }
 .details .team-grade ul li img{
-		margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 .details .team-grade>div{
 	width:100%;
@@ -197,8 +199,8 @@ p{
 	position: relative;
 	text-align: center;
 	width: 80%;
-	height: 492px;
-	padding-top: 70px;
+	height: 575px;
+	padding-top: 20px;
 }
 .details .way-introduce>ul.way-img>li{
 	position: absolute;
@@ -385,6 +387,27 @@ p{
 }
 .details .team-group>ul>li>p:last-child{
 	display: none;
+}
+.allEvents>ul>li>div.coming-soon>.state{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 68px;
+	height: 80px;
+	background: url(../../img/icon/state.svg);
+	background-size: cover;
+	line-height: 80px;
+	box-sizing: border-box;
+	padding-left: 14px;
+}
+.allEvents>ul>li>div.coming-soon>.state>span{
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 300;
+	opacity: 0.4;
+	color: #393939;
+	transform-origin: center;
+	transform: rotate(-40deg);
 }
 
 /*PC端*/
@@ -820,13 +843,16 @@ p{
 		top: 0rem;
 		right: 1.36rem;
 		width: 5rem;
-		height: 3.92rem;
+		height: 2.92rem;
 		padding: 0.52rem 0.48rem 0.6rem 0.52rem;
+		background: url(../../img/icon/mobilecoom.svg);
+		background-size: cover;
 	}
 	.allEvents>ul>li>div.coming-soon>hr{
-		margin-top: 0.4rem;
+		display: none;
+		/*margin-top: 0.4rem;
 	    margin-bottom: 0.24rem;
-	    border-top: 0.04rem dashed white;
+	    border-top: 0.04rem dashed white;*/
 	}
 	.allEvents>ul>li>div.coming-soon>p:first-child{
 		font-size: 0.44rem;
@@ -835,6 +861,7 @@ p{
 		font-size: 0.6rem;
 	}
 	.allEvents>ul>li>div.coming-soon>p:last-child{
+		display: none;
 		font-size: 0.44rem;
 		padding-right: 0.4rem;
 	}
@@ -870,10 +897,20 @@ p{
 		border-bottom: 0.04rem solid white;
 		margin-right: 0.4rem;
 	}
-	.allEvents>ul>li:nth-child(2),.allEvents>ul>li:nth-child(3),.allEvents>ul>li:nth-child(4){
+	.allEvents>ul>li:nth-child(2){
 		background: url(../../img/index/banner02.jpg) no-repeat;
 		background-size: cover;
 		filter: grayscale(100%);
+	}
+	.allEvents>ul>li:nth-child(3){
+		background: url(../../img/index/03.jpg) no-repeat;
+		filter: grayscale(100%);
+		background-size: cover;
+	}
+	.allEvents>ul>li:nth-child(4){
+		background: url(../../img/index/04.jpg) no-repeat;
+		filter: grayscale(100%);
+		background-size: cover;
 	}
 	.coming-soon>p>a{
 		color: #282739;
@@ -1111,7 +1148,7 @@ p{
 	    font-size: 0.44rem;
 	}
 	.details .way-introduce>ul.way-img{
-		left: -3rem;
+		/*left: -3rem;*/
 	}
 	.details .way-introduce>ul.way-img>li{
 		position: relative;
@@ -1172,4 +1209,25 @@ p{
 		float: initial;
 		margin-left: 0rem;
 	}
+	.allEvents>ul>li>div.coming-soon>.state{
+		width: 1.6rem;
+		height: 1.6rem;
+		line-height: 1.6rem;
+		padding-left: 0.24rem;
+	}
+	.allEvents>ul>li>div.coming-soon>.state>span{
+		font-size: 0.36rem;
+		font-weight: 300;
+		opacity: 0.4;
+		color: #393939;
+		transform-origin: center;
+		transform: rotate(-40deg);
+	}
+	.allEvents>ul>li>div.coming-soon>p.signUp{
+		display: none;
+	}
+	.details .way-introduce>ul.way-img{
+		height: 385px;
+	}
+	
 }
