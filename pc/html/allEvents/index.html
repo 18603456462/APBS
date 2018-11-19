@@ -6,17 +6,17 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>亚太地区商学院统计赛</title>
-		<link rel="stylesheet" type="text/css" href="../../css/fonts.css"/>
-		<link rel="stylesheet" type="text/css" href="../../css/bootstrap/css/bootstrap.css"/>
-		<link rel="stylesheet" type="text/css" href="../../css/common/common.css"/>
-		<script src="../../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../../css/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
-		<link rel="stylesheet" type="text/css" href="../../css/each/index.css"/>
-		<link rel="stylesheet" type="text/css" href="../../css/each/allEvents.css"/>
-		<link rel="stylesheet" type="text/css" href="../../css/animate/animate.css"/>
-		<script src="../../js/include.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../../js/jquery.mousewheel.js" type="text/javascript" charset="utf-8"></script>
-		<!--<script src="../../js/language-2.js" type="text/javascript" charset="utf-8"></script>-->
+		<link rel="stylesheet" type="text/css" href="/view/pc/css/fonts.css"/>
+		<link rel="stylesheet" type="text/css" href="/view/pc/css/bootstrap/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="/view/pc/css/common/common.css"/>
+		<script src="/view/pc/js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/view/pc/css/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="/view/pc/css/each/index.css"/>
+		<link rel="stylesheet" type="text/css" href="/view/pc/css/each/allEvents.css"/>
+		<link rel="stylesheet" type="text/css" href="/view/pc/css/animate/animate.css"/>
+		<script src="/view/pc/js/include.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/view/pc/js/jquery.mousewheel.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="/view/pc/js/language-2.js" type="text/javascript" charset="utf-8"></script>-->
 	</head>
 	<body>
 		<div class="index-content">
@@ -29,7 +29,7 @@
 							<span class="icon-bar"></span>
 			  			</div>
 						<a class="navbar-brand" href="#">
-							<img src="../../img/index/logo.png" class="pull-left"/>
+							<img src="/view/pc/img/index/logo.png" class="pull-left"/>
 							<div class="pull-right">
 								<span>亚太地区商学院</span><br />
 								<span>挑战赛</span>
@@ -41,7 +41,7 @@
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav-list">
 							<li>
-								<a href="../../index.html">首页</a><br />
+								<a href="/view/pc/index.html">首页</a><br />
 							</li>
 							<li class="page">
 								<a href="index.html">全部赛事</a><br />
@@ -67,7 +67,7 @@
 			<div class="mobile-bar">
 				<ul class="nav-list">
 					<li>
-						<a href="../../index.html">首页</a>
+						<a href="/view/pc/index.html">首页</a>
 					</li>
 					<li>
 						<a href="../allEvents/index.html">全部赛事</a>
@@ -202,9 +202,21 @@
 		}) 
 	</script>
 </html>
-<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
-<!--<script type="text/javascript">
-	$("#change").click(function() {
-		translate();
+<script src="/view/pc/js/common.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		function getEvents(){
+			$.ajax({
+				type:"post",
+				url:"http://139.129.210.241:85/events/getAllData",
+				async:true,
+				dataType:"json",
+				data:{},
+				success:function(data){
+					console.log(data)
+				}
+			});
+		}
+		getEvents()
 	})
-</script>-->
+</script>

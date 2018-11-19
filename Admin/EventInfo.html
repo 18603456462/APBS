@@ -14,18 +14,18 @@
 		<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
 
 		<!-- page specific plugin styles -->
-		<link rel="stylesheet" href="assets/css/prettify.min.css" />
+		<link rel="stylesheet" href="/view/Admin/assets/css/prettify.min.css" />
 		<!-- page specific plugin styles -->
-		<link rel="stylesheet" href="assets/css/dropzone.min.css" />
+		<link rel="stylesheet" href="/view/Admin/assets/css/dropzone.min.css" />
 
 		<!-- ace styles -->
-		<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+		<link rel="stylesheet" href="/view/Admin/assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
 
 		<!--[if lte IE 9]>
 			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
 		<![endif]-->
-		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
-		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="/view/Admin/assets/css/ace-skins.min.css" />
+		<link rel="stylesheet" href="/view/Admin/assets/css/ace-rtl.min.css" />
 
 		<!--[if lte IE 9]>
 		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
@@ -34,7 +34,7 @@
 		<!-- inline styles related to this page -->
 
 		<!-- ace settings handler -->
-		<script src="assets/js/ace-extra.min.js"></script>
+		<script src="/view/Admin/assets/js/ace-extra.min.js"></script>
 
 		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
@@ -92,7 +92,7 @@
 					</li>
 
 					<li class="">
-						<a href="news.html">
+						<a href="listsnews.html">
 							<i class="menu-icon fa fa-desktop"></i>
 							<span class="menu-text">
 								内容管理
@@ -149,9 +149,10 @@
 													<div class="row">
 														<div class="col-xs-12">
 															<h5>状态</h5>
-															<select name="">
-																<option value="">即将开启</option>
-																<option value="">敬请期待</option>
+															<select name="" id="state">
+																<option value="0">即将开启</option>
+																<option value="1">已开启</option>
+																<option value="2">敬请期待</option>
 															</select>
 														</div>
 													</div>
@@ -159,48 +160,47 @@
 													<div class="row">
 														<div class="col-xs-12">
 															<h5>名称</h5>
-															<input type="text" name="" id="" value="" class="form-control" />
+															<input type="text" name="" id="name" value="" class="form-control" />
 														</div>
 													</div>
 													<div class="row">
 														<div class="col-xs-12">
 															<h5>地点</h5>
-															<input type="text" name="" id="" value="" class="form-control" />
+															<input type="text" name="" id="place" value="" class="form-control" />
 														</div>
 													</div>
 													<div class="row">
 														<div class="col-xs-12">
 															<h5>赛事时间</h5>
 															<div class="input-daterange input-group">
-																<input type="text" class="input-sm form-control" name="start" />
+																<input type="text" class="input-sm form-control" name="start"  id="startTime"/>
 																<span class="input-group-addon">
 																	<i class="fa fa-exchange"></i>
 																</span>
-
-																<input type="text" class="input-sm form-control" name="end" />
+																<input type="text" class="input-sm form-control" name="end" id="endTime" />
 															</div>
 														</div>
 													</div>
 													<div class="row">
 														<div class="col-xs-6">
 															<h5>参数天数</h5>
-															<select name="">
-																<option value="">2天</option>
-																<option value="">3天</option>
-																<option value="">4天</option>
-																<option value="">5天</option>
+															<select name="" id="day">
+																<option value="2">2天</option>
+																<option value="3">3天</option>
+																<option value="4">4天</option>
+																<option value="5">5天</option>
 															</select>
 														</div>
-														<div class="col-xs-6 form-inline">
+														<div class="col-xs-6 form-inline" id="dayMiles">
 															<h5>参赛公里数</h5>
-															<div class="form-group">
-																<label for="day">第一天</label>
-																<input type="text" id="day" class="form-control" />
-															</div>
-															<div class="form-group">
-																<label for="day">第二天</label>
-																<input type="text" id="day" class="form-control" />
-															</div>
+															<!--<div class="form-group">-->
+																<!--<label for="day">第一天</label>-->
+																<!--<input type="text" id="" class="form-control" />-->
+															<!--</div>-->
+															<!--<div class="form-group">-->
+																<!--<label for="day">第二天</label>-->
+																<!--<input type="text" id="" class="form-control" />-->
+															<!--</div>-->
 														</div>
 													</div>
 												</div>
@@ -276,19 +276,31 @@
 								<div class="row">
 									<div class="col-xs-12">
 										<div class="clearfix form-actions">
-											<div class="col-md-offset-3 col-md-9">
-												<button class="btn btn-info" type="button">
-													<i class="ace-icon fa fa-check bigger-110"></i>
-													<a href="EventInfo2.html" style="color: white;">下一步</a>
-												</button> &nbsp; &nbsp; &nbsp;
-												<button class="btn" type="reset">
-													<i class="ace-icon fa fa-undo bigger-110"></i>
-													重置
-												</button>
+											<div class="col-md-5">
+												<ul class="steps">
+													<li data-step="1" class="active">
+														<span class="step">1</span>
+														<span class="title">赛事信息</span>
+													</li>
+
+													<li data-step="2">
+														<span class="step">2</span>
+														<span class="title">赛事内容</span>
+													</li>
+
+													<li data-step="3">
+														<span class="step">3</span>
+														<span class="title">报名设置</span>
+													</li>
+												</ul>
+											</div>
+											<div class="col-md-offset-5 col-md-2">
+												<button class="btn btn-info" type="button" id="addSure">下一步</button>
 											</div>
 										</div>
 									</div>
 								</div>
+							
 							</div>
 							<!-- /.col -->
 						</div>
@@ -340,21 +352,21 @@
 		<!--[if lte IE 8]>
 		  <script src="assets/js/excanvas.min.js"></script>
 		<![endif]-->
-		<script src="assets/js/jquery-ui.custom.min.js"></script>
-		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
-		<script src="assets/js/chosen.jquery.min.js"></script>
-		<script src="assets/js/spinbox.min.js"></script>
-		<script src="assets/js/bootstrap-datepicker.min.js"></script>
-		<script src="assets/js/bootstrap-timepicker.min.js"></script>
-		<script src="assets/js/moment.min.js"></script>
-		<script src="assets/js/daterangepicker.min.js"></script>
-		<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
-		<script src="assets/js/bootstrap-colorpicker.min.js"></script>
-		<script src="assets/js/jquery.knob.min.js"></script>
-		<script src="assets/js/autosize.min.js"></script>
-		<script src="assets/js/jquery.inputlimiter.min.js"></script>
-		<script src="assets/js/jquery.maskedinput.min.js"></script>
-		<script src="assets/js/bootstrap-tag.min.js"></script>
+		<script src="/view/Admin/assets/js/jquery-ui.custom.min.js"></script>
+		<script src="/view/Admin/assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="/view/Admin/assets/js/chosen.jquery.min.js"></script>
+		<script src="/view/Admin/assets/js/spinbox.min.js"></script>
+		<script src="/view/Admin/assets/js/bootstrap-datepicker.min.js"></script>
+		<script src="/view/Admin/assets/js/bootstrap-timepicker.min.js"></script>
+		<script src="/view/Admin/assets/js/moment.min.js"></script>
+		<script src="/view/Admin/assets/js/daterangepicker.min.js"></script>
+		<script src="/view/Admin/assets/js/bootstrap-datetimepicker.min.js"></script>
+		<script src="/view/Admin/assets/js/bootstrap-colorpicker.min.js"></script>
+		<script src="/view/Admin/assets/js/jquery.knob.min.js"></script>
+		<script src="/view/Admin/assets/js/autosize.min.js"></script>
+		<script src="/view/Admin/assets/js/jquery.inputlimiter.min.js"></script>
+		<script src="/view/Admin/assets/js/jquery.maskedinput.min.js"></script>
+		<script src="/view/Admin/assets/js/bootstrap-tag.min.js"></script>
 
 		<!--[if IE]>
 <script src="assets/js/jquery-1.11.3.min.js"></script>
@@ -393,6 +405,7 @@
 				$('.input-daterange').datepicker({
 					autoclose: true
 				});
+				var imgPath=[];
 				try {
 					Dropzone.autoDiscover = false;
 
@@ -402,6 +415,8 @@
 						thumbnailHeight: 120,
 						thumbnailWidth: 120,
 						maxFilesize: 1,
+						maxFiles: 2,
+						uploadMultiple:false,
 
 						//addRemoveLinks : true,
 						//dictRemoveFile: 'Remove',
@@ -452,9 +467,32 @@
 										self.emit('uploadprogress', file, file.upload.progress, file.upload.bytesSent);
 										if(file.upload.progress == 100) {
 											file.status = Dropzone.SUCCESS;
+											
+//											upLoadImg()
 											self.emit("success", file, 'success', null);
 											self.emit("complete", file);
 											self.processQueue();
+											var coverSrc=[];
+											for(let i=0; i<$("#dropzone .dz-image").length;i++){
+												coverSrc.push($("#dropzone .dz-image").eq(i).children("img").attr("src"))
+											}
+											$.ajax({
+												type:"post",
+												url:"http://139.129.210.241:85/admin/news/uploadImg",
+												async:false,
+												data:{
+													file:coverSrc.pop()
+												},
+												success:function(data){
+													if(data.success){
+														imgPath.push(data.imgpath);
+														
+													}
+													
+												}
+											});
+											
+											
 										}
 									};
 								}(file, totalSteps, step), duration);
@@ -472,8 +510,123 @@
 				} catch(e) {
 					alert('Dropzone.js does not support older browsers!');
 				}
+//				修改参赛天数
+				$("#day").change(function(){
+					var val=$(this).val();
+					var ob=$("#dayMiles");
+					ob.children().remove()
+					for(var i=0;i<val;i++){
+						var dayMiles=$("<div class='form-group'><label>第"+ (i+1) +"天</label><input type='text' class='form-control'/></div>");
+						ob.append(dayMiles)
+					}
 
-			});
+				})
+				$("#day").change();
+				
+				
+				//编辑接口
+				var editEventId=window.sessionStorage.getItem("editEventId");
+				function changeTime(time){
+					var d = new Date(time);
+					
+					var times=d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate() ; 
+					return times
+				}
+				function editEvent(){
+					if(editEventId!="null"){
+						$.ajax({
+							type: "post",
+							url:"http://139.129.210.241:85/admin/events/getEventsById",
+							data:{
+								id:editEventId
+							},
+							dataType:"json",
+							success:function(data){
+								console.log(data)
+								if(data.success){
+									$("#state").val(data.data.state);
+									$("#name").val(data.data.name);
+									$("#place").val(data.data.place);
+									$("#startTime").val(changeTime(data.data.startTime));
+									$("#endTime").val(changeTime(data.data.endTime));
+									$("#day").val(data.data.dayMiles.length);
+									$("#dayMiles").children().remove()
+									for(let i=0;i<data.data.dayMiles.length;i++){
+										var dayMiles=$("<div class='form-group'><label>第"+ (i+1) +"天</label><input type='text' class='form-control' value='"+ data.data.dayMiles[i]+"'/></div>");
+										$("#dayMiles").append(dayMiles)
+									}
+	//								
+								}
+							},
+							error:function(data){
+								console.log(data)
+							}
+						})
+					}
+					
+				}
+				editEvent()
+				
+//				提交
+				function addSure(){
+					$("#addSure").click(function(){
+						var name=$("#name").val();
+						var place=$("#place").val()
+						var startTime=$("#startTime").val()
+						var endTime=$("#endTime").val()
+						var state=$("#state").val()
+						var day=$("#day").val();
+						var dayMile=[];
+						for(let i=0;i<$("#dayMiles div input").length;i++){
+							dayMile.push($("#dayMiles div input").eq(i).val())
+						}
+						var data;
+						if(editEventId!="null"){
+							data={
+								id:editEventId,
+								name:name,
+								place:place,
+								startTime:startTime,
+								endTime:endTime,
+								state:state,
+								day:day,
+								dayMiles:dayMile,
+								coverSrcs:imgPath
+							}
+						}else{
+							data={
+								name:name,
+								place:place,
+								startTime:startTime,
+								endTime:endTime,
+								state:state,
+								day:day,
+								dayMiles:dayMile,
+								coverSrcs:imgPath
+							}
+						}
+						console.log(data)
+						$.ajax({
+							type: "post",
+							url:"http://139.129.210.241:85/admin/events/addOrEdit",
+							data:data,
+							dataType:"json",
+							success:function(data){
+								if(data.success){
+									window.sessionStorage.setItem("eventId",data.data.id);
+									window.location.href="EventInfo2.html"
+									
+								}
+							},
+							error:function(data){
+								console.log(data)
+							}
+						})
+					})
+				}
+				addSure()
+
+			})
 		</script>
 	</body>
 
