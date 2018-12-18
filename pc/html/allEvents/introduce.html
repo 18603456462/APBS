@@ -7,53 +7,59 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>亚太地区商学院统计赛</title>
-		<link rel="stylesheet" type="text/css" href="../../css/fonts.css" />
-		<link rel="stylesheet" type="text/css" href="../../css/bootstrap/css/bootstrap.css" />
-		<link rel="stylesheet" type="text/css" href="../../css/common/common.css" />
-		<script src="../../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../../css/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
-		<link rel="stylesheet" type="text/css" href="../../css/each/index.css" />
-		<link rel="stylesheet" type="text/css" href="../../css/each/allEvents.css" />
-		<link rel="stylesheet" type="text/css" href="../../css/animate/animate.css"/>
-		<script src="../../js/include.js" type="text/javascript" charset="utf-8"></script>
-		<!--<script src="../../js/language-2.js" type="text/javascript" charset="utf-8"></script>-->
+		<link rel="stylesheet" type="text/css" href="/views/pc/css/fonts.css" />
+		<link rel="stylesheet" type="text/css" href="/views/pc/css/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="/views/pc/css/common/common.css" />
+		<script src="/views/pc/js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/views/pc/css/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="/views/pc/css/each/index.css" />
+		<link rel="stylesheet" type="text/css" href="/views/pc/css/each/allEvents.css" />
+		<link rel="stylesheet" type="text/css" href="/views/pc/css/animate/animate.css" />
+		<script src="/views/pc/js/include.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="/views/pc/js/language-2.js" type="text/javascript" charset="utf-8"></script>-->
 		<style type="text/css">
 			@media only screen and (min-width: 768px) {
-				.details{
+				.details {
 					padding-left: 0px;
 					padding-right: 0px;
 					box-sizing: border-box;
 				}
-				.details>.title-box,.details>div>.about,.details>div>div.team-group,.details>div>div.team-grade,.details>div>div.way-introduce{
+				.details>.title-box,
+				.details>div>.about,
+				.details>div>div.team-group,
+				.details>div>div.team-grade,
+				.details>div>div.way-introduce {
 					margin-left: 91px;
 					margin-right: 121px;
 				}
-				.allEvents{
+				.allEvents {
 					width: 93%;
 					display: flex;
 				}
 			}
-			.pinch-zoom-container{
-	        	height: 300px !important;
-	        }
-			 div.pinch-zoom,
-        div.pinch-zoom img{
-            width: 100%;
-            height: 100% !important;
-            -webkit-user-drag: none;
-        }
-        @media only screen and (max-width: 769px) {
-        	.pinch-zoom-container{
-	        	height: 300px !important;
-	        }
-	        div.pinch-zoom img{
-	            width: 125%;
-	            height: 100% !important;
-	            position: relative;
-	            left: -2rem;
-	        }
-        }
-        
+			
+			.pinch-zoom-container {
+				height: 300px !important;
+			}
+			
+			div.pinch-zoom,
+			div.pinch-zoom img {
+				width: 100%;
+				height: 100% !important;
+				-webkit-user-drag: none;
+			}
+			
+			@media only screen and (max-width: 769px) {
+				.pinch-zoom-container {
+					height: 300px !important;
+				}
+				div.pinch-zoom img {
+					width: 125%;
+					height: 100% !important;
+					position: relative;
+					left: -2rem;
+				}
+			}
 		</style>
 	</head>
 
@@ -66,16 +72,16 @@
 						<div type="button" id="nav-button">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
-			  			</div>
+						</div>
 						<a class="navbar-brand" href="#">
-							<img src="../../img/Events/Group 4.svg" class="pull-left" />
+							<img src="/views/pc/img/Events/Group 4.svg" class="pull-left" />
 							<hr />
 						</a>
 					</div>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav-list">
 							<li class="page">
-								<a href="index.html" class="opacity6">第三届</a><br />
+								<a href="http://139.129.210.241:85/events/index" class="opacity6">第三届</a><br />
 								<span>草原</span>
 								<i></i>
 							</li>
@@ -89,25 +95,25 @@
 							</li>
 						</ul>
 					</div>
-					
+
 					<div class="nav-bottom">
-				
+
 					</div>
 				</div>
 			</nav>
 			<div class="mobile-bar">
 				<ul class="nav-list">
 					<li>
-						<a href="../../index.html">首页</a>
+						<a href="/views/pc/index.html">首页</a>
 					</li>
 					<li>
-						<a href="index.html">全部赛事</a>
+						<a href="http://139.129.210.241:85/events/index">全部赛事</a>
 					</li>
 					<li>
-						<a href="../news/index.html">赛事新闻</a>
+						<a href="http://139.129.210.241:85/news/index">赛事新闻</a>
 					</li>
 					<li>
-						<a href="../about.html">关于我们</a>
+						<a href="http://139.129.210.241:85/news/about">关于我们</a>
 					</li>
 				</ul>
 			</div>
@@ -119,43 +125,49 @@
 			<!--全部赛事-->
 			<div class="allEvents Regulations clearfix">
 				<div>
-					<div id="Events" class="starting">
+					<div class="starting Events">
 						<div class="img-zhezhao"></div>
 						<div class="coming-soon">
 							<p>即将开始赛事</p>
-							<p>42:41:51:52</p>
+							<p id="timeChange">42:41:51:52</p>
 							<hr />
-							<p><a href="../enter/index.html">前去报名</a><span class="pull-right">></span></p>
+							<p>
+								<a href="http://139.129.210.241:85/order/index" class="">前去报名</a><span class="pull-right">></span></p>
 						</div>
 						<div class="event-content">
 							<p class="year">2018</p>
-							<h4>第三届草原挑战赛</h4>
-							<p class="area">内蒙古<i></i>辉腾锡勒草原</p>
+							<h4 id="eventName">第三届草原挑战赛</h4>
+							<p class="area" id="eventPlace">内蒙古<i></i>辉腾锡勒草原</p>
 							<div class="time">
-								<span class="data">08/03</span>
+								<span class="data" id="startTime">08/03</span>
 								<span class="week">Wed</span>
-								<span class="year">2018</span>
-								<span class="data">08/06</span>
+								<span class="year" id="eventYear">2018</span>
+								<span class="data" id="x">08/06</span>
 								<span class="week">Fri</span>
 							</div>
 						</div>
-						
 					</div>
 					<div class="mobile-events">
-						<h1><span class="font-num opacity6">2018</span>第三届草原挑战赛</h1>
-						<a href="../enter/index.html">前去报名</a>
+						<h1><span class="font-num opacity6" id="eventYear2">2018</span><span id="eventName2">第三届草原挑战赛</span></h1>
+						<a href="#" class="eventEnter">前去报名</a>
 						<div class="zhezhao"></div>
 					</div>
 				</div>
 				<div class="details pull-left">
 					<div class="title-box">
 						<ul class="title">
-							<li><a href="Regulations.html">赛事介绍</a></li>
-							<li  class="active"><a href="introduce.html">赛制/赛道介绍</a></li>
-							<li><a href="brochure.html">赛事简章</a></li>
+							<li>
+								<a href="http://139.129.210.241:85/eventsIntroduce/regulations">赛事介绍</a>
+							</li>
+							<li class="active">
+								<a href="http://139.129.210.241:85/eventsIntroduce/introduce">赛制/赛道介绍</a>
+							</li>
+							<li>
+								<a href="http://139.129.210.241:85/eventsIntroduce/index">赛事简章</a>
+							</li>
 						</ul>
 					</div>
-					
+
 					<div>
 						<div class="about"><span>赛制介绍</span></div>
 						<div class="team-group">
@@ -166,7 +178,7 @@
 										<span class="pull-right">+</span>
 									</p>
 									<p>A组队员必须为所在商学院学生（含在读、往届、预录取）。每个院校需满足6-10（含）人，方可组成竞技组（不足6人的，自动视为B组），队员需完成两天赛程。组委会建议参加竞技组的队员有长期运动基础。
-</p>
+									</p>
 								</li>
 								<li>
 									<p class="clearfix">
@@ -183,31 +195,29 @@
 									<p>A组队员必须为所在商学院学生（含在读、往届、预录取）。每个院校需满足6-10（含）人，方可组成竞技组（不足6人的，自动视为B组），队员需完成两天赛程。组委会建议参加竞技组的队员有长期运动基础。</p>
 								</li>
 							</ul>
-							<p class="opacity6">比赛将历经2天，参赛队员以徒步、越野跑的形式，在规定的时间内完成赛程。本赛事以院校为单位组队参赛。每个院校代表队可包含团队竞技组（简称竞技组或A组）、体验组（简称B组）、亲子组（简称C组）、领队、随队记者、院校领导或中心老师。由各院校MBA中心核准后在规定时间内（6月25号下午5点前）由领队将参赛名单报至赛事组委会队员中心。</p>
+							<p class="opacity6" id="groupIntroduce">比赛将历经2天，参赛队员以徒步、越野跑的形式，在规定的时间内完成赛程。本赛事以院校为单位组队参赛。每个院校代表队可包含团队竞技组（简称竞技组或A组）、体验组（简称B组）、亲子组（简称C组）、领队、随队记者、院校领导或中心老师。由各院校MBA中心核准后在规定时间内（6月25号下午5点前）由领队将参赛名单报至赛事组委会队员中心。</p>
 						</div>
 						<div class="team-grade">
 							<ul>
 								<li>
-									<img src="../../img/Events/Group 9.png"/><br />
+									<img src="/views/pc/img/Events/Group 9.png" /><br />
 									<span>团队成绩</span>
 								</li>
 								<li>
-									<img src="../../img/Events/Page 1.png"/><br />
+									<img src="/views/pc/img/Events/Page 1.png" /><br />
 									<span class="opacity6">女队员成绩</span>
 								</li>
 								<li>
-									<img src="../../img/Events/Group 10.png"/><br />
+									<img src="/views/pc/img/Events/Group 10.png" /><br />
 									<span class="opacity6">个人成绩</span>
 								</li>
 								<li>
-									<img src="../../img/Events/Group 11.png"/><br />
+									<img src="/views/pc/img/Events/Group 11.png" /><br />
 									<span class="opacity6">关门时间</span>
 								</li>
 							</ul>
 							<div>
-								<p class="opacity6">1. 每个竞赛日各院校竞技组有效参赛成绩的第六名为该团队当日成绩；两个竞赛日成绩之和为团队总成绩。<br />
-2. 竞技组中非有效参赛队员不再具备团队成绩排名资格，此前成绩作废，竞技组此前团队当日成绩全部重新排序并取新第六名成绩计算。<br />
-3. 如团队有效队员不足六人则该团队成绩无效，但该团队有效成员仍可参加后续的赛程，其成绩不再计入团队排名。</p>
+								<p class="opacity6">1. 每个竞赛日各院校竞技组有效参赛成绩的第六名为该团队当日成绩；两个竞赛日成绩之和为团队总成绩。<br /> 2. 竞技组中非有效参赛队员不再具备团队成绩排名资格，此前成绩作废，竞技组此前团队当日成绩全部重新排序并取新第六名成绩计算。<br /> 3. 如团队有效队员不足六人则该团队成绩无效，但该团队有效成员仍可参加后续的赛程，其成绩不再计入团队排名。</p>
 								<div></div>
 							</div>
 						</div>
@@ -215,17 +225,17 @@
 						<div class="way-introduce">
 							<ul class="way">
 								<li>
-									<img src="../../img/Events/35kmCSmall.svg"/>
+									<img src="/views/pc/img/Events/35kmCSmall.svg" />
 									<p class="mile"><span>35</span>公里</p>
 									<p class="opacity6">“空中花原”35公里越野</p>
 								</li>
 								<li>
-									<img src="../../img/Events/no15Small.svg"/>
+									<img src="/views/pc/img/Events/no15Small.svg" />
 									<p class="opacity6 mile"><span>15</span>公里</p>
 									<p class="opacity6">“冰川地貌”15公里越野</p>
 								</li>
 								<li>
-									<img src="../../img/Events/noChildssmall.svg"/>
+									<img src="/views/pc/img/Events/noChildssmall.svg" />
 									<p class="opacity6 mile"><span></span>亲子跑</p>
 									<p class="opacity6">“鲜花草原”5公里跑</p>
 								</li>
@@ -233,9 +243,9 @@
 							<ul class="way-img">
 								<li>
 									<div class="pinch-zoom">
-										<img src="../../img/Events/35track.svg"/>
+										<img src="/views/pc/img/Events/35track.svg" />
 									</div>
-									
+
 									<ul class="roadmap">
 										<li class="active">赛道图</li>
 										<li>海拔图</li>
@@ -247,7 +257,7 @@
 								</li>
 								<li class="disNone">
 									<div class="pinch-zoom">
-										<img src="../../img/Events/15track.svg"/>
+										<img src="/views/pc/img/Events/15track.svg" />
 									</div>
 									<ul class="roadmap">
 										<li class="active">赛道图</li>
@@ -260,7 +270,7 @@
 								</li>
 								<li class="disNone">
 									<div class="pinch-zoom">
-										<img src="../../img/Events/childTrack.svg"/>
+										<img src="/views/pc/img/Events/childTrack.svg" />
 									</div>
 									<div class="north">
 										<p>N</p>
@@ -270,175 +280,268 @@
 							</ul>
 						</div>
 						<div class="way-txt">
-							<div class="way-txt-intro">在世界上保护最好的三大高山鲜花草甸草原之一，完成35公里的越野挑战。本赛道由国家体育总局亲自勘定，沿途可以欣赏最美、最独特的蓝天白云、鲜花草原、白桦林、风车阵……竞赛中，组委会在补给点增设草原特有的物产，让您在体验赛事的同时，领略草原文化和草原美食。
-</div>
+							<div class="way-txt-intro" id="trackIntroduce">在世界上保护最好的三大高山鲜花草甸草原之一，完成35公里的越野挑战。本赛道由国家体育总局亲自勘定，沿途可以欣赏最美、最独特的蓝天白云、鲜花草原、白桦林、风车阵……竞赛中，组委会在补给点增设草原特有的物产，让您在体验赛事的同时，领略草原文化和草原美食。
+							</div>
 							<div class="way-icon">
 								<ul class="clearfix">
 									<li class="margin-top-0">
-										<img src="../../img/Events/check.svg"/>
+										<img src="/views/pc/img/Events/check.svg" />
 										<span>打卡 (检查)</span>
 									</li>
 									<li class="margin-top-0">
-										<img src="../../img/Events/water.svg"/>
+										<img src="/views/pc/img/Events/water.svg" />
 										<span>水</span>
 									</li>
 									<li class="margin-top-0">
-										<img src="../../img/Events/health.svg"/>
+										<img src="/views/pc/img/Events/health.svg" />
 										<span>医疗站</span>
 									</li>
 									<li class="margin-left-0">
-										<img src="../../img/Events/wc.svg"/>
+										<img src="/views/pc/img/Events/wc.svg" />
 										<span>厕所</span>
 									</li>
 									<li>
-										<img src="../../img/Events/food.svg"/>
+										<img src="/views/pc/img/Events/food.svg" />
 										<span>食物</span>
 									</li>
 									<li>
-										<img src="../../img/Events/banner.svg"/>
+										<img src="/views/pc/img/Events/banner.svg" />
 										<span>香蕉</span>
 									</li>
 									<li class="margin-left-0">
-										<img src="../../img/Events/drink.svg"/>
+										<img src="/views/pc/img/Events/drink.svg" />
 										<span>功能饮料</span>
 									</li>
 								</ul>
 								<ul class="clearfix start-end">
 									<li>
 										<p><span>起终点</span>
-											<img src="../../img/Events/check.svg"/>
-											<img src="../../img/Events/water.svg"/>
-											<img src="../../img/Events/health.svg"/>
-											<img src="../../img/Events/wc.svg"/>
-											<img src="../../img/Events/food.svg"/>
+											<img src="/views/pc/img/Events/check.svg" />
+											<img src="/views/pc/img/Events/water.svg" />
+											<img src="/views/pc/img/Events/health.svg" />
+											<img src="/views/pc/img/Events/wc.svg" />
+											<img src="/views/pc/img/Events/food.svg" />
 										</p>
 										<p><span>CP1</span>
-											<img src="../../img/Events/check.svg"/>
-											<img src="../../img/Events/water.svg"/>
-											<img src="../../img/Events/health.svg"/>
-											<img src="../../img/Events/banner.svg"/>
+											<img src="/views/pc/img/Events/check.svg" />
+											<img src="/views/pc/img/Events/water.svg" />
+											<img src="/views/pc/img/Events/health.svg" />
+											<img src="/views/pc/img/Events/banner.svg" />
 										</p>
 										<p><span>CP2</span>
-											<img src="../../img/Events/check.svg"/>
-											<img src="../../img/Events/water.svg"/>
-											<img src="../../img/Events/health.svg"/>
-											<img src="../../img/Events/banner.svg"/>
-											<img src="../../img/Events/food.svg"/>
+											<img src="/views/pc/img/Events/check.svg" />
+											<img src="/views/pc/img/Events/water.svg" />
+											<img src="/views/pc/img/Events/health.svg" />
+											<img src="/views/pc/img/Events/banner.svg" />
+											<img src="/views/pc/img/Events/food.svg" />
 										</p>
 									</li>
 									<li>
 										<p><span>CP3</span>
-											<img src="../../img/Events/check.svg"/>
-											<img src="../../img/Events/water.svg"/>
-											<img src="../../img/Events/health.svg"/>
-											<img src="../../img/Events/banner.svg"/>
-											<img src="../../img/Events/wc.svg"/>
+											<img src="/views/pc/img/Events/check.svg" />
+											<img src="/views/pc/img/Events/water.svg" />
+											<img src="/views/pc/img/Events/health.svg" />
+											<img src="/views/pc/img/Events/banner.svg" />
+											<img src="/views/pc/img/Events/wc.svg" />
 										</p>
 										<p><span>CP4</span>
-											<img src="../../img/Events/check.svg"/>
-											<img src="../../img/Events/water.svg"/>
-											<img src="../../img/Events/health.svg"/>
-											<img src="../../img/Events/banner.svg"/>
+											<img src="/views/pc/img/Events/check.svg" />
+											<img src="/views/pc/img/Events/water.svg" />
+											<img src="/views/pc/img/Events/health.svg" />
+											<img src="/views/pc/img/Events/banner.svg" />
 										</p>
 										<p><span>SP1</span>
-											<img src="../../img/Events/water.svg"/>
+											<img src="/views/pc/img/Events/water.svg" />
 										</p>
 									</li>
 									<li>
 										<p><span>SP2</span>
-											<img src="../../img/Events/water.svg"/>
-											<img src="../../img/Events/health.svg"/>
-											<img src="../../img/Events/banner.svg"/>
-											<img src="../../img/Events/drink.svg"/>
+											<img src="/views/pc/img/Events/water.svg" />
+											<img src="/views/pc/img/Events/health.svg" />
+											<img src="/views/pc/img/Events/banner.svg" />
+											<img src="/views/pc/img/Events/drink.svg" />
 										</p>
 										<p><span>SP2</span>
-											<img src="../../img/Events/water.svg"/>
-											<img src="../../img/Events/health.svg"/>
-											<img src="../../img/Events/banner.svg"/>
-											<img src="../../img/Events/wc.svg"/>
-											<img src="../../img/Events/drink.svg"/>
+											<img src="/views/pc/img/Events/water.svg" />
+											<img src="/views/pc/img/Events/health.svg" />
+											<img src="/views/pc/img/Events/banner.svg" />
+											<img src="/views/pc/img/Events/wc.svg" />
+											<img src="/views/pc/img/Events/drink.svg" />
 										</p>
 									</li>
 								</ul>
 							</div>
 						</div>
-						
+
 					</div>
-					
+
 				</div>
 			</div>
 	</body>
 	<script type="text/javascript">
-		$("#Events").on("click", function() {
-			window.location.href = 'index.html'
+		$(".Events").on("click", function() {
+			window.location.href = ' http://139.129.210.241:85/events/index'
 		})
-		$(function(){
-			function groupChange(){
-				var ob=$(".team-group ul li");
-				ob.click(function(){
+		$(function() {
+			var eventId = window.sessionStorage.getItem("eventId");
+			function getEvents() {
+				$.ajax({
+					type: "post",
+					url: "/admin/eventsIntroduce/getById",
+					data: {
+						eventId: eventId
+					},
+					async: true,
+					dataType: "json",
+					success: function(data) {
+
+						if(data.success) {
+							$("#groupIntroduce").text(data.data.groupIntroduce)
+							$("#trackIntroduce").text(data.data.groupIntroduce)
+						}
+					}
+				});
+			}
+			getEvents()
+			$.ajax({
+				type: "post",
+				url: "/admin/events/getEventsById",
+				data: {
+					id: eventId
+				},
+				async: true,
+				dataType: "json",
+				success: function(data) {
+					if(data.success) {
+						function show_time() {
+							var time = data.data.endTime;
+							var dateee = new Date(time).toJSON();            
+							var date = new Date(+new Date(dateee) + 8 * 3600 * 1000).toISOString().replace(/T/g, ' ').replace(/\.[\d]{3}Z/, '');
+							var time_start = new Date().getTime(); //设定当前时间
+							var time_end = new Date(date.replace(/-/g, "/")).getTime(); //设定目标时间
+							// 计算时间差 
+							var time_distance = time_end - time_start;
+							// 天
+							var int_day = Math.floor(time_distance / 86400000)
+							time_distance -= int_day * 86400000;
+							// 时
+							var int_hour = Math.floor(time_distance / 3600000)
+							time_distance -= int_hour * 3600000;
+							// 分
+							var int_minute = Math.floor(time_distance / 60000)
+							time_distance -= int_minute * 60000;
+							// 秒 
+							var int_second = Math.floor(time_distance / 1000)
+							// 时分秒为单数时、前面加零 
+							if(int_day < 10) {
+								int_day = "0" + int_day;
+							}
+							if(int_hour < 10) {
+								int_hour = "0" + int_hour;
+							}
+							if(int_minute < 10) {
+								int_minute = "0" + int_minute;
+							}
+							if(int_second < 10) {
+								int_second = "0" + int_second;
+							}
+							$("#timeChange").text(int_day + ":" + int_hour + ":" + int_minute + ":" + int_second);
+							setTimeout(show_time, 1000)
+						}
+						show_time()
+						$("#startTime").text(data.data.startTime.substring(5, 7) + "/" + data.data.startTime.substring(8, 10))
+						$("#endTime").text(data.data.endTime.substring(5, 7) + "/" + data.data.endTime.substring(8, 10))
+						$("#eventYear").text(data.data.createTime.substring(0, 4))
+						$("#eventYear2").text(data.data.createTime.substring(0, 4))
+						$("#eventName").text(data.data.name)
+						$("#eventName2").text(data.data.name)
+						$("#eventPlace").text(data.data.place)
+						$("#eventDay").text(data.data.dayMiles.length);
+						var dayMiles = 0;
+						var oneMiles = "";
+						for(var i = 0; i < data.data.dayMiles.length; i++) {
+							dayMiles += parseInt(data.data.dayMiles[i])
+
+							oneMiles += data.data.dayMiles[i] + "公里" + "+"
+						}
+						$("#eventMiles").text(dayMiles)
+						$("#milesDetails").text(oneMiles.substring(0, oneMiles.length - 1))
+					}
+				}
+			})
+			$(".eventEnter").click(function(e){
+				var e=window.event||e;
+				e.stopPropagation();
+				e.preventDefault()
+				window.sessionStorage.setItem("enterId",eventId)
+				window.location.href="http://139.129.210.241:85/order/index"
+			})
+			function groupChange() {
+				var ob = $(".team-group ul li");
+				ob.click(function() {
 					$(this).addClass("now-group").siblings().removeClass('now-group');
 					$(this).children("p:last-child").show().end().find("span:first").removeClass("opacity6").siblings("span").text("-");
 					$(this).siblings().children("p:last-child").hide().end().find("span:first").addClass("opacity6").siblings("span").text("+");
 				})
 			}
 			groupChange();
-			var groupImg=["../../img/Events/Group 9.png","../../img/Events/Group 9.png"]
-			$(".team-grade ul li").on("click",function(){
-				var ob=$(this);
+			var groupImg = ["/views/pc/img/Events/Group 9.png", "/views/pc/img/Events/Group 9.png"]
+			$(".team-grade ul li").on("click", function() {
+				var ob = $(this);
 			})
-			var img={
-				wayImg:{
-					checked:["../../img/Events/35kmCSmall.svg","../../img/Events/check15kmS.svg","../../img/Events/check15Child.svg"],
-					noCheck:["../../img/Events/no35small.svg","../../img/Events/no15Small.svg","../../img/Events/noChildssmall.svg"]
+			var img = {
+				wayImg: {
+					checked: ["/views/pc/img/Events/35kmCSmall.svg", "/views/pc/img/Events/check15kmS.svg", "/views/pc/img/Events/check15Child.svg"],
+					noCheck: ["/views/pc/img/Events/no35small.svg", "/views/pc/img/Events/no15Small.svg", "/views/pc/img/Events/noChildssmall.svg"]
 				},
-				gradeImg:{
-					checked:["../../img/Events/Group 9.png","../../img/Events/girlCheck.png","../../img/Events/gradecheck.png","../../img/Events/closeCheck.png"],
-					noCheck:["../../img/Events/grade.png","../../img/Events/Page 1.png","../../img/Events/Group 10.png","../../img/Events/Group 11.png"]
+				gradeImg: {
+					checked: ["/views/pc/img/Events/Group 9.png", "/views/pc/img/Events/girlCheck.png", "/views/pc/img/Events/gradecheck.png", "/views/pc/img/Events/closeCheck.png"],
+					noCheck: ["/views/pc/img/Events/grade.png", "/views/pc/img/Events/Page 1.png", "/views/pc/img/Events/Group 10.png", "/views/pc/img/Events/Group 11.png"]
 				},
-				distance:{
-					longer:["../../img/Events/35track.svg","../../img/Events/35kmheight.svg"],
-					shorter:["../../img/Events/15track.svg","../../img/Events/15height.svg"]
+				distance: {
+					longer: ["/views/pc/img/Events/35track.svg", "/views/pc/img/Events/35kmheight.svg"],
+					shorter: ["/views/pc/img/Events/15track.svg", "/views/pc/img/Events/15height.svg"]
 				}
 			}
-			function roadmapChange(id,n,img){
-				id.eq(n).children("li").click(function(){
-					var index=$(this).index();
+
+			function roadmapChange(id, n, img) {
+				id.eq(n).children("li").click(function() {
+					var index = $(this).index();
 					$(this).addClass("active").siblings().removeClass("active")
-					var ob=$(this).parent("ul.roadmap").siblings("div").find("img");
-					ob.attr("src",img[index]);
-					
+					var ob = $(this).parent("ul.roadmap").siblings("div").find("img");
+					ob.attr("src", img[index]);
+
 				})
 			}
-			roadmapChange($(".roadmap"),0,img.distance.longer)
-			roadmapChange($(".roadmap"),1,img.distance.shorter)
+			roadmapChange($(".roadmap"), 0, img.distance.longer)
+			roadmapChange($(".roadmap"), 1, img.distance.shorter)
 			
-			function iconCheck(ob,checked,nocheck,flag){
-				ob.click(function(){
-					var n=$(this).index();
-					for(var i=0;i<ob.length;i++){
-						ob.eq(i).children("img").attr("src",nocheck[i]);
+			function iconCheck(ob, checked, nocheck, flag) {
+				ob.click(function() {
+					var n = $(this).index();
+					for(var i = 0; i < ob.length; i++) {
+						ob.eq(i).children("img").attr("src", nocheck[i]);
 					}
-					$(this).children("img").attr("src",checked[n]);
-					if(flag){
+					$(this).children("img").attr("src", checked[n]);
+					if(flag) {
 						$(".way-img>li").eq(n).show().siblings().hide();
-					}else{
-						var left=98+210*n;
-						$(".team-grade>div>div").css("left",left+"px")
+					} else {
+						var left = 98 + 210 * n;
+						$(".team-grade>div>div").css("left", left + "px")
 					}
 				})
 			}
-			iconCheck($(".team-grade ul li"),img.gradeImg.checked,img.gradeImg.noCheck,false);
-			iconCheck($(".way li"),img.wayImg.checked,img.wayImg.noCheck,true);
+			iconCheck($(".team-grade ul li"), img.gradeImg.checked, img.gradeImg.noCheck, false);
+			iconCheck($(".way li"), img.wayImg.checked, img.wayImg.noCheck, true);
 		})
-		
 	</script>
 
 </html>
-<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
-<script src="../../js/pinchzoom.js" type="text/javascript" charset="utf-8"></script>
-<!--<script src="../../js/e-smart-zoom-jquery.min.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="/views/pc/js/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="/views/pc/js/pinchzoom.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="/views/pc/js/e-smart-zoom-jquery.min.js" type="text/javascript" charset="utf-8"></script>-->
 <script type="text/javascript">
-	 $('div.pinch-zoom').each(function () {
-            new RTP.PinchZoom($(this), {});
-        });
+	$('div.pinch-zoom').each(function() {
+		new RTP.PinchZoom($(this), {});
+	});
 </script>

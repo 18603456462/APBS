@@ -134,7 +134,7 @@ body{
 	.personnal .form-group input.input-width-long{
 		width: 70%;
 	}
-	.personnal .form-group input.input-width-short{
+	.personnal .form-group .input-width-short{
 		width: 27%;
 		background: url(../../img/icon/select.svg) no-repeat right center;
 	}
@@ -143,7 +143,7 @@ body{
 		margin-bottom: 25px;
 		border-bottom: 1px dashed rgba(151,151,151,0.2);
 	}
-	.personnal>button{
+	#addPerson{
 		display: block;
 		width: 99px;
 		height: 33px;

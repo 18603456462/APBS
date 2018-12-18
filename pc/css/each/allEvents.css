@@ -18,7 +18,7 @@ p{
 	background: url('../../img/index/Group 7.svg') no-repeat;
 	background-size: cover;
 }
-#Events{
+.Events{
 	position: relative;
 	box-sizing: border-box;
 }
@@ -333,7 +333,7 @@ p{
 .details .event-date .event-date-day1>ul>li>ul>li{
 	margin-top: 5px;
 }
-#Events{
+.Events{
 	position: relative;
 }
 .img-zhezhao{
@@ -481,7 +481,7 @@ p{
 		position: absolute;
 		/*left: 40px;*/
 	}
-	#Events{
+	.Events{
 		width: 345px;
 		float: left;
 		height: 100%;
@@ -531,9 +531,10 @@ p{
 	.allEvents>ul>li:last-child{
 		animation: left 0.8s 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 	}
-	#Events{
+	.Events{
 		background: url(../../img/index/banner01.jpg) no-repeat center;
 		background-size: cover;
+		/*display: none;*/
 	}
 	.coming-soon{
 		left: 32px;
@@ -781,7 +782,7 @@ p{
 	.details>div{
 		font-size: 14px;
 	}
-	#Events{
+	.Events{
 		display: block;
 	}
 	.mobile-events{
@@ -835,9 +836,10 @@ p{
 		height: 6rem;
 		padding:0.6rem 0rem 0.52rem 1.2rem;
 	}
-	#Events{
+	.Events{
 		background: url(../../img/index/banner01.jpg) no-repeat;
 		background-size: cover;
+		/*display: none;*/
 	}
 	.allEvents>ul>li>div.coming-soon{
 		top: 0rem;

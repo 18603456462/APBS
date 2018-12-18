@@ -89,7 +89,7 @@
 				</script>
 
 				<ul class="nav nav-list">
-					<li class="active">
+					<li class="">
 						<a href="http://139.129.210.241:85/admin/events/index">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> 赛事管理 </span>
@@ -98,7 +98,7 @@
 						<b class="arrow"></b>
 					</li>
 
-					<li class="">
+					<li class="active">
 						<a href="http://139.129.210.241:85/admin/news/index" >
 							<i class="menu-icon fa fa-desktop"></i>
 							<span class="menu-text">
@@ -127,7 +127,7 @@
 					<div class="page-content">
 
 						<div class="page-header clearfix">
-							<button  type="button" class="btn btn-primary pull-left" id="addEvent">添加赛事</button>
+							<a href="news.html" type="button" class="btn btn-primary pull-left">添加新闻</a>
 							<input type="text" name="" id="" value="" placeholder="请输入赛事名称" class="pull-right" />
 						</div><!-- /.page-header -->
 
@@ -137,11 +137,9 @@
 								<table border="" cellspacing="" cellpadding="" class="table table-bordered table-hover">
 									<thead>
 										<tr>
-											<th class="col-xs-1">赛事名称</th>
-											<th  class="col-xs-1">赛事状态</th>
-											<th class="col-xs-1">赛事时间</th>
-											<th class="col-xs-1">地点</th>
-											<th class="col-xs-1">总公里数</th>
+											<th class="col-xs-1">主标题</th>
+											<th  class="col-xs-1">副标题</th>
+											<th  class="col-xs-1">时间</th>
 											<th class="col-xs-2">操作</th>
 										</tr>
 									</thead>
@@ -188,11 +186,11 @@
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">
 			$(function(){
-				var event_data;
+				var event_data=[];
 				function lists(){
 					$.ajax({
 						type:"post",
-						url:"/admin/events/getData",
+						url:"/admin/news/getData",
 						async:true,
 						dataType:"json",
 						data:{
@@ -213,12 +211,6 @@
 					});
 				}
 				lists()
-				
-				$("#addEvent").click(function(){
-					window.sessionStorage.setItem("editEventId",null);
-					window.location.href="http://139.129.210.241:85/admin/events/addUI"
-					
-				})
 				function changeTime(time){
 					var d = new Date(time);
 					
@@ -231,29 +223,19 @@
 					var state="";
 					var dayMiles=0;
 					for (var l=0; l<event_data.length; l++) {
-						if(event_data[l].state==1){
-							state="已开启"
-						}else if(event_data[l].state==0){
-							state="即将开启"
-						}else if(event_data[l].state==2){
-							state="尽情期待"
-						}
-						for (var i=0;i<event_data[l].dayMiles.length;i++) {
-							dayMiles+=parseInt(event_data[l].dayMiles[i]) 
-						}
-						var tr=$("<tr><td id='"+ event_data[l].id +"'>" + event_data[l].name + "</td><td>" + state + "</td><td>" + changeTime(event_data[l].startTime) + "</td><td>" + event_data[l].place + "</td><td>" +dayMiles +   "</td><td>" + operation + "</td></tr>")
+						var tr=$("<tr><td id='"+ event_data[l].id+"'>" + event_data[l].mainTitle + "</td><td>" +  event_data[l].subTitle + "</td><td>" + changeTime(event_data[l].time) +   "</td><td>" + operation + "</td></tr>")
 						tbody.append(tr)
 					}
 					$(".edit").click(function(){
-						var eventId=$(this).parent("td").siblings("td").first().attr("id");
-						window.sessionStorage.setItem("editEventId",eventId);
-						window.location.href="http://139.129.210.241:85/admin/events/addUI"
+						var newsId=$(this).parent("td").siblings("td").first().attr("id");
+						window.sessionStorage.setItem("newsId",newsId);
+						window.location.href="http://139.129.210.241:85/admin/order/addUI"
 					})
 					$(".delete").click(function(){
 						var eventId=$(this).parent("td").siblings("td").first().attr("id");
 						$.ajax({
 							type:"post",
-							url:"/admin/events/del",
+							url:"/admin/news/del",
 							async:true,
 							dataType:"json",
 							data:{

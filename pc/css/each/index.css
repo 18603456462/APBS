@@ -166,7 +166,7 @@ body{
 	}
 	.content-right>div>.open{
 		text-align: right;
-		width: 330px;
+		width: 340px;
 		position: relative;
 		margin-right: 0px;
 		opacity:0;
@@ -226,6 +226,8 @@ body{
 	}
 	.content-right>div>.open>ul>li>p>span{
 		font-size: 28px;
+		letter-spacing: 10px;
+    	margin-left: 12px;
 	}
 	.content-right>div>.open>p.view{
 		font-size: 20px;
