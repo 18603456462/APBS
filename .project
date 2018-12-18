@@ -34,7 +34,11 @@
 			</matcher>
 		</filter>
 		<filter>
+<<<<<<< HEAD
 			<id>0</id>
+=======
+			<id>1541733627804</id>
+>>>>>>> 1dba9301c3403d5d45573a8937fb809239ee6e25
 			<name></name>
 			<type>26</type>
 			<matcher>
@@ -43,7 +47,11 @@
 			</matcher>
 		</filter>
 		<filter>
+<<<<<<< HEAD
 			<id>0</id>
+=======
+			<id>1541733627836</id>
+>>>>>>> 1dba9301c3403d5d45573a8937fb809239ee6e25
 			<name></name>
 			<type>26</type>
 			<matcher>
@@ -52,6 +60,7 @@
 			</matcher>
 		</filter>
 		<filter>
+<<<<<<< HEAD
 			<id>0</id>
 			<name></name>
 			<type>26</type>
@@ -71,6 +80,9 @@
 		</filter>
 		<filter>
 			<id>1543204847261</id>
+=======
+			<id>1542520773510</id>
+>>>>>>> 1dba9301c3403d5d45573a8937fb809239ee6e25
 			<name></name>
 			<type>26</type>
 			<matcher>
