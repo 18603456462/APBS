@@ -52,7 +52,7 @@
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav-list">
 							<li class="page">
-								<a href="http://139.129.210.241:85/events/index" class="opacity6">第三届</a><br />
+								<a href="/events/index" class="opacity6">第三届</a><br />
 								<span>草原</span>
 								<i></i>
 							</li>
@@ -78,13 +78,13 @@
 						<a href="../../index.html">首页</a>
 					</li>
 					<li>
-						<a href="http://139.129.210.241:85/events/index">全部赛事</a>
+						<a href="/events/index">全部赛事</a>
 					</li>
 					<li>
-						<a href="http://139.129.210.241:85/news/index">赛事新闻</a>
+						<a href="/news/index">赛事新闻</a>
 					</li>
 					<li>
-						<a href="http://139.129.210.241:85/news/about">关于我们</a>
+						<a href="/news/about">关于我们</a>
 					</li>
 				</ul>
 			</div>
@@ -103,7 +103,7 @@
 							<p id="timeChange">42:41:51:52</p>
 							<hr />
 							<p>
-								<a href="http://139.129.210.241:85/order/index">前去报名</a><span class="pull-right">></span></p>
+								<a href="/order/index">前去报名</a><span class="pull-right">></span></p>
 						</div>
 						<div class="event-content">
 							<p class="year">2018</p>
@@ -127,13 +127,13 @@
 				<div class="details">
 					<ul class="title">
 						<li>
-							<a href="http://139.129.210.241:85/eventsIntroduce/regulations">赛事介绍</a>
+							<a href="/eventsIntroduce/regulations">赛事介绍</a>
 						</li>
 						<li>
-							<a href="http://139.129.210.241:85/eventsIntroduce/introduce">赛制/赛道介绍</a>
+							<a href="/eventsIntroduce/introduce">赛制/赛道介绍</a>
 						</li>
 						<li class="active">
-							<a href="http://139.129.210.241:85/eventsIntroduce/index">赛事简章</a>
+							<a href="/eventsIntroduce/index">赛事简章</a>
 						</li>
 					</ul>
 					<div>
@@ -515,29 +515,31 @@
 					$("#timeChange").text(int_day + ":" + int_hour + ":" + int_minute + ":" + int_second);
 					setTimeout(show_time, 1000)
 				}
-				show_time()
-				$("#startTime").text(data.data.startTime.substring(5, 7) + "/" + data.data.startTime.substring(8, 10))
-				$("#endTime").text(data.data.endTime.substring(5, 7) + "/" + data.data.endTime.substring(8, 10))
-				$("#eventYear").text(data.data.createTime.substring(0, 4))
-				$("#eventName").text(data.data.name)
-				$("#eventPlace").text(data.data.place)
-				$("#eventDay").text(data.data.dayMiles.length);
-				var dayMiles = 0;
-				var oneMiles = "";
-				for(var i = 0; i < data.data.dayMiles.length; i++) {
-					dayMiles += parseInt(data.data.dayMiles[i])
-
-					oneMiles += data.data.dayMiles[i] + "公里" + "+"
-				}
-				$("#eventMiles").text(dayMiles)
-				$("#milesDetails").text(oneMiles.substring(0, oneMiles.length - 1))
 			}
+			show_time()
+			$("#startTime").text(data.data.startTime.substring(5, 7) + "/" + data.data.startTime.substring(8, 10))
+			$("#endTime").text(data.data.endTime.substring(5, 7) + "/" + data.data.endTime.substring(8, 10))
+			$("#eventYear").text(data.data.createTime.substring(0, 4))
+			$("#eventName").text(data.data.name)
+			$("#eventPlace").text(data.data.place)
+			$("#eventDay").text(data.data.dayMiles.length);
+			var dayMiles = 0;
+			var oneMiles = "";
+			for(var i = 0; i < data.data.dayMiles.length; i++) {
+				dayMiles += parseInt(data.data.dayMiles[i])
+
+				oneMiles += data.data.dayMiles[i] + "公里" + "+"
+			}
+			$("#eventMiles").text(dayMiles)
+			$("#milesDetails").text(oneMiles.substring(0, oneMiles.length - 1))
 		}
-		$(".eventEnter").click(function(e){
-			var e=window.event||e;
-			e.stopPropagation();
-			e.preventDefault()
-			window.sessionStorage.setItem("enterId",eventId)
-			window.location.href="http://139.129.210.241:85/order/index"
-		})
+	})
+	$(".eventEnter").click(function(e) {
+		var e = window.event || e;
+		e.stopPropagation();
+		e.preventDefault()
+		window.sessionStorage.setItem("enterId", eventId)
+		window.location.href = "/order/index"
+	})
+</script>
 <script src="/view/pc/js/common.js" type="text/javascript" charset="utf-8"></script>

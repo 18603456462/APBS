@@ -46,15 +46,15 @@
 								<a href="/views/pc/index.html">首页</a><br />
 							</li>
 							<li class="page">
-								<a href="http://139.129.210.241:85/events/index">全部赛事</a><br />
+								<a href="/events/index">全部赛事</a><br />
 								<span>ALL EVENTS</span>
 								<i></i>
 							</li>
 							<li>
-								<a href="http://139.129.210.241:85/news/inde">赛事新闻</a>
+								<a href="/news/inde">赛事新闻</a>
 							</li>
 							<li>
-								<a href="http://139.129.210.241:85/news/about">关于我们</a>
+								<a href="/news/about">关于我们</a>
 							</li>
 						</ul>
 					</div>
@@ -72,13 +72,13 @@
 						<a href="/views/pc/index.html">首页</a>
 					</li>
 					<li>
-						<a href="http://139.129.210.241:85/events/index">全部赛事</a>
+						<a href="/events/index">全部赛事</a>
 					</li>
 					<li>
-						<a href="http://139.129.210.241:85/news/inde">赛事新闻</a>
+						<a href="/news/inde">赛事新闻</a>
 					</li>
 					<li>
-						<a href="http://139.129.210.241:85/news/about">关于我们</a>
+						<a href="/news/about">关于我们</a>
 					</li>
 				</ul>
 			</div>
@@ -154,7 +154,7 @@
 					$(".enter").eq(l).show()
 					$(".arrows").eq(l).show()
 					li.eq(l).click(function(){
-						window.location.href = 'http://139.129.210.241:85/eventsIntroduce/regulations'
+						window.location.href = '/eventsIntroduce/regulations'
 						window.sessionStorage.setItem("eventdId",id)
 					})
 				} else if(event_data[l].state == 0) {
@@ -181,7 +181,7 @@
 				e.preventDefault()
 				var enterId=$(this).parents("li").attr("id")
 				window.sessionStorage.setItem("enterId",enterId)
-				window.location.href="http://139.129.210.241:85/order/index"
+				window.location.href="/order/index"
 			})
 			$(".eventState").click(function(){
 				var n=$(this).index()

@@ -51,7 +51,7 @@
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav-list">
 							<li class="page">
-								<a href="http://139.129.210.241:85/events/index" class="opacity6">第三届</a><br />
+								<a href="/events/index" class="opacity6">第三届</a><br />
 								<span>草原</span>
 								<i></i>
 							</li>
@@ -77,13 +77,13 @@
 						<a href="/views/pc/index.html">首页</a>
 					</li>
 					<li>
-						<a href="http://139.129.210.241:85/events/index">全部赛事</a>
+						<a href="/events/index">全部赛事</a>
 					</li>
 					<li>
-						<a href="http://139.129.210.241:85/news/index">赛事新闻</a>
+						<a href="/news/index">赛事新闻</a>
 					</li>
 					<li>
-						<a href="http://139.129.210.241:85/news/about">关于我们</a>
+						<a href="/news/about">关于我们</a>
 					</li>
 				</ul>
 			</div>
@@ -101,7 +101,7 @@
 							<p>即将开始赛事</p>
 							<p id="timeChange"></p>
 							<hr />
-							<p><a href="http://139.129.210.241:85/order/index">前去报名</a><span class="pull-right">></span></p>
+							<p><a href="/order/index">前去报名</a><span class="pull-right">></span></p>
 						</div>
 						<div class="event-content">
 							<p class="year">2018</p>
@@ -230,7 +230,7 @@
 	</body>
 	<script type="text/javascript">
 		$(".Events").on("click", function() {
-			window.location.href = ' http://139.129.210.241:85/events/index'
+			window.location.href = ' /events/index'
 		})
 		$(function(){
 			//轮播图
@@ -345,7 +345,7 @@
 			e.stopPropagation();
 			e.preventDefault()
 			window.sessionStorage.setItem("enterId",eventId)
-			window.location.href="http://139.129.210.241:85/order/index"
+			window.location.href="/order/index"
 		})
 	})
 </script>

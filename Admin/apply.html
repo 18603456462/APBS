@@ -82,7 +82,7 @@
 				</script>
 				<ul class="nav nav-list">
 					<li class="active">
-						<a href="http://139.129.210.241:85/admin/events/index">
+						<a href="/admin/events/index">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> 赛事管理 </span>
 						</a>
@@ -91,7 +91,7 @@
 					</li>
 
 					<li class="">
-						<a href="http://139.129.210.241:85/admin/news/index" >
+						<a href="/admin/news/index">
 							<i class="menu-icon fa fa-desktop"></i>
 							<span class="menu-text">
 								内容管理
@@ -101,7 +101,7 @@
 						<b class="arrow"></b>
 					</li>
 					<li class="">
-						<a href="http://139.129.210.241:85/admin/order/index">
+						<a href="/admin/order/index">
 							<i class="menu-icon fa fa-list"></i>
 							<span class="menu-text"> 订单管理 </span>
 						</a>
@@ -178,27 +178,27 @@
 														<div class="col-xs-12">
 															<div class="form-group col-xs-6">
 																<label for="name">票名称</label>
-																<input type="text" name="" id="name" value=""  class="form-control"/>
+																<input type="text" name="" id="name" value="" class="form-control" />
 															</div>
 															<div class="form-group col-xs-6">
 																<label for="total">票数量</label>
-																<input type="text" name="" id="total" value="" class="form-control"/>
+																<input type="text" name="" id="total" value="" class="form-control" />
 															</div>
 															<div class="form-group col-xs-6">
 																<h5>开票时间</h5>
 																<div class="input-daterange input-group">
-																	<input type="text" class="input-sm form-control" name="start" id="startTime"/>
+																	<input type="text" class="input-sm form-control" name="start" id="startTime" />
 																	<span class="input-group-addon">
 																		<i class="fa fa-exchange"></i>
 																	</span>
-																	<input type="text" class="input-sm form-control" name="end" id="endTime"/>
+																	<input type="text" class="input-sm form-control" name="end" id="endTime" />
 																</div>
 															</div>
 															<div class="form-group col-xs-6">
 																<label for="oriPrice">原价</label>
-																<input type="text" name="" id="oriPrice" value="" class=""/>
+																<input type="text" name="" id="oriPrice" value="" class="" />
 																<label for="prePrice">现价</label>
-																<input type="text" name="" id="prePrice" value="" class=""/>
+																<input type="text" name="" id="prePrice" value="" class="" />
 															</div>
 														</div>
 													</div>
@@ -219,9 +219,9 @@
 													<div class="row">
 														<div class="col-xs-12" id="message">
 															<h5>添加报名信息 <button class="btn addInformation" type="button"style="height: 30px; line-height:0px;" >添加</button></h5>
-															<div class="form-group"  >
+															<div class="form-group">
 																<label>报名信息1</label>
-																<input type="text" name="" value="" class="form-control"/>
+																<input type="text" name="" value="" class="form-control" />
 															</div>
 														</div>
 													</div>
@@ -242,9 +242,9 @@
 													<div class="row">
 														<div class="col-xs-6" id="attention">
 															<h5>添加注意事项 <button class="btn addInformation" type="button"style="height: 30px; line-height:0px;">添加</button></h5>
-															<div class="form-group" >
+															<div class="form-group">
 																<label>注意事项1</label>
-																<textarea name="" rows="" cols="" class="form-control" ></textarea>
+																<textarea name="" rows="" cols="" class="form-control"></textarea>
 															</div>
 														</div>
 													</div>
@@ -373,44 +373,45 @@
 		</script>
 
 		<script>
-			$(function(){
-				function addInformation(ob,id,flag){
-					var n=2;
+			$(function() {
+				function addInformation(ob, id, flag) {
+					var n = 2;
 					var information;
-					id.click(function(){
-						if(flag){
-							information=$("<div class='form-group'><label>报名信息"+ n +"</label><input type='text' class='form-control'/></div>");
-						}else{
-							information=$("<div class='form-group'><label>注意事项"+ n +"</label><textarea  class='form-control'width='100%'></textarea></div>");
+					id.click(function() {
+						if(flag) {
+							information = $("<div class='form-group'><label>报名信息" + n + "</label><input type='text' class='form-control'/></div>");
+						} else {
+							information = $("<div class='form-group'><label>注意事项" + n + "</label><textarea  class='form-control'width='100%'></textarea></div>");
 						}
 
 						n++;
 						ob.append(information)
 					})
 				}
-				addInformation($("#message"),$(".addInformation").eq(0),true)
-				addInformation($("#attention"),$(".addInformation").eq(1),false)
-				function changeTime(time){
+				addInformation($("#message"), $(".addInformation").eq(0), true)
+				addInformation($("#attention"), $(".addInformation").eq(1), false)
+
+				function changeTime(time) {
 					var d = new Date(time);
-					
-					var times=d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate() ; 
+
+					var times = d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate();
 					return times
 				}
-				var editEventId=window.sessionStorage.getItem("editEventId");
-				var editEventId2="";
-				function editEvent(){
-					if(editEventId!="null"){
+				var editEventId = window.sessionStorage.getItem("editEventId");
+				var editEventId2 = "";
+
+				function editEvent() {
+					if(editEventId != "null") {
 						$.ajax({
 							type: "post",
-							url:"/admin/eventsReport/getById",
-							data:{
-								eventId:editEventId
+							url: "/admin/eventsReport/getById",
+							data: {
+								eventId: editEventId
 							},
-							dataType:"json",
-							success:function(data){
-								console.log(data)
-								if(data.success){
-									editEventId2=data.data.id;
+							dataType: "json",
+							success: function(data) {
+								if(data.success) {
+									editEventId2 = data.data.id;
 									$("#state").val(data.data.state);
 									$("#name").val(data.data.name);
 									$("#total").val(data.data.total);
@@ -419,77 +420,77 @@
 									$("#oriPrice").val(data.data.oriPrice);
 								}
 							},
-							error:function(data){
+							error: function(data) {
 								console.log(data)
 							}
 						})
 					}
-					
+
 				}
 				editEvent()
-				var eventId=window.sessionStorage.getItem("eventId")
+				var eventId = window.sessionStorage.getItem("eventId")
 				//				提交
-				function addSure(){
-					$("#addSure").click(function(){
-						var state=$("#state").val();
-						var name=$("#name").val()
-						var total=$("#total").val()
-						var startTime=$("#startTime").val()
-						var endTime=$("#endTime").val()
-						var oriPrice=$("#oriPrice").val()
-						var prePrice=$("#prePrice").val()
-						var message=[];
-						var attention=[];
-						for(var i=0;i<$("#message div input").length;i++){
+				function addSure() {
+					$("#addSure").click(function() {
+						var state = $("#state").val();
+						var name = $("#name").val()
+						var total = $("#total").val()
+						var startTime = $("#startTime").val()
+						var endTime = $("#endTime").val()
+						var oriPrice = $("#oriPrice").val()
+						var prePrice = $("#prePrice").val()
+						var message = [];
+						var attention = [];
+						for(var i = 0; i < $("#message div input").length; i++) {
 							message.push($("#message div input").eq(i).val())
 						}
-						for(var j=0;j<$("#attention div textarea").length;j++){
+						for(var j = 0; j < $("#attention div textarea").length; j++) {
 							attention.push($("#attention div textarea").eq(j).val())
 						}
 						var data;
-						if(editEventId!="null"){
-							data={
-								id:editEventId2,
-								eventId:eventId,
-								state:state,
-								name:name,
-								total:total,
-								startTime:startTime,
-								endTime:endTime,
-								oriPrice:oriPrice,
-								prePrice:prePrice,
-								messages:message,
-								attentions:attention
-							
+						if(editEventId != "null") {
+							data = {
+								id: editEventId2,
+								eventId: eventId,
+								state: state,
+								name: name,
+								total: total,
+								startTime: startTime,
+								endTime: endTime,
+								oriPrice: oriPrice,
+								prePrice: prePrice,
+								messages: message,
+								attentions: attention
+
 							}
-						}else{
-							data={
-								eventId:eventId,
-								state:state,
-								name:name,
-								total:total,
-								startTime:startTime,
-								endTime:endTime,
-								oriPrice:oriPrice,
-								prePrice:prePrice,
-								messages:message,
-								attentions:attention
+						} else {
+							data = {
+								eventId: eventId,
+								state: state,
+								name: name,
+								total: total,
+								startTime: startTime,
+								endTime: endTime,
+								oriPrice: oriPrice,
+								prePrice: prePrice,
+								messages: message,
+								attentions: attention
 							}
-							
+
 						}
 						console.log(data)
 						$.ajax({
 							type: "post",
-							url:"/admin/eventsReport/addOrEdit",
-							data:data,
-							dataType:"json",
-							success:function(data){
-								if(data.success){
+							url: "/admin/eventsReport/addOrEdit",
+							data: data,
+							dataType: "json",
+							success: function(data) {
+								if(data.success) {
 									console.log(data)
-									window.location.href="http://139.129.210.241:85/admin/events/index" 
+									window.location.href = "/admin/events/index"
 								}
 							},
-							error:function(data){
+							error: function(data) {
 								alert("信息填写有误，请确认所有信息全部填写并填写无误后再次提交！")
 							}
 						})

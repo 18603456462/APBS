@@ -83,7 +83,7 @@
 				</script>
 				<ul class="nav nav-list">
 					<li class="active">
-						<a href="http://139.129.210.241:85/admin/events/index">
+						<a href="/admin/events/index">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> 赛事管理 </span>
 						</a>
@@ -92,7 +92,7 @@
 					</li>
 
 					<li class="">
-						<a href="http://139.129.210.241:85/admin/news/index" >
+						<a href="/admin/news/index">
 							<i class="menu-icon fa fa-desktop"></i>
 							<span class="menu-text">
 								内容管理
@@ -102,7 +102,7 @@
 						<b class="arrow"></b>
 					</li>
 					<li class="">
-						<a href="http://139.129.210.241:85/admin/order/index">
+						<a href="/admin/order/index">
 							<i class="menu-icon fa fa-list"></i>
 							<span class="menu-text"> 订单管理 </span>
 						</a>
@@ -136,7 +136,7 @@
 						</h3>
 						<div class="row">
 							<div class="col-xs-12">
-								
+
 								<div class="row">
 									<div class="col-sm-6">
 										<div class="widget-box">
@@ -164,7 +164,7 @@
 																				<input multiple="" type="file" id="challenge_img" class="challenge_img" />
 																			</div>
 																		</div>
-				
+
 																		<label>
 																			<span class="lbl"> 只允许图片</span>
 																		</label>
@@ -240,8 +240,7 @@
 															</div>
 														</div>
 													</div>
-												
-													
+
 												</div>
 											</div>
 										</div>
@@ -338,7 +337,7 @@
 																<h5>团队组内容</h5>
 																<textarea id="groupContent" class="autosize-transition form-control" style="overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 50px;" placeholder="请填写内容"></textarea>
 															</div>
-															
+
 															<div class="col-xs-2">
 																<button class="btn btn-primary" style="margin-top: 50px;">+</button>
 															</div>
@@ -360,9 +359,9 @@
 																<button class="btn btn-primary" style="margin-top: 50px;">+</button>
 															</div>
 														</div>
-														
+
 														<hr />
-														
+
 													</div>
 												</div>
 											</div>
@@ -487,8 +486,7 @@
 										</div>
 									</div>
 								</div>
-							
-								
+
 							</div>
 							<!-- /.col -->
 						</div>
@@ -565,9 +563,9 @@
 				$('.input-daterange').datepicker({
 					autoclose: true
 				});
-				var origin_img=[];
-				var special_img=[];
-				var trackImg=[]
+				var origin_img = [];
+				var special_img = [];
+				var trackImg = []
 				try {
 					Dropzone.autoDiscover = false;
 
@@ -630,23 +628,23 @@
 											self.emit("success", file, 'success', null);
 											self.emit("complete", file);
 											self.processQueue();
-											var coverSrc=[];
-											for(let i=0; i<$("#origin_img .dz-image").length;i++){
+											var coverSrc = [];
+											for(let i = 0; i < $("#origin_img .dz-image").length; i++) {
 												coverSrc.push($("#origin_img .dz-image").eq(i).children("img").attr("src"))
 											}
 											$.ajax({
-												type:"post",
-												url:"/admin/news/uploadImg",
-												async:false,
-												data:{
-													file:coverSrc.pop()
+												type: "post",
+												url: "/admin/news/uploadImg",
+												async: false,
+												data: {
+													file: coverSrc.pop()
 												},
-												success:function(data){
-													if(data.success){
+												success: function(data) {
+													if(data.success) {
 														origin_img.push(data.imgpath);
-														
+
 													}
-													
+
 												}
 											});
 										}
@@ -721,23 +719,23 @@
 											self.emit("success", file, 'success', null);
 											self.emit("complete", file);
 											self.processQueue();
-											var coverSrc=[];
-											for(let i=0; i<$("#special_img .dz-image").length;i++){
+											var coverSrc = [];
+											for(let i = 0; i < $("#special_img .dz-image").length; i++) {
 												coverSrc.push($("#special_img .dz-image").eq(i).children("img").attr("src"))
 											}
 											$.ajax({
-												type:"post",
-												url:"/admin/news/uploadImg",
-												async:false,
-												data:{
-													file:coverSrc.pop()
+												type: "post",
+												url: "/admin/news/uploadImg",
+												async: false,
+												data: {
+													file: coverSrc.pop()
 												},
-												success:function(data){
-													if(data.success){
+												success: function(data) {
+													if(data.success) {
 														special_img.push(data.imgpath);
-														
+
 													}
-													
+
 												}
 											});
 										}
@@ -753,7 +751,7 @@
 							myDropzone2.destroy();
 						} catch(e) {}
 					});
-					
+
 					var myDropzone3 = new Dropzone('#trackImg', {
 						previewTemplate: $('#preview-template3').html(),
 
@@ -813,23 +811,23 @@
 											self.emit("success", file, 'success', null);
 											self.emit("complete", file);
 											self.processQueue();
-											var coverSrc=[];
-											for(let i=0; i<$("#trackImg .dz-image").length;i++){
+											var coverSrc = [];
+											for(let i = 0; i < $("#trackImg .dz-image").length; i++) {
 												coverSrc.push($("#trackImg .dz-image").eq(i).children("img").attr("src"))
 											}
 											$.ajax({
-												type:"post",
-												url:"/admin/news/uploadImg",
-												async:false,
-												data:{
-													file:coverSrc.pop()
+												type: "post",
+												url: "/admin/news/uploadImg",
+												async: false,
+												data: {
+													file: coverSrc.pop()
 												},
-												success:function(data){
-													if(data.success){
+												success: function(data) {
+													if(data.success) {
 														trackImg.push(data.imgpath);
-														
+
 													}
-													
+
 												}
 											});
 										}
@@ -852,13 +850,13 @@
 				$('#challenge_img').ace_file_input({
 					style: 'well',
 					btn_choose: '在这里放下图像或点击选择 ',
-					no_icon :"ace-icon fa fa-picture-o",
-					thumbnail: 'small',//large | fit
+					no_icon: "ace-icon fa fa-picture-o",
+					thumbnail: 'small', //large | fit
 					droppable: true,
 					btn_change: null,
-					allowExt : ["jpeg", "jpg", "png", "gif" , "bmp"],
-					allowMime : ["image/jpg", "image/jpeg", "image/png", "image/gif", "image/bmp"],
-					preview_error : function(filename, error_code) {
+					allowExt: ["jpeg", "jpg", "png", "gif", "bmp"],
+					allowMime: ["image/jpg", "image/jpeg", "image/png", "image/gif", "image/bmp"],
+					preview_error: function(filename, error_code) {
 						//name of the file that failed
 						//error_code values
 						//1 = 'FILE_LOAD_FAILED',
@@ -866,28 +864,29 @@
 						//3 = 'THUMBNAIL_FAILED'
 						alert(error_code);
 					}
-			
-				}).on('change', function(){
+
+				}).on('change', function() {
 					//console.log($(this).data('ace_input_files'));
 					//console.log($(this).data('ace_input_method'));
 				});
-				
-				var editEventId=window.sessionStorage.getItem("editEventId");
-				var editEventId2="";
-				function editEvent(){
-					if(editEventId!="null"){
+
+				var editEventId = window.sessionStorage.getItem("editEventId");
+				var editEventId2 = "";
+
+				function editEvent() {
+					if(editEventId != "null") {
 						$.ajax({
 							type: "post",
-							url:"/admin/eventsIntroduce/getById",
-							data:{
-								eventId:editEventId
+							url: "/admin/eventsIntroduce/getById",
+							data: {
+								eventId: editEventId
 							},
-							async:false,
-							dataType:"json",
-							success:function(data){
+							async: false,
+							dataType: "json",
+							success: function(data) {
 								console.log(data)
-								if(data.success){
-									editEventId2=data.data.id;
+								if(data.success) {
+									editEventId2 = data.data.id;
 									$("#challenge_content").val(data.data.challenge_content);
 									$("#origin_content").val(data.data.origin_content);
 									$("#special_content").val(data.data.special_content);
@@ -902,106 +901,106 @@
 									$("#title").val(data.data.title);
 								}
 							},
-							error:function(data){
+							error: function(data) {
 								console.log(data)
 							}
 						})
 					}
-					
+
 				}
 				editEvent()
-				var eventId=window.sessionStorage.getItem("eventId")
-//				提交
-				function addSure(){
-					$("#addSure").click(function(){
-						var challenge_content=$("#challenge_content").val();//关于赛事挑战赛内容
-						
-						var origin_content=$("#origin_content").val()//赛事起源
-						var special_content=$("#special_content").val()//赛事特色
-						var groupTitle=$("#groupTitle").val()
-						var groupContent=$("#groupContent").val()
-						var groupIntroduce=$("#groupIntroduce").val()
-						var scoreType=$("#scoreType").val()
-						var trackIntroduce=$("#trackIntroduce").val()
-						var content=$("#content").val();
-						var title=$("#title").val();
+				var eventId = window.sessionStorage.getItem("eventId")
+				//				提交
+				function addSure() {
+					$("#addSure").click(function() {
+						var challenge_content = $("#challenge_content").val(); //关于赛事挑战赛内容
+
+						var origin_content = $("#origin_content").val() //赛事起源
+						var special_content = $("#special_content").val() //赛事特色
+						var groupTitle = $("#groupTitle").val()
+						var groupContent = $("#groupContent").val()
+						var groupIntroduce = $("#groupIntroduce").val()
+						var scoreType = $("#scoreType").val()
+						var trackIntroduce = $("#trackIntroduce").val()
+						var content = $("#content").val();
+						var title = $("#title").val();
 						var data;
-						if(editEventId!="null"){
-							data={
-								id:editEventId2,
-								eventId:eventId,
-								challenge_content:challenge_content,
-								challenge_imgs:challengeImg(),
-								origin_content:origin_content,
-								origin_imgs:origin_img,
-								special_content:special_content,
-								special_imgs:special_img,
-								groupTitle:groupTitle,
-								groupContent:groupContent,
-								groupIntroduce:groupIntroduce,
-								scoreType:scoreType,
-								trackIntroduce:trackIntroduce,
-								trackImgs:trackImg,
-								content:content,
-								title:title
+						if(editEventId != "null") {
+							data = {
+								id: editEventId2,
+								eventId: eventId,
+								challenge_content: challenge_content,
+								challenge_imgs: challengeImg(),
+								origin_content: origin_content,
+								origin_imgs: origin_img,
+								special_content: special_content,
+								special_imgs: special_img,
+								groupTitle: groupTitle,
+								groupContent: groupContent,
+								groupIntroduce: groupIntroduce,
+								scoreType: scoreType,
+								trackIntroduce: trackIntroduce,
+								trackImgs: trackImg,
+								content: content,
+								title: title
 							}
-						}else{
-							data={
-								eventId:eventId,
-								challenge_content:challenge_content,
-								challenge_imgs:challengeImg(),
-								origin_content:origin_content,
-								origin_imgs:origin_img,
-								special_content:special_content,
-								special_imgs:special_img,
-								groupTitle:groupTitle,
-								groupContent:groupContent,
-								groupIntroduce:groupIntroduce,
-								scoreType:scoreType,
-								trackIntroduce:trackIntroduce,
-								trackImgs:trackImg,
-								content:content,
-								title:title
+						} else {
+							data = {
+								eventId: eventId,
+								challenge_content: challenge_content,
+								challenge_imgs: challengeImg(),
+								origin_content: origin_content,
+								origin_imgs: origin_img,
+								special_content: special_content,
+								special_imgs: special_img,
+								groupTitle: groupTitle,
+								groupContent: groupContent,
+								groupIntroduce: groupIntroduce,
+								scoreType: scoreType,
+								trackIntroduce: trackIntroduce,
+								trackImgs: trackImg,
+								content: content,
+								title: title
 							}
 						}
 						console.log(data)
 						$.ajax({
 							type: "post",
-							url:"/admin/eventsIntroduce/addOrEdit",
-							data:data,
-							dataType:"json",
-							success:function(data){
+							url: "/admin/eventsIntroduce/addOrEdit",
+							data: data,
+							dataType: "json",
+							success: function(data) {
 								console.log(data)
-								if(data.success){
-									window.location.href="http://139.129.210.241:85/admin/eventsReport/index"
+								if(data.success) {
+									window.location.href = "/admin/eventsReport/index"
 								}
-													
+
 							},
-							error:function(data){
+							error: function(data) {
 								alert("信息填写有误，请确认所有信息全部填写并填写无误后再次提交！")
 							}
 						})
 					})
 				}
 				addSure()
-				
-				function challengeImg(){
-					var challenge_img=[];
-					if($("#challenge_img").siblings("span").find("img").length>0){
-						var challenge_src=$("#challenge_img").siblings("span").find("img").css("background-image").split("\"")[1];
+
+				function challengeImg() {
+					var challenge_img = [];
+					if($("#challenge_img").siblings("span").find("img").length > 0) {
+						var challenge_src = $("#challenge_img").siblings("span").find("img").css("background-image").split("\"")[1];
 						$.ajax({
-							type:"post",
-							url:"/admin/news/uploadImg",
-							async:false,
-							data:{
-								file:challenge_src
+							type: "post",
+							url: "/admin/news/uploadImg",
+							async: false,
+							data: {
+								file: challenge_src
 							},
-							success:function(data){
-								if(data.success){
+							success: function(data) {
+								if(data.success) {
 									challenge_img.push(data.imgpath);
-									
+
 								}
-								
+
 							}
 						});
 					}

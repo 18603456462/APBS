@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
@@ -16,8 +17,6 @@
 		<link rel="stylesheet" href="/views/Admin/assets/css/jquery-ui.min.css" />
 		<link rel="stylesheet" href="/views/Admin/assets/css/bootstrap-datepicker3.min.css" />
 		<link rel="stylesheet" href="/views/Admin/assets/css/ui.jqgrid.min.css" />
-
-		
 
 		<!-- ace styles -->
 		<link rel="stylesheet" href="/views/Admin/assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
@@ -43,9 +42,9 @@
 		<script src="assets/js/html5shiv.min.js"></script>
 		<script src="assets/js/respond.min.js"></script>
 		<![endif]-->
-		
+
 		<style type="text/css">
-			.page-header>input{
+			.page-header>input {
 				background: url(assets/images/group-7.svg) no-repeat right center;
 				box-sizing: border-box;
 				padding-right: 10px;
@@ -75,22 +74,27 @@
 						</small>
 					</a>
 				</div>
-			</div><!-- /.navbar-container -->
+			</div>
+			<!-- /.navbar-container -->
 		</div>
 
 		<div class="main-container ace-save-state" id="main-container">
 			<script type="text/javascript">
-				try{ace.settings.loadState('main-container')}catch(e){}
+				try {
+					ace.settings.loadState('main-container')
+				} catch(e) {}
 			</script>
 
 			<div id="sidebar" class="sidebar                  responsive                    ace-save-state">
 				<script type="text/javascript">
-					try{ace.settings.loadState('sidebar')}catch(e){}
+					try {
+						ace.settings.loadState('sidebar')
+					} catch(e) {}
 				</script>
 
 				<ul class="nav nav-list">
 					<li class="">
-						<a href="http://139.129.210.241:85/admin/events/index">
+						<a href="/admin/events/index">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> 赛事管理 </span>
 						</a>
@@ -99,7 +103,7 @@
 					</li>
 
 					<li class="">
-						<a href="http://139.129.210.241:85/admin/news/index" >
+						<a href="/admin/news/index">
 							<i class="menu-icon fa fa-desktop"></i>
 							<span class="menu-text">
 								内容管理
@@ -108,12 +112,13 @@
 						<b class="arrow"></b>
 					</li>
 					<li class="active">
-						<a href="http://139.129.210.241:85/admin/order/index">
+						<a href="/admin/order/index">
 							<i class="menu-icon fa fa-list"></i>
 							<span class="menu-text"> 订单管理 </span>
 						</a>
 					</li>
-				</ul><!-- /.nav-list -->
+				</ul>
+				<!-- /.nav-list -->
 
 				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
 					<i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
@@ -127,7 +132,8 @@
 
 						<div class="page-header clearfix">
 							<input type="text" name="" id="" value="" placeholder="请输入姓名" class="pull-left" />
-						</div><!-- /.page-header -->
+						</div>
+						<!-- /.page-header -->
 
 						<div class="row">
 							<div class="col-xs-12">
@@ -136,11 +142,11 @@
 									<thead>
 										<tr>
 											<th class="col-xs-1">姓名</th>
-											<th  class="col-xs-1">赛事名称</th>
-											<th  class="col-xs-1">票类型</th>
-											<th  class="col-xs-1">票金额</th>
-											<th  class="col-xs-1">支付时间</th>
-											<th  class="col-xs-1">付款方式</th>
+											<th class="col-xs-1">赛事名称</th>
+											<th class="col-xs-1">票类型</th>
+											<th class="col-xs-1">票金额</th>
+											<th class="col-xs-1">支付时间</th>
+											<th class="col-xs-1">付款方式</th>
 											<th class="col-xs-2">操作</th>
 										</tr>
 									</thead>
@@ -148,17 +154,21 @@
 									</tbody>
 								</table>
 								<!-- PAGE CONTENT ENDS -->
-							</div><!-- /.col -->
-						</div><!-- /.row -->
-					</div><!-- /.page-content -->
+							</div>
+							<!-- /.col -->
+						</div>
+						<!-- /.row -->
+					</div>
+					<!-- /.page-content -->
 				</div>
-			</div><!-- /.main-content -->
-
+			</div>
+			<!-- /.main-content -->
 
 			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
 				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
 			</a>
-		</div><!-- /.main-container -->
+		</div>
+		<!-- /.main-container -->
 
 		<!-- basic scripts -->
 
@@ -171,7 +181,7 @@
 <script src="assets/js/jquery-1.11.3.min.js"></script>
 <![endif]-->
 		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
 		</script>
 		<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
 
@@ -186,74 +196,78 @@
 
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">
-			$(function(){
-				var event_data=[];
-				function lists(){
+			$(function() {
+				var event_data = [];
+
+				function lists() {
 					$.ajax({
-						type:"post",
-						url:"/admin/order/getData",
-						async:true,
-						dataType:"json",
-						data:{
-//							name : "" ,
-							pageNum : 1 ,
-							pageSize : 10
+						type: "post",
+						url: "/admin/order/getData",
+						async: true,
+						dataType: "json",
+						data: {
+							//							name : "" ,
+							pageNum: 1,
+							pageSize: 10
 						},
-						success:function(data){
+						success: function(data) {
 							console.log(data)
-							if(data.success==true){
-								event_data=data.data.records || [];
+							if(data.success == true) {
+								event_data = data.data.records || [];
 								addData()
 							}
 						},
-						error:function(data){
+						error: function(data) {
 							console.log(data)
 						}
 					});
 				}
 				lists()
-				function changeTime(time){
+
+				function changeTime(time) {
 					var d = new Date(time);
-					
-					var times=d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds(); 
+
+					var times = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
 					return times
 				}
-				function addData(){
-					var tbody=$("#banner_tr");
-					var operation="<a class='btn btn-primary btn-sm lineItem' href='lineItem.html'>查看</a>";
-					var state="";
-					var dayMiles=0;
-					for (var l=0; l<event_data.length; l++) {
-						var tr=$("<tr><td"+event_data[l].id +">" + event_data[l].name + "</td><td>" +  event_data[l].events.name + "</td><td>" + event_data[l].buy_name  + "</td><td>" + event_data[l].pay_money+"</td><td>"+changeTime(event_data[l].pay_time) +"</td><td>"+event_data[l].pay_tools +"</td><td>"+ operation + "</td></tr>")
+
+				function addData() {
+					var tbody = $("#banner_tr");
+					var operation = "<a class='btn btn-primary btn-sm lineItem' href='lineItem.html'>查看</a>";
+					var state = "";
+					var dayMiles = 0;
+					for(var l = 0; l < event_data.length; l++) {
+						var tr = $("<tr><td" + event_data[l].id + ">" + event_data[l].name + "</td><td>" + event_data[l].events.name + "</td><td>" + event_data[l].buy_name + "</td><td>" + event_data[l].pay_money + "</td><td>" + changeTime(event_data[l].pay_time) + "</td><td>" + event_data[l].pay_tools + "</td><td>" + operation + "</td></tr>")
 						tbody.append(tr)
 					}
-					$(".lineItem").click(function(){
-						var id=$(this).parent("td").siblings("td").first().attr("id");
-						window.sessionStorage.setItem("orderId",id);
-						window.location.href="http://139.129.210.241:85/admin/order/detail"
+					$(".lineItem").click(function() {
+						var id = $(this).parent("td").siblings("td").first().attr("id");
+						window.sessionStorage.setItem("orderId", id);
+						window.location.href = "/admin/order/detail"
 						$.ajax({
-							type:"post",
-							url:"/admin/order/getById",
-							async:true,
-							dataType:"json",
-							data:{
-								id : id ,
+							type: "post",
+							url: "/admin/order/getById",
+							async: true,
+							dataType: "json",
+							data: {
+								id: id,
 							},
-							success:function(data){
+							success: function(data) {
 								console.log(data)
-								if(data.success==true){
-									event_data=data.data.records || [];
+								if(data.success == true) {
+									event_data = data.data.records || [];
 									addData()
 								}
-							},m9
-							error:function(data){
+							},
+							error: function(data) {
 								console.log(data)
 							}
 						});
 					})
 				}
-				
+
 			})
 		</script>
 	</body>
+
 </html>
