@@ -5,8 +5,6 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>亚太地区商学院统计赛</title>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.css"/>
-	
-<<<<<<< HEAD
 		<link rel="stylesheet" type="text/css" href="/views/pc/css/common/common.css"/>
 		<script src="/views/pc/js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/views/pc/css/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
@@ -15,16 +13,6 @@
 		<link rel="stylesheet" type="text/css" href="/views/pc/css/fonts.css"/>
 		<!--<script src="js/language.js" type="text/javascript" charset="utf-8"></script>-->
 		<script src="/views/pc/js/include.js" type="text/javascript" charset="utf-8"></script>
-=======
-		<link rel="stylesheet" type="text/css" href="/view/pc/css/common/common.css"/>
-		<script src="/view/pc/js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="/view/pc/css/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
-		<link rel="stylesheet" type="text/css" href="/view/pc/css/animate/animate.css"/>
-		<link rel="stylesheet" type="text/css" href="/view/pc/css/each/index.css"/>
-		<link rel="stylesheet" type="text/css" href="/view/pc/css/fonts.css"/>
-		<!--<script src="js/language.js" type="text/javascript" charset="utf-8"></script>-->
-		<script src="/view/pc/js/include.js" type="text/javascript" charset="utf-8"></script>
->>>>>>> 1dba9301c3403d5d45573a8937fb809239ee6e25
 	</head>
 	<body>
 		<div class="backImg">
@@ -172,11 +160,7 @@
 		</div>
 	</body>
 </html>
-<<<<<<< HEAD
 <script src="/views/pc/js/common.js" type="text/javascript" charset="utf-8"></script>
-=======
-<script src="/view/pc/js/common.js" type="text/javascript" charset="utf-8"></script>
->>>>>>> 1dba9301c3403d5d45573a8937fb809239ee6e25
 <script type="text/javascript">
 	$(function(){
 		//轮播图
@@ -195,7 +179,6 @@
 		function getBanner(){
 			$.ajax({
 				type:"post",
-<<<<<<< HEAD
 				url:"/admin/banner/getAllData",
 				async:true,
 				dataType:"json",
@@ -209,19 +192,10 @@
 							$("#bannerPage").append(page)
 						}
 					}
-=======
-				url:"http://139.129.210.241:85/admin/banner/getAllData",
-				async:true,
-				dataType:"json",
-				success:function(data){
-					console.log(data)
->>>>>>> 1dba9301c3403d5d45573a8937fb809239ee6e25
 				}
 			});
 		}
 		getBanner()
-<<<<<<< HEAD
-		
 		var endTime;
 		$.ajax({
 			type:"post",
@@ -282,9 +256,5 @@
 			}
 			timeChange()
 		}
-		
-		
-=======
->>>>>>> 1dba9301c3403d5d45573a8937fb809239ee6e25
 	})
 </script>
